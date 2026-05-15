@@ -20,7 +20,7 @@ export default function Home() {
           Web Development
         </Button>
 
-        <h1 className="text-center font-bold text-4xl max-w-165 ">
+        <h1 className="text-center text-4xl max-w-165 font-extrabold">
           Best Next.js Website 
         </h1>
 

@@ -21,8 +21,8 @@ import { User, Settings, LogOut } from "lucide-react";
 
 export default function Header() {
   return (
-    <header className=" w-full  ">
-      <div className="container m-auto flex-between h-[56px] px-6 py-8 ">
+    <header className=" w-full font-he ">
+      <div className="container m-auto flex-between h-14 px-6 py-8 max-w-7xl">
         <div className="bg-linear-to-r via-[#ee87cb] from-[#fff1be] to-[#b060ff] rounded-2xl h-44 w-80 absolute   -top-20 -right-5 z-[-1] blur-[80px] "></div>
 
         <div className="flex-start">
@@ -86,7 +86,7 @@ export default function Header() {
             Alternatives
           </a>
         </div>
-        <div>
+        <div dir="rtl" className="min-w-34.5 ">
           <div className=" lg:hidden flex flex-col gap-1 ">
             <span className="block w-4 h-0.5 bg-black dark:bg-white"></span>
             <span className="block w-4 h-0.5 bg-black dark:bg-white"></span>

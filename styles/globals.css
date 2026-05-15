@@ -4,7 +4,17 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@import "@fontsource-variable/inter";
+
+@font-face {
+  font-family: "hanken";
+  src: url("../public/font/hanken-grotesk-latin-wght-normal.0zrhm0yfqw_5l.woff2") format("truetype");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "interLatin";
+  src: url("../public/font/inter-latin-wght-normal.055ydel_y7o6i.woff2") format("truetype");
+  font-weight: 800;
+}
 
 /* ========== متغیرهای رنگی (بر اساس استایل دوم - oklch) ========== */
 :root {
@@ -54,7 +64,7 @@
 
 /* ========== Theme Inline برای دسترسی آسان به متغیرها ========== */
 @theme inline {
-  --font-sans: "Inter Variable", sans-serif;
+ 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -161,5 +171,14 @@
 
   body {
     @apply bg-background text-foreground antialiased;
+    font-family: var(--font-sans);
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
   }
 }

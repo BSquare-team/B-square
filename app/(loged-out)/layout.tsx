@@ -15,16 +15,11 @@ export default function RootLayout({
 }>) {
   return (
     <div className="flex h-screen flex-col">
-      
-        <Header />
-        <div className="min-h-screen"> 
+      <Header />
 
-        {children}
-        </div>
-        <Footer />
-        
-      
-      
+      {children}
+
+      <Footer />
     </div>
   );
 }
