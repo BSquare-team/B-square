@@ -1,9 +1,10 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
+
+@import "@fontsource-variable/inter";
 
 /* ========== متغیرهای رنگی (بر اساس استایل دوم - oklch) ========== */
 :root {
@@ -53,6 +54,7 @@
 
 /* ========== Theme Inline برای دسترسی آسان به متغیرها ========== */
 @theme inline {
+  --font-sans: "Inter Variable", sans-serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
