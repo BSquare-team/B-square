@@ -21,9 +21,11 @@ import { User, Settings, LogOut } from "lucide-react";
 
 export default function Header() {
   return (
-    <header className=" w-full border-b">
-      <div className=" flex-between">
-       <div className="flex-start">
+    <header className=" w-full  ">
+      <div className="container m-auto flex-between h-[56px] px-6 py-8 ">
+        <div className="bg-linear-to-r via-[#ee87cb] from-[#fff1be] to-[#b060ff] rounded-2xl h-44 w-80 absolute   -top-20 -right-5 z-[-1] blur-[80px] "></div>
+
+        <div className="flex-start">
           <Link href="/" className="flex-start">
             <Image
               src="/images/logo.svg"
@@ -32,14 +34,12 @@ export default function Header() {
               width={25}
               property="true"
             />
-            <span className="hidden lg:block font-bold text-2xl ml-3">
-              {APP_NAME}
-            </span>
+            <span className=" font-semibold text-2xl ml-3">{APP_NAME}</span>
           </Link>
         </div>
 
-        <div className="space-x-5 flex">
-          <DropdownMenu modal={false}>
+        <div className="hidden lg:flex gap-4 text-lg">
+          {/* <DropdownMenu modal={false}>
             <DropdownMenuTrigger asChild>
               <Button variant="outline">My Account</Button>
             </DropdownMenuTrigger>
@@ -51,7 +51,7 @@ export default function Header() {
               <DropdownMenuItem>
                 <User className="mr-2 h-4 w-4" />
                 <span>Profile</span>
-                
+
                 <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
               </DropdownMenuItem>
 
@@ -75,12 +75,27 @@ export default function Header() {
             <Link href={"/login"}>
               <UserIcon /> login
             </Link>
-          </Button>
-
-          <LightDarkToggle className="" />
+          </Button> */}
+          <a href="#" className="font-medium text-gray-500">
+            Blog
+          </a>
+          <a href="#" className="font-medium text-gray-500">
+            Guides
+          </a>
+          <a href="#" className="font-medium text-gray-500">
+            Alternatives
+          </a>
         </div>
-        
-
+        <div>
+          <div className=" lg:hidden flex flex-col gap-1 ">
+            <span className="block w-4 h-0.5 bg-black dark:bg-white"></span>
+            <span className="block w-4 h-0.5 bg-black dark:bg-white"></span>
+            <span className="block w-4 h-0.5 bg-black dark:bg-white"></span>
+          </div>
+          <Button variant={"ghost"} className="hidden lg:flex">
+            EN
+          </Button>
+        </div>
       </div>
     </header>
   );
