@@ -8,7 +8,21 @@ import {
 } from "@/components/ui/accordion";
 
 import { Button } from "@/components/ui/button";
+import SwiperCards from "@/components/ui/swiper";
 import { Small } from "@/components/ui/typography";
+
+// import کامپوننت‌های اصلی
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// import ماژول‌هایی که نیاز داری
+import { Navigation, Pagination, Autoplay, EffectCards } from "swiper/modules";
+
+// import استایل‌های اصلی Swiper (این خط خیلی مهمه!)
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/effect-cards";
+import SwiperThreeView from "@/components/ui/swiperThreeView";
 
 export default function Home() {
   return (
@@ -73,23 +87,67 @@ export default function Home() {
         </blockquote>
 
         <h2>#1: Tailwind Next.js Starter Blog</h2>
-        <p>
-          Best for: Writers, bloggers, and developers who prioritize content
-        </p>
-        <p>
-          GitHub: timlrx/tailwind-nextjs-starter-blog | Demo:
-          tailwind-nextjs-starter-blog.vercel.app
-        </p>
+
+        <div className="flex flex-col lg:flex-row gap-3">
+          <div className="lg:w-1/2">
+            <p>
+              Best for: Writers, bloggers, and developers who prioritize content
+            </p>
+
+            <p>
+              GitHub: timlrx/tailwind-nextjs-starter-blog | Demo:
+              tailwind-nextjs-starter-blog.vercel.app
+            </p>
+          </div>
+          <div className="lg:w-1/2">
+            <SwiperCards />
+          </div>
+        </div>
+
         <p>
           The most complete nextjs personal website template for content
           creators. With over 6,000 GitHub stars, it is the most popular
           personal site template in the Next.js ecosystem and for good reason.
         </p>
 
+        <Swiper
+          slidesPerView={2}
+          spaceBetween={-10}
+          centeredSlides={true}
+          pagination={{ clickable: true }}
+          className=" w-full  rounded-xl "
+          loop={true}
+          navigation={{
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          }}
+        >
+          <SwiperSlide className="">
+            <div className="bg-amber-400"></div>{" "}
+          </SwiperSlide>
+          <SwiperSlide className="">
+            <div className="bg-amber-400"></div>{" "}
+          </SwiperSlide>
+          <SwiperSlide className="">
+            <div className="bg-amber-400"></div>{" "}
+          </SwiperSlide>
+          <SwiperSlide className="">
+            <div className="bg-amber-400"></div>{" "}
+          </SwiperSlide>
+          <SwiperSlide className="">
+            <div className="bg-amber-400"></div>{" "}
+          </SwiperSlide>
+          <SwiperSlide className="">
+            <div className="bg-amber-400"></div>{" "}
+          </SwiperSlide>
+        </Swiper>
+
+        <SwiperThreeView />
+
         <h2>Frequently Asked Questions</h2>
 
-        <Accordion type="multiple"  className="">
-          <AccordionItem value="item-1" >
+        <Accordion type="multiple" className="">
+          <AccordionItem value="item-1">
             <AccordionTrigger className="text-left font-semibold text-lg">
               What is the best free Next.js personal website template?
             </AccordionTrigger>
@@ -115,6 +173,8 @@ export default function Home() {
             </AccordionContent>
           </AccordionItem>
         </Accordion>
+
+        
       </div>
     </div>
   );
