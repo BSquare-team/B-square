@@ -5,11 +5,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import LightDarkToggle from "./ui/lightDarkToggle";
 
 export default function Header() {
- const [isScrolled, setIsScrolled] = useState(false)
- 
- 
+  const [isScrolled, setIsScrolled] = useState(false);
+
   return (
     <header className=" w-full font- ">
       <div
@@ -19,7 +19,10 @@ export default function Header() {
             : "bg-transparent"
         }`}
       >
-        <div className="bg-linear-to-r via-[#ee87cb] from-[#fff1be] to-[#b060ff] rounded-2xl h-44 w-80 absolute   -top-20 -right-5 z-[-1] blur-[80px] "></div>
+        <div
+          className="bg-linear-to-r via-[#ee87cb] from-[#fff1be] to-[#b060ff] dark:bg-linear-to-r
+         dark:from-[#06b6d4] dark:via-[#3b82f6] dark:to-[#df10ff]  rounded-2xl h-44 w-80 absolute -top-20 -right-5 z-[-1] blur-[80px] dark:blur-[110px] "
+        ></div>
 
         <div className="flex-start">
           <Link href="/" className="flex-start">
@@ -88,9 +91,15 @@ export default function Header() {
             <span className="block w-4 h-0.5 bg-black dark:bg-white"></span>
             <span className="block w-4 h-0.5 bg-black dark:bg-white"></span>
           </div>
-          <Button variant={"ghost"} className="hidden lg:flex">
-            EN
-          </Button>
+
+          <div className="flex flex-row">
+            <Button variant={"ghost"} className="hidden lg:flex">
+              EN
+            </Button>
+            <Button variant={"ghost"}>
+              <LightDarkToggle className="mt-1" />
+            </Button>
+          </div>
         </div>
       </div>
     </header>

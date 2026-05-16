@@ -57,7 +57,7 @@ export default function Home() {
         </Button>
       </div>
       {/* main content */}
-      <div className="m-auto prose prose-lg">
+      <div className="m-auto prose prose-lg dark:prose-invert">
         <p className="prose-p">
           Your personal website is the one project you never seem to finish. You
           start from scratch, burn a weekend on layout decisions, and end up
