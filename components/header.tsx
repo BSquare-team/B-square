@@ -3,26 +3,22 @@
 import { APP_NAME } from "@/lib/constants";
 import Image from "next/image";
 import Link from "next/link";
-import { ShoppingCart, UserIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import LightDarkToggle from "@/components/ui/lightDarkToggle";
-
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-  DropdownMenuShortcut,
-} from "@/components/ui/dropdown-menu";
-
-import { User, Settings, LogOut } from "lucide-react";
+import { useState } from "react";
 
 export default function Header() {
+ const [isScrolled, setIsScrolled] = useState(false)
+ 
+ 
   return (
-    <header className=" w-full font-he ">
-      <div className="container m-auto flex-between h-14 px-6 py-8 max-w-7xl">
+    <header className=" w-full font- ">
+      <div
+        className={`container m-auto flex-between h-14 px-6 py-8 max-w-7xl ${
+          isScrolled
+            ? "bg-white/80 backdrop-blur-md border-b border-gray-200 shadow-sm"
+            : "bg-transparent"
+        }`}
+      >
         <div className="bg-linear-to-r via-[#ee87cb] from-[#fff1be] to-[#b060ff] rounded-2xl h-44 w-80 absolute   -top-20 -right-5 z-[-1] blur-[80px] "></div>
 
         <div className="flex-start">

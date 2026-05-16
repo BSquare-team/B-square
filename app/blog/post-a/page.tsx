@@ -174,7 +174,7 @@ export default function Home() {
           </AccordionItem>
         </Accordion>
 
-        
+
       </div>
     </div>
   );
