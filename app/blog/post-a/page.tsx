@@ -26,7 +26,7 @@ import SwiperThreeView from "@/components/ui/swiperThreeView";
 
 export default function Home() {
   return (
-    <div className="min-h-screen container m-auto ">
+    <div className="min-h-screen container m-auto px-6">
       {/* Hero section  */}
       <div className="mx-auto flex flex-col justify-center items-center pt-10 sm:pt22 pb-12 ">
         <Button
@@ -173,8 +173,6 @@ export default function Home() {
             </AccordionContent>
           </AccordionItem>
         </Accordion>
-
-
       </div>
     </div>
   );
