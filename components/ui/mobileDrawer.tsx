@@ -23,7 +23,6 @@ export default function MobileDrawer() {
 
         {/* محتوای منو */}
         <Dialog.Content
-          dir="rtl"
           className="fixed top-0 right-0 z-50 h-full w-4/5 max-w-xs bg-white dark:bg-gray-900 shadow-xl 
                      data-[state=open]:animate-in data-[state=closed]:animate-out 
                      data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right 
@@ -69,8 +68,8 @@ export default function MobileDrawer() {
             {/* بقیه لینک‌ها */}
           </nav>
           <nav className="flex flex-row justify-center p-4">
-            <Button variant={"ghost"}>
-              <LightDarkToggle className="mt-1" />
+            <Button variant={"ghost"} >
+              <LightDarkToggle />
             </Button>
 
             <Button variant={"ghost"}>En</Button>
