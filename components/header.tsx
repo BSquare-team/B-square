@@ -8,6 +8,8 @@ import { useEffect, useState } from "react";
 import LightDarkToggle from "./ui/lightDarkToggle";
 import MobileDrawer from "./ui/mobileDrawer";
 import { Headroom } from "nextjs-headroom";
+import { UserIcon } from "lucide-react";
+import LoginPage from "./ui/loginDialog";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -66,6 +68,10 @@ export default function Header() {
             </div>
 
             <div className=" flex-row hidden lg:flex">
+
+              <Button variant={"ghost"} className="hidden lg:flex">
+               <LoginPage/>
+              </Button>
               <Button variant={"ghost"} className="hidden lg:flex">
                 EN
               </Button>
