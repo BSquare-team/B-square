@@ -70,7 +70,7 @@ export default function Header() {
                 EN
               </Button>
               <Button variant={"ghost"}>
-                <LightDarkToggle className="mt-1 " />
+                <LightDarkToggle className=" " />
               </Button>
             </div>
           </div>

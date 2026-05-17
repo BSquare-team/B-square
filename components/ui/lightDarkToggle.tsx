@@ -21,6 +21,7 @@ export default function LightDarkToggle({ className }: a) {
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger
+          asChild
             className={className}
             onClick={() => {
               document.body.classList.toggle("dark");
