@@ -4,7 +4,7 @@ import { APP_NAME } from "@/lib/constants";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import LightDarkToggle from "./ui/lightDarkToggle";
 import MobileDrawer from "./ui/mobileDrawer";
 import { Headroom } from "nextjs-headroom";
@@ -12,12 +12,29 @@ import { Headroom } from "nextjs-headroom";
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 110) {
+        // آستانه 20 پیکسل
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <Headroom>
-      <header className=" w-full ">
-
-        
-    
+      <header
+        className={`w-full transition-all duration-300 ${
+          isScrolled
+            ? "bg-white/80 dark:bg-gray-900/80 backdrop-blur-md  border-gray-200 dark:border-gray-800 shadow-sm"
+            : "bg-transparent"
+        }`}
+      >
         <div className="container m-auto flex-between h-14 px-6 py-8 max-w-7xl   ">
           <div className="flex-start">
             <Link href="/" className="flex-start">
