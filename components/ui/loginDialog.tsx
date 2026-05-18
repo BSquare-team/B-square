@@ -29,6 +29,7 @@ import { z } from "zod";
 import { Input } from "@/components/ui/input";
 import { PasswordInput } from "@/components/ui/password-input";
 import { UserIcon } from "lucide-react";
+import SignUpPage from "./signUpDialog";
 
 const formSchema = z.object({
   email: z.string().email(),
@@ -100,7 +101,7 @@ export default function LoginPage() {
         <DialogFooter className="flex justify-between sm:justify-between">
           <small>don't have an account?</small>
           <Button asChild variant="outline" size="sm">
-            <Link href="/sign-up">Sign up</Link>
+          <SignUpPage/>
           </Button>
         </DialogFooter>
       </DialogContent>
