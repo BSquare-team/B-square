@@ -1,4 +1,3 @@
-# فعلاً از backend ساده استفاده می‌کنیم برای تست لوکال
 backend:
   name: test-repo
 
@@ -7,18 +6,109 @@ public_folder: "/images"
 
 collections:
   - name: "blog"
-    label: "پست‌های وبلاگ"
-    label_singular: "پست وبلاگ"
-    folder: "content/posts"
+    label: "Blog Posts"
+    label_singular: "Blog Post"
+    folder: "content/blog"
     create: true
+    extension: "json"
+    format: "json"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+
     fields:
-      - { label: "عنوان", name: "title", widget: "string" }
+      # ── Header Section ──
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Excerpt", name: "excerpt", widget: "text" }
+      - { label: "Author", name: "author", widget: "string" }
       - {
-          label: "تاریخ انتشار",
+          label: "Publish Date",
           name: "date",
           widget: "datetime",
           default: "{{now}}",
         }
-      - { label: "خلاصه", name: "excerpt", widget: "text", required: false }
-      - { label: "متن اصلی", name: "body", widget: "markdown" }
+
+      # ── Tags (Two Categories, Each Max 3 Words) ──
+      - label: "Category Tags"
+        name: "categoryTags"
+        widget: "list"
+        hint: "e.g., Frontend, Backend, DevOps"
+        max: 3
+        field: { label: "Tag", name: "tag", widget: "string" }
+
+      - label: "Tech Tags"
+        name: "techTags"
+        widget: "list"
+        hint: "e.g., React, TypeScript, Next.js"
+        max: 3
+        field: { label: "Tag", name: "tag", widget: "string" }
+
+      # ── Featured Image (Optional, for Blog Card) ──
+      - {
+          label: "Featured Image",
+          name: "featuredImage",
+          widget: "image",
+          required: false,
+        }
+
+      # ── Main Content Blocks ──
+      - label: "Content Blocks"
+        name: "blocks"
+        widget: "list"
+        types:
+          - label: "Text"
+            name: "text"
+            widget: "object"
+            fields:
+              - { label: "Content", name: "content", widget: "markdown" }
+
+          - label: "Single Image"
+            name: "image"
+            widget: "object"
+            fields:
+              - { label: "Image", name: "src", widget: "image" }
+              - { label: "Alt Text", name: "alt", widget: "string" }
+              - {
+                  label: "Caption",
+                  name: "caption",
+                  widget: "string",
+                  required: false,
+                }
+
+          - label: "Image Slider"
+            name: "slider"
+            widget: "object"
+            fields:
+              - label: "Slides"
+                name: "slides"
+                widget: "list"
+                fields:
+                  - { label: "Image", name: "src", widget: "image" }
+                  - {
+                      label: "Caption",
+                      name: "caption",
+                      widget: "string",
+                      required: false,
+                    }
+
+          - label: "Code Snippet"
+            name: "code"
+            widget: "object"
+            fields:
+              - {
+                  label: "Language",
+                  name: "language",
+                  widget: "string",
+                  default: "typescript",
+                }
+              - { label: "Code", name: "code", widget: "text" }
+
+          - label: "Quote"
+            name: "quote"
+            widget: "object"
+            fields:
+              - { label: "Quote Text", name: "text", widget: "text" }
+              - {
+                  label: "Author",
+                  name: "author",
+                  widget: "string",
+                  required: false,
+                }
