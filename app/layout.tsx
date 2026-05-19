@@ -35,10 +35,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={` ${hankenGrotesk.variable} ${inter.variable}`}
+      className={`overflow-x-clip ${hankenGrotesk.variable} ${inter.variable}`}
       suppressContentEditableWarning
     >
-      <body className="min-h-full flex flex-col relative  overflow-x-clip">
+      <body className="min-h-full flex flex-col relative overflow-x-clip">
         <Header />
         {children}
         <div
