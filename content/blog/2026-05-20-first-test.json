@@ -1,0 +1,19 @@
+{
+  "title": "first test",
+  "excerpt": "lorm 1",
+  "author": "lorm2",
+  "date": "2026-05-21T00:40:00",
+  "categoryTags": [
+    "category lorm"
+  ],
+  "techTags": [
+    "tech tag 2"
+  ],
+  "featuredImage": "/images/sample-products/p1-2.jpg",
+  "blocks": [
+    {
+      "type": "text",
+      "content": "hello"
+    }
+  ]
+}
