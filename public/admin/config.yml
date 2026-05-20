@@ -2,7 +2,7 @@ backend:
   name: github
   repo: aminb9383/OurBlog-Shadcn-Tellwind
   branch: main
-  auth_url: https://auth.sveltia-cms.dev/.well-known/oauth/providers
+  auth_url: https://auth.sveltia-cms.dev
 
 media_folder: "public/images"
 public_folder: "/images"
