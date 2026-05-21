@@ -1,9 +1,24 @@
 // app/blog/page.tsx
 
+import { APP_NAME, SERVER_URL } from "@/lib/constants";
 import { getAllPosts } from "@/lib/posts";
+import { Metadata } from "next";
 import Link from "next/link";
 
 export const dynamic = "force-dynamic";
+
+export const metadata: Metadata = {
+  title: "Blog",
+  description: `Read our latest blog posts about web development, programming, and technology.`,
+  openGraph: {
+    title: `Blog | ${APP_NAME}`,
+    description: `Read our latest blog posts about web development, programming, and technology.`,
+    url: `${SERVER_URL}/blog`,
+  },
+  alternates: {
+    canonical: `${SERVER_URL}/blog`,
+  },
+};
 
 export default function BlogPage() {
   const posts = getAllPosts();

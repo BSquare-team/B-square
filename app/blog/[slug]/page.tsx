@@ -4,9 +4,68 @@ import { getAllPosts, getPostBySlug } from "@/lib/posts";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import PostContent from "@/components/PostContent";
+import { APP_NAME, SERVER_URL } from "@/lib/constants";
+import { Metadata } from "next";
 
 export const dynamic = "force-dynamic";
 
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
+
+  if (!post) {
+    return {
+      title: `Post Not Found | ${APP_NAME}`,
+    };
+  }
+
+  const tags = [
+    ...post.categoryTags.map((t) => t.tag),
+    ...post.techTags.map((t) => t.tag),
+  ];
+
+  const postUrl = `${SERVER_URL}/blog/${slug}`;
+
+  return {
+    title: post.title,
+    description: post.description || "",
+    keywords: tags,
+    authors: [{ name: post.author }],
+    openGraph: {
+      title: `${post.title} | ${APP_NAME}`,
+      description: post.description || "",
+      type: "article",
+      publishedTime: post.date,
+      authors: [post.author],
+      images: post.featuredImage
+        ? [
+            {
+              url: post.featuredImage,
+              width: 1200,
+              height: 630,
+              alt: post.title,
+            },
+          ]
+        : undefined,
+      url: postUrl,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.description || "",
+      images: post.featuredImage ? [post.featuredImage] : undefined,
+    },
+    alternates: {
+      canonical: postUrl,
+    },
+  };
+}
+
+// 👇 Static Params برای build
 export function generateStaticParams() {
   const posts = getAllPosts();
   return posts.map((post) => ({
