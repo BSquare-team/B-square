@@ -1,7 +1,5 @@
 backend:
-  name: github
-  repo: aminb9383/OurBlog-Shadcn-Tellwind
-  branch: main
+  name: test-repo
 
 media_folder: "public/images"
 public_folder: "/images"
