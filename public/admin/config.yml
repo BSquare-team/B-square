@@ -12,35 +12,9 @@ collections:
     create: true
     extension: "json"
     format: "json"
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
 
     fields:
-      # ── Header Section ──
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Excerpt", name: "excerpt", widget: "text" }
-      - { label: "Author", name: "author", widget: "string" }
-      - {
-          label: "Publish Date",
-          name: "date",
-          widget: "datetime",
-          default: "{{now}}",
-        }
-
-      # ── Tags (Two Categories, Each Max 3 Words) ──
-      - label: "Category Tags"
-        name: "categoryTags"
-        widget: "list"
-        hint: "e.g., Frontend, Backend, DevOps"
-        max: 3
-        field: { label: "Tag", name: "tag", widget: "string" }
-
-      - label: "Tech Tags"
-        name: "techTags"
-        widget: "list"
-        hint: "e.g., React, TypeScript, Next.js"
-        max: 3
-        field: { label: "Tag", name: "tag", widget: "string" }
-
       # ── Featured Image (Optional, for Blog Card) ──
       - {
           label: "Featured Image",
@@ -48,6 +22,41 @@ collections:
           widget: "image",
           required: false,
         }
+
+      # ── Header Section ──
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "description", name: "description", widget: "text" }
+      - {
+          label: "Author",
+          name: "author",
+          widget: "select",
+          options: ["Amin", "Omid"],
+          default: "Amin",
+        }
+      - {
+          label: "Publish Date",
+          name: "date",
+          widget: "datetime",
+          default: "{{now}}",
+          width: "1/2",
+        }
+
+      # ── Tags (Two Categories, Each Max 3 Words) ──
+      - label: "Category Tags"
+        name: "categoryTags"
+        widget: "list"
+        required: false
+        hint: "e.g., Frontend, Backend, DevOps"
+        max: 3
+        field: { label: "Tag", name: "tag", widget: "string" }
+
+      - label: "Tech Tags"
+        name: "techTags"
+        widget: "list"
+        required: false
+        hint: "e.g., React, TypeScript, Next.js"
+        max: 3
+        field: { label: "Tag", name: "tag", widget: "string" }
 
       # ── Main Content Blocks ──
       - label: "Content Blocks"
