@@ -1,0 +1,40 @@
+{
+  "title": "first test",
+  "excerpt": "lorm 1",
+  "author": "lorm2",
+  "date": "2026-05-21T00:40:00",
+  "categoryTags": [
+    "category lorm",
+    "category lorm2",
+    "category lorm3"
+  ],
+  "techTags": [
+    "tech tag",
+    "tech tag 2"
+  ],
+  "featuredImage": "/images/sample-products/p1-2.jpg",
+  "blocks": [
+    {
+      "type": "text",
+      "content": "hello"
+    },
+    {
+      "type": "slider",
+      "slides": [
+        {
+          "src": "/images/banner-2.jpg",
+          "caption": "ssd"
+        },
+        {
+          "src": "/images/banner-1.jpg",
+          "caption": "dsds"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "text": "sdsd",
+      "author": "dssd"
+    }
+  ]
+}
