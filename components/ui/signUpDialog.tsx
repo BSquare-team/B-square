@@ -196,7 +196,7 @@ export default function SignUpPage() {
                     mode="single"
                     selected={field.value}
                     onSelect={field.onChange}
-                    initialFocus
+                    
                   />
                 </PopoverContent>
               </Popover>
