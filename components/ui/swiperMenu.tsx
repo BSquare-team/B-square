@@ -13,26 +13,28 @@ export default function SwiperMenu() {
     if (!swiperRef.current) return;
 
     const menuButton = menuButtonRef.current;
+    let swiperInstance: Swiper | null = null;
+
     const openMenu = () => {
       if (swiperInstance) swiperInstance.slidePrev();
     };
 
-    const swiperInstance = new Swiper(swiperRef.current, {
+    swiperInstance = new Swiper(swiperRef.current, {
       slidesPerView: "auto",
       initialSlide: 1,
       resistanceRatio: 0,
       slideToClickedSlide: true,
       on: {
-        slideChangeTransitionStart: function () {
-          if (this.activeIndex === 0) {
+        slideChangeTransitionStart: function (swiper) {
+          if (swiper.activeIndex === 0) {
             menuButton?.classList.add("cross");
             menuButton?.removeEventListener("click", openMenu, true);
           } else {
             menuButton?.classList.remove("cross");
           }
         },
-        slideChangeTransitionEnd: function () {
-          if (this.activeIndex === 1) {
+        slideChangeTransitionEnd: function (swiper) {
+          if (swiper.activeIndex === 1) {
             menuButton?.addEventListener("click", openMenu, true);
           }
         },
@@ -40,7 +42,7 @@ export default function SwiperMenu() {
     });
 
     return () => {
-      swiperInstance.destroy();
+      swiperInstance?.destroy();
     };
   }, []);
 

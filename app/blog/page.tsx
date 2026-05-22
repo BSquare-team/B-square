@@ -1,16 +1,29 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { ArrowLeft, CalendarDays } from "lucide-react";
+import { APP_NAME, SERVER_URL } from "@/lib/constants";
+import { getAllPosts } from "@/lib/posts";
+import { Metadata } from "next";
 import Link from "next/link";
-import React from "react";
+
+export const dynamic = "force-dynamic";
+
+export const metadata: Metadata = {
+  title: "Blog",
+  description: `Read our latest blog posts about web development, programming, and technology.`,
+  openGraph: {
+    title: `Blog | ${APP_NAME}`,
+    description: `Read our latest blog posts about web development, programming, and technology.`,
+    url: `${SERVER_URL}/blog`,
+  },
+  alternates: {
+    canonical: `${SERVER_URL}/blog`,
+  },
+};
 
 export default function page() {
+  const posts = getAllPosts();
+  if (posts.length === 0) {
+    return <p>not found</p>;
+  }
+
   return (
     <div className="container m-auto max-w-7xl ">
       {/* // hero section */}
@@ -219,6 +232,47 @@ export default function page() {
               </div>
             </Link>
           </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="min-h-screen max-w-3xl mx-auto px-4 py-16">
+          <h1 className="text-3xl font-bold mb-8">Blog</h1>
+        </div>
+
+        <div className="space-y-6">
+          {posts.map((post) => (
+            <Link
+              key={post.slug}
+              href={`/blog/${post.slug}`}
+              className="block p-6 rounded-lg border border-zinc-800 hover:border-zinc-600 transition-colors group"
+            >
+              <article>
+                <h2 className="text-xl font-semibold mb-2 group-hover:text-blue-400 transition-colors">
+                  {post.title}
+                </h2>
+                <p className="text-zinc-400 mb-3">{post.description}</p>
+
+                <div className="flex flex-wrap items-center gap-3 text-sm text-zinc-500">
+                  <span>{post.author}</span>
+                  <span>·</span>
+                  <span>
+                    {new Date(post.date).toLocaleDateString("en-US", {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    })}
+                  </span>
+
+                  {post.techTags.length > 0 && (
+                    <>
+                      <span>·</span>
+                    </>
+                  )}
+                </div>
+              </article>
+            </Link>
+          ))}
         </div>
       </section>
     </div>

@@ -68,10 +68,9 @@ export default function Header() {
             </div>
 
             <div className=" flex-row hidden lg:flex">
-
-              <Button variant={"ghost"} className="hidden lg:flex">
-               <LoginPage/>
-              </Button>
+              <div className="hidden lg:flex">
+                <LoginPage />
+              </div>
               <Button variant={"ghost"} className="hidden lg:flex">
                 EN
               </Button>

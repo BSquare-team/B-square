@@ -1,0 +1,125 @@
+backend:
+  name: github
+  repo: aminb9383/OurBlog-Shadcn-Tellwind
+  branch: main
+
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+  - name: "blog"
+    label: "Blog Posts"
+    label_singular: "Blog Post"
+    folder: "content/blog"
+    create: true
+    extension: "json"
+    format: "json"
+    slug: "{{slug}}"
+
+    fields:
+      # ── Featured Image (Optional, for Blog Card) ──
+      - {
+          label: "Featured Image",
+          name: "featuredImage",
+          widget: "image",
+          required: false,
+        }
+
+      # ── Header Section ──
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "description", name: "description", widget: "text" }
+      - {
+          label: "Author",
+          name: "author",
+          widget: "select",
+          options: ["Amin", "Omid"],
+          default: "Amin",
+        }
+      - {
+          label: "Publish Date",
+          name: "date",
+          widget: "datetime",
+          default: "{{now}}",
+          width: "1/2",
+        }
+
+      # ── Tags (Two Categories, Each Max 3 Words) ──
+      - label: "Category Tags"
+        name: "categoryTags"
+        widget: "list"
+        required: false
+        hint: "e.g., Frontend, Backend, DevOps"
+        max: 3
+        field: { label: "Tag", name: "tag", widget: "string" }
+
+      - label: "Tech Tags"
+        name: "techTags"
+        widget: "list"
+        required: false
+        hint: "e.g., React, TypeScript, Next.js"
+        max: 3
+        field: { label: "Tag", name: "tag", widget: "string" }
+
+      # ── Main Content Blocks ──
+      - label: "Content Blocks"
+        name: "blocks"
+        widget: "list"
+        types:
+          - label: "Text"
+            name: "text"
+            widget: "object"
+            fields:
+              - { label: "Content", name: "content", widget: "markdown" }
+
+          - label: "Single Image"
+            name: "image"
+            widget: "object"
+            fields:
+              - { label: "Image", name: "src", widget: "image" }
+              - { label: "Alt Text", name: "alt", widget: "string" }
+              - {
+                  label: "Caption",
+                  name: "caption",
+                  widget: "string",
+                  required: false,
+                }
+
+          - label: "Image Slider"
+            name: "slider"
+            widget: "object"
+            fields:
+              - label: "Slides"
+                name: "slides"
+                widget: "list"
+                fields:
+                  - { label: "Image", name: "src", widget: "image" }
+                  - {
+                      label: "Caption",
+                      name: "caption",
+                      widget: "string",
+                      required: false,
+                    }
+
+          - label: "Code Snippet"
+            name: "code"
+            widget: "object"
+            fields:
+              - {
+                  label: "Language",
+                  name: "language",
+                  widget: "string",
+                  default: "typescript",
+                }
+              - { label: "Code", name: "code", widget: "text" }
+
+          - label: "Quote"
+            name: "quote"
+            widget: "object"
+            fields:
+              - { label: "Quote Text", name: "text", widget: "text" }
+              - {
+                  label: "Author",
+                  name: "author",
+                  widget: "string",
+                  required: false,
+                }
