@@ -1,0 +1,81 @@
+{
+  "title": "Best Next.js Personal Website Templates (2026): 12 Options Ranked",
+  "description": "Your personal website is the one project you never seem to finish. We tested 12 templates to help you pick the best one for your portfolio.",
+  "author": "Amin",
+  "date": "2026-02-18T10:00:00.000Z",
+  "categoryTags": [
+    { "tag": "Web Development" },
+    { "tag": "Frontend" },
+    { "tag": "Templates" }
+  ],
+  "techTags": [
+    { "tag": "Next.js" },
+    { "tag": "TypeScript" },
+    { "tag": "Tailwind" }
+  ],
+  "featuredImage": "/images/banner-1.jpg",
+  "blocks": [
+    {
+      "type": "text",
+      "content": "Your personal website is the one project you never seem to finish. You start from scratch, burn a weekend on layout decisions, and end up with something that looks worse than a GitHub README.\n\nA good Next.js personal website template fixes this. You get a production-ready foundation with responsive design, dark mode, SEO, and a blog system built in. Customize the content, deploy to Vercel, and move on to work that actually matters."
+    },
+    {
+      "type": "quote",
+      "text": "The best personal website is the one that ships. Don't spend months perfecting your portfolio when a template can get you 90% of the way there in a weekend.",
+      "author": "Tim Lrx"
+    },
+    {
+      "type": "text",
+      "content": "## Key Takeaways\n\nIf you remember nothing else from this article:\n\n- **Tailwind Next.js Starter Blog** (6k+ stars) is the best free option for writers and bloggers\n- **Chronark.com** is the cleanest developer portfolio template with built-in analytics\n- **Vercel Templates** offer the widest variety, but quality varies significantly\n- **Paid templates** are worth it if you need advanced features like MDX, search, and analytics out of the box"
+    },
+    {
+      "type": "image",
+      "src": "/images/banner-1.jpg",
+      "alt": "Comparison of Next.js personal website templates",
+      "caption": "Figure 1: Side-by-side comparison of the top 12 templates ranked in this article"
+    },
+    {
+      "type": "text",
+      "content": "## #1: Tailwind Next.js Starter Blog\n\n**Best for:** Writers, bloggers, and developers who prioritize content\n\n**GitHub:** [timlrx/tailwind-nextjs-starter-blog](https://github.com) | **Demo:** [tailwind-nextjs-starter-blog.vercel.app](https://vercel.app)\n\nThe most complete Next.js personal website template for content creators. With over 6,000 GitHub stars, it is the most popular personal site template in the Next.js ecosystem — and for good reason."
+    },
+    {
+      "type": "slider",
+      "slides": [
+        {
+          "src": "/images/banner-1.jpg",
+          "caption": "Template homepage with dark mode enabled"
+        },
+        {
+          "src": "/images/banner-2.jpg",
+          "caption": "Blog post view with MDX support"
+        },
+        {
+          "src": "/images/promo.jpg",
+          "caption": "Mobile responsive layout"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "content": "The template includes everything you need: MDX blog with tags, RSS feed, sitemap generation, SEO optimization with JSON-LD, dark mode, and analytics support. It uses the App Router with TypeScript and Tailwind CSS."
+    },
+    {
+      "type": "code",
+      "language": "typescript",
+      "code": "// Example: How the blog generates static pages\nexport function generateStaticParams() {\n  const posts = getAllPosts();\n  return posts.map((post) => ({\n    slug: post.slug,\n  }));\n}\n\n// Each post is pre-rendered at build time\nexport default function BlogPost({ params }) {\n  const post = getPostBySlug(params.slug);\n  return <PostContent post={post} />;\n}"
+    },
+    {
+      "type": "text",
+      "content": "## Frequently Asked Questions\n\n### What is the best free Next.js personal website template?\n\nThe **Tailwind Next.js Starter Blog** by timlrx is the best free option with over 6,000 GitHub stars. It includes MDX blog support, dark mode, SEO optimization, RSS feeds, sitemap generation, and tag-based filtering. It uses the App Router with TypeScript and Tailwind CSS and works on Vercel with one-click deployment."
+    },
+    {
+      "type": "quote",
+      "text": "Good artists copy, great artists steal. Pick a template, make it your own, and focus on creating content that matters.",
+      "author": "Anonymous"
+    },
+    {
+      "type": "text",
+      "content": "## Final Verdict\n\nAfter testing all 12 templates, here's our recommendation:\n\n| Use Case | Best Template |\n|----------|---------------|\n| **Blogging** | Tailwind Next.js Starter Blog |\n| **Developer Portfolio** | Chronark.com |\n| **Minimalist** | Nextfolio |\n| **Full-featured** | Next.js + Contentlayer |\n\nChoose based on your primary use case. All templates are excellent starting points."
+    }
+  ]
+}

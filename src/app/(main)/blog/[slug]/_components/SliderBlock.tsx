@@ -1,20 +1,23 @@
-// components/ImageSlider.tsx
+// src/app/(main)/blog/[slug]/_components/SliderBlock.tsx
 
 "use client";
 
-import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Keyboard } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Slide } from "@/src/features/blog/lib/types";
 
-interface ImageSliderProps {
+interface Slide {
+  src: string;
+  caption?: string;
+}
+
+interface SliderBlockProps {
   slides: Slide[];
 }
 
-export default function ImageSlider({ slides }: ImageSliderProps) {
+export default function SliderBlock({ slides }: SliderBlockProps) {
   return (
     <div className="my-8 rounded-xl overflow-hidden">
       <Swiper

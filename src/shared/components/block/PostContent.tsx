@@ -2,7 +2,7 @@
 
 "use client";
 
-import { ContentBlock } from "@/src/shared/lib/types";
+import { ContentBlock } from "@/src/features/blog/lib/types";
 import ImageSlider from "./ImageSlider";
 import CodeBlock from "./CodeBlock";
 import QuoteBlock from "./QuoteBlock";

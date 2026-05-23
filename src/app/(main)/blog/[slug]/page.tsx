@@ -1,13 +1,19 @@
-// app/blog/[slug]/page.tsx
+// src/app/(main)/blog/[slug]/page.tsx
 
-import { getAllPosts, getPostBySlug } from "@/src/features/blog/lib/posts";
+import { getPostBySlug, getAllPosts } from "@/src/features/blog/lib/posts";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import PostContent from "@/src/shared/components/block/PostContent";
+import PostHeader from "./_components/PostHeader";
+import PostContent from "./_components/PostContent";
 import { APP_NAME, SERVER_URL } from "@/src/shared/lib/constants";
 import { Metadata } from "next";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 3600;
+
+export function generateStaticParams() {
+  const posts = getAllPosts();
+  return posts.map((post) => ({ slug: post.slug }));
+}
 
 export async function generateMetadata({
   params,
@@ -18,9 +24,7 @@ export async function generateMetadata({
   const post = getPostBySlug(slug);
 
   if (!post) {
-    return {
-      title: `Post Not Found | ${APP_NAME}`,
-    };
+    return { title: `Post Not Found | ${APP_NAME}` };
   }
 
   const tags = [
@@ -32,12 +36,12 @@ export async function generateMetadata({
 
   return {
     title: post.title,
-    description: post.description || "",
+    description: post.description,
     keywords: tags,
     authors: [{ name: post.author }],
     openGraph: {
       title: `${post.title} | ${APP_NAME}`,
-      description: post.description || "",
+      description: post.description,
       type: "article",
       publishedTime: post.date,
       authors: [post.author],
@@ -56,21 +60,11 @@ export async function generateMetadata({
     twitter: {
       card: "summary_large_image",
       title: post.title,
-      description: post.description || "",
+      description: post.description,
       images: post.featuredImage ? [post.featuredImage] : undefined,
     },
-    alternates: {
-      canonical: postUrl,
-    },
+    alternates: { canonical: postUrl },
   };
-}
-
-// 👇 Static Params برای build
-export function generateStaticParams() {
-  const posts = getAllPosts();
-  return posts.map((post) => ({
-    slug: post.slug,
-  }));
 }
 
 export default async function BlogPostPage({
@@ -86,57 +80,26 @@ export default async function BlogPostPage({
   }
 
   return (
-    <div className="min-h-screen max-w-3xl mx-auto px-4 py-16">
+    <div className="min-h-screen container m-auto px-6">
       {/* Back Button */}
       <Link
         href="/blog"
-        className="inline-flex items-center gap-1 text-zinc-400 hover:text-zinc-200 transition-colors mb-8"
+        className="inline-flex items-center gap-1 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 transition-colors pt-8"
       >
         ← Back to Blog
       </Link>
 
-      {/* Header */}
-      <header className="mb-10">
-        <h1 className="text-3xl md:text-4xl font-bold mb-4">{post.title}</h1>
+      {/* Post Header */}
+      <PostHeader
+        title={post.title}
+        author={post.author}
+        date={post.date}
+        categoryTags={post.categoryTags}
+        techTags={post.techTags}
+        featuredImage={post.featuredImage}
+      />
 
-        <p className="text-zinc-400 text-lg mb-4">{post.description}</p>
-
-        <div className="flex flex-wrap items-center gap-3 text-sm text-zinc-500">
-          <span>{post.author}</span>
-          <span>·</span>
-          <span>
-            {new Date(post.date).toLocaleDateString("en-US", {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-            })}
-          </span>
-
-          {post.techTags.length > 0 && (
-            <div className="flex gap-1.5">
-              {post.techTags.map((t) => (
-                <span
-                  key={t.tag}
-                  className="px-2 py-0.5 rounded-full bg-blue-900/50 text-blue-300 text-xs"
-                >
-                  {t.tag}
-                </span>
-              ))}
-            </div>
-          )}
-        </div>
-      </header>
-
-      {/* Featured Image */}
-      {post.featuredImage && (
-        <img
-          src={post.featuredImage}
-          alt={post.title}
-          className="w-full rounded-xl mb-10 object-cover max-h-96"
-        />
-      )}
-
-      {/* Content Blocks */}
+      {/* Post Content */}
       <PostContent blocks={post.blocks} />
     </div>
   );
