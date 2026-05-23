@@ -1,6 +1,6 @@
 // app/blog/[slug]/page.tsx
 
-import { getAllPosts, getPostBySlug } from "@/src/shared/lib/posts";
+import { getAllPosts, getPostBySlug } from "@/src/features/blog/lib/posts";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import PostContent from "@/src/shared/components/block/PostContent";
