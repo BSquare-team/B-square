@@ -6,8 +6,8 @@ export default function page() {
       <div className="prose dark:prose-invert">
         <h1>Changelog from my journey</h1>
         <p>
-          I've been working at Kay.ai for the past 1.5 years. Here's a timeline
-          of my journey.
+          Ive been working at Kay.ai for the past 1.5 years. Heres a timeline of
+          my journey.
         </p>
       </div>
 
@@ -22,7 +22,10 @@ export default function page() {
           </div>
           {/* text */}
           <div className="relative flex flex-col w-full prose prose-ul:mb-0 dark:prose-invert ">
-            <span className="md:hidden flex text-[rgb(115 115 115)] "> Mar 2024 - Present</span>
+            <span className="md:hidden flex text-[rgb(115 115 115)] ">
+              {" "}
+              Mar 2024 - Present
+            </span>
             <h3 className="lg:text-xl mt-0">Lorem ipsum dolor sit.</h3>
             <span>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -58,7 +61,6 @@ export default function page() {
           />
         </div>
 
-        
         <div className="relative flex justify-start py-6  w-full ">
           {/* Date */}
           <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
@@ -66,7 +68,10 @@ export default function page() {
           </div>
           {/* text */}
           <div className="relative flex flex-col w-full prose prose-ul:mb-0 dark:prose-invert ">
-            <span className="md:hidden flex text-[rgb(115 115 115)] "> Mar 2024 - Present</span>
+            <span className="md:hidden flex text-[rgb(115 115 115)] ">
+              {" "}
+              Mar 2024 - Present
+            </span>
             <h3 className="lg:text-xl mt-0">Lorem ipsum dolor sit.</h3>
             <span>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -101,8 +106,6 @@ export default function page() {
                           top-0 xl:top-14"
           />
         </div>
-
-        
       </div>
     </section>
   );

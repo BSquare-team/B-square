@@ -5,7 +5,7 @@ import SimpleSliderBlock from "./SimpleSliderBlock";
 import CardSliderBlock from "./CardSliderBlock";
 import CodeBlock from "./CodeBlock";
 import QuoteBlock from "./QuoteBlock";
-import type { ContentBlock } from "@/src/features/blog/lib/blog.types";
+import type { ContentBlock } from "@/src/features/blog/types/blog.types";
 
 interface PostContentProps {
   blocks: ContentBlock[];

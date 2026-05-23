@@ -131,3 +131,17 @@ collections:
                   widget: "string",
                   required: false,
                 }
+  # ── Changelog ──
+  - name: "changelog"
+    label: "Changelog"
+    label_singular: "Changelog Entry"
+    folder: "content/changelog"
+    create: true
+    extension: "json"
+    format: "json"
+    slug: "{{year}}-{{month}}-{{slug}}"
+
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime", default: "{{now}}" }
+      - { label: "Content", name: "content", widget: "markdown" }
