@@ -4,7 +4,7 @@
 import fs from "fs";
 // بازم ماژول نودجی اسی برای کار با مسیر فایل‌ها استفاده میشه. مثلاً چسبوندن قطعات مسیر به همدیگه.
 import path from "path";
-import { BlogPost } from "./types";
+import { BlogPost } from "./blog.types";
 
 // این خط یه رشته می‌سازه که مسیر دقیق پوشه‌ای که فایل‌های JSON پست‌ها توش ذخیره شدن رو نشون میده.
 const postsDirectory = path.join(process.cwd(), "content/blog");

@@ -1,11 +1,11 @@
 // src/app/(main)/blog/[slug]/_components/PostContent.tsx
 
 import TextBlock from "./TextBlock";
-import ImageBlock from "./ImageBlock";
-import SliderBlock from "./SliderBlock";
+import SimpleSliderBlock from "./SimpleSliderBlock";
+import CardSliderBlock from "./CardSliderBlock";
 import CodeBlock from "./CodeBlock";
 import QuoteBlock from "./QuoteBlock";
-import type { ContentBlock } from "@/src/features/blog/lib/types";
+import type { ContentBlock } from "@/src/features/blog/lib/blog.types";
 
 interface PostContentProps {
   blocks: ContentBlock[];
@@ -28,20 +28,13 @@ export default function PostContent({ blocks }: PostContentProps) {
             if (!block.content) return null;
             return <TextBlock key={index} content={block.content} />;
 
-          case "image":
-            if (!block.src) return null;
-            return (
-              <ImageBlock
-                key={index}
-                src={block.src}
-                alt={block.alt || ""}
-                caption={block.caption}
-              />
-            );
-
-          case "slider":
+          case "simpleSlider":
             if (!block.slides || block.slides.length === 0) return null;
-            return <SliderBlock key={index} slides={block.slides} />;
+            return <SimpleSliderBlock key={index} slides={block.slides} />;
+
+          case "cardSlider":
+            if (!block.cards || block.cards.length === 0) return null;
+            return <CardSliderBlock key={index} cards={block.cards} />;
 
           case "code":
             if (!block.code) return null;

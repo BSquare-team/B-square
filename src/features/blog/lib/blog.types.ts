@@ -1,21 +1,26 @@
-// lib/types.ts
+// src/features/blog/types/blog.types.ts
 
 export interface Tag {
   tag: string;
 }
 
-export interface Slide {
+export interface SimpleSlide {
   src: string;
   caption?: string;
 }
 
+export interface CardSlide {
+  src: string;
+  title: string;
+  description?: string;
+  link?: string;
+}
+
 export interface ContentBlock {
-  type: "text" | "image" | "slider" | "code" | "quote";
+  type: "text" | "simpleSlider" | "cardSlider" | "code" | "quote";
   content?: string;
-  src?: string;
-  alt?: string;
-  caption?: string;
-  slides?: Slide[];
+  slides?: SimpleSlide[];
+  cards?: CardSlide[];
   language?: string;
   code?: string;
   text?: string;
@@ -25,7 +30,7 @@ export interface ContentBlock {
 export interface BlogPost {
   title: string;
   description: string;
-  author: "amin" | "omid";
+  author: string;
   date: string;
   categoryTags: Tag[];
   techTags: Tag[];

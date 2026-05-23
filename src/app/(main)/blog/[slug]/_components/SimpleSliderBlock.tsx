@@ -1,20 +1,23 @@
-// components/ImageSlider.tsx
+// src/app/(main)/blog/[slug]/_components/SimpleSliderBlock.tsx
 
 "use client";
 
-import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Keyboard } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Slide } from "@/src/features/blog/lib/blog.types";
 
-interface ImageSliderProps {
-  slides: Slide[];
+interface SimpleSlide {
+  src: string;
+  caption?: string;
 }
 
-export default function ImageSlider({ slides }: ImageSliderProps) {
+interface SimpleSliderBlockProps {
+  slides: SimpleSlide[];
+}
+
+export default function SimpleSliderBlock({ slides }: SimpleSliderBlockProps) {
   return (
     <div className="my-8 rounded-xl overflow-hidden">
       <Swiper
@@ -24,6 +27,7 @@ export default function ImageSlider({ slides }: ImageSliderProps) {
         keyboard={{ enabled: true }}
         spaceBetween={0}
         slidesPerView={1}
+        loop={true}
         className="rounded-xl"
       >
         {slides.map((slide, index) => (

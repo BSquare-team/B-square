@@ -29,17 +29,11 @@
       "content": "## Key Takeaways\n\nIf you remember nothing else from this article:\n\n- **Tailwind Next.js Starter Blog** (6k+ stars) is the best free option for writers and bloggers\n- **Chronark.com** is the cleanest developer portfolio template with built-in analytics\n- **Vercel Templates** offer the widest variety, but quality varies significantly\n- **Paid templates** are worth it if you need advanced features like MDX, search, and analytics out of the box"
     },
     {
-      "type": "image",
-      "src": "/images/banner-1.jpg",
-      "alt": "Comparison of Next.js personal website templates",
-      "caption": "Figure 1: Side-by-side comparison of the top 12 templates ranked in this article"
-    },
-    {
       "type": "text",
       "content": "## #1: Tailwind Next.js Starter Blog\n\n**Best for:** Writers, bloggers, and developers who prioritize content\n\n**GitHub:** [timlrx/tailwind-nextjs-starter-blog](https://github.com) | **Demo:** [tailwind-nextjs-starter-blog.vercel.app](https://vercel.app)\n\nThe most complete Next.js personal website template for content creators. With over 6,000 GitHub stars, it is the most popular personal site template in the Next.js ecosystem — and for good reason."
     },
     {
-      "type": "slider",
+      "type": "simpleSlider",
       "slides": [
         {
           "src": "/images/banner-1.jpg",
@@ -58,6 +52,29 @@
     {
       "type": "text",
       "content": "The template includes everything you need: MDX blog with tags, RSS feed, sitemap generation, SEO optimization with JSON-LD, dark mode, and analytics support. It uses the App Router with TypeScript and Tailwind CSS."
+    },
+    {
+      "type": "cardSlider",
+      "cards": [
+        {
+          "src": "/images/banner-1.jpg",
+          "title": "Tailwind Next.js Starter Blog",
+          "description": "Best free option for writers and bloggers with 6k+ GitHub stars. Includes MDX, dark mode, SEO, RSS, and sitemap.",
+          "link": "/blog/tailwind-nextjs-starter-blog"
+        },
+        {
+          "src": "/images/banner-2.jpg",
+          "title": "Chronark Portfolio",
+          "description": "Cleanest developer portfolio template with built-in analytics and perfect Lighthouse scores.",
+          "link": "/blog/chronark-portfolio"
+        },
+        {
+          "src": "/images/promo.jpg",
+          "title": "Nextfolio Minimal",
+          "description": "Perfect for developers who want a minimalist, fast, and easy-to-customize portfolio.",
+          "link": "/blog/nextfolio-minimal"
+        }
+      ]
     },
     {
       "type": "code",
