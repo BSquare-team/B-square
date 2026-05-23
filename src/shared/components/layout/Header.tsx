@@ -54,12 +54,10 @@ export default function Header() {
             <Link href="/blog" className="font-medium text-gray-500">
               Blog
             </Link>
-            <a href="#" className="font-medium text-gray-500">
-              Guides
-            </a>
-            <a href="#" className="font-medium text-gray-500">
-              Alternatives
-            </a>
+
+            <Link href="/changelog" className="font-medium text-gray-500">
+              changelog
+            </Link>
           </div>
           <div dir="rtl" className="min-w-34.5 ">
             <div className=" lg:hidden ">
