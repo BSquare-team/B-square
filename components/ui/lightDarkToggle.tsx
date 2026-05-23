@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
 import {
   Tooltip,
   TooltipContent,
@@ -14,25 +15,36 @@ type a = {
 };
 
 export default function LightDarkToggle({ className }: a) {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const { resolvedTheme, setTheme } = useTheme();
+
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+
+  const isDark = resolvedTheme === "dark";
 
   return (
     <div>
       <TooltipProvider>
         <Tooltip>
-          <TooltipTrigger
-          asChild
-            className={className}
-            onClick={() => {
-              document.body.classList.toggle("dark");
-              setIsDarkMode((e) => !e);
-            }}
-          >
-            {isDarkMode ? <MoonIcon /> : <SunIcon />}
+          <TooltipTrigger asChild>
+            <button
+              type="button"
+              className={className}
+              onClick={() => {
+                setTheme(isDark ? "light" : "dark");
+              }}
+            >
+              {isDark ? <MoonIcon /> : <SunIcon />}
+            </button>
           </TooltipTrigger>
 
           <TooltipContent>
-            {isDarkMode ? "Enable Light mode" : "Enable Dark mode"}
+            {isDark ? "Enable Light mode" : "Enable Dark mode"}
           </TooltipContent>
         </Tooltip>
       </TooltipProvider>

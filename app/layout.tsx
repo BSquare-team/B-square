@@ -11,7 +11,7 @@ import { Metadata } from "next";
 import localFont from "next/font/local";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
-
+import { ThemeProvider } from "next-themes";
 // فونت هدینگ
 const hankenGrotesk = localFont({
   src: "../public/font/hanken-grotesk-latin-wght-normal.0zrhm0yfqw_5l.woff2",
@@ -78,16 +78,21 @@ export default function RootLayout({
       lang="en"
       className={`overflow-x-clip ${hankenGrotesk.variable} ${inter.variable}`}
       suppressContentEditableWarning
+      suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col relative overflow-x-clip">
-        <Header />
-        {children}
-        <div
-          className="bg-linear-to-r via-[#ee87cb] from-[#fff1be] to-[#b060ff] dark:bg-linear-to-r 
-               dark:from-[#06b6d4] dark:via-[#3b82f6] dark:to-[#df10ff]  rounded-2xl h-44 w-80 absolute -top-20 -right-5 z-[-1] blur-[80px] dark:blur-[110px] "
-        ></div>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <Header />
 
-        <Footer />
+          {children}
+
+          <div
+            className="bg-linear-to-r via-[#ee87cb] from-[#fff1be] to-[#b060ff] dark:bg-linear-to-r 
+               dark:from-[#06b6d4] dark:via-[#3b82f6] dark:to-[#df10ff]  rounded-2xl h-44 w-80 absolute -top-20 -right-5 z-[-1] blur-[80px] dark:blur-[110px] "
+          ></div>
+
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
