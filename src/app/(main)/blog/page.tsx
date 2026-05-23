@@ -7,8 +7,6 @@ import { getAllPosts } from "@/src/features/blog/lib/posts";
 import { APP_NAME, SERVER_URL } from "@/src/shared/lib/constants";
 import { Metadata } from "next";
 
-export const dynamic = "force-dynamic";
-
 export const metadata: Metadata = {
   title: "Blog",
   description:
