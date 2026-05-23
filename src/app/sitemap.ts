@@ -2,7 +2,7 @@
 
 import { MetadataRoute } from "next";
 import { SERVER_URL } from "@/src/shared/lib/constants";
-import { getAllPosts } from "@/src/shared/lib/posts";
+import { getAllPosts } from "@/src/features/blog/lib/posts";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const posts = getAllPosts();

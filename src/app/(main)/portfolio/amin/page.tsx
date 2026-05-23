@@ -3,20 +3,15 @@
 import { Button } from "@/src/shared/components/ui/button";
 import Image from "next/image";
 
-import picMe2 from "@/assets/image/mePic.jpg";
-import hp6 from "@/assets/image/hp6.jpg";
-import hp5 from "@/assets/image/hp5.jpg";
-import hp4 from "@/assets/image/hp4.jpg";
-import hp3 from "@/assets/image/hp3.jpg";
-import hp2 from "@/assets/image/hp2.jpg";
+import picMe2 from "@/src/assets/image/mePic.jpg";
+import hp6 from "@/src/assets/image/hp6.jpg";
+import hp5 from "@/src/assets/image/hp5.jpg";
+import hp4 from "@/src/assets/image/hp4.jpg";
+import hp3 from "@/src/assets/image/hp3.jpg";
+import hp2 from "@/src/assets/image/hp2.jpg";
 
-import cp6 from "@/assets/image/cp6.jpg";
-import cp7 from "@/assets/image/cp7.jpg";
-import cp8 from "@/assets/image/cp8.jpg";
-import cp9 from "@/assets/image/cp9.jpg";
-
-import { LucideStar, Star } from "lucide-react";
-import CommentsSec from "@/src/shared/components/sections/commentsSec";
+import { LucideStar } from "lucide-react";
+import CommentsSec from "../_components/CommentsSec";
 
 export default function page() {
   return (
