@@ -1,5 +1,5 @@
 import React from "react";
-import { APP_NAME } from "@/src/features/lib/constants";
+import { APP_NAME } from "../../lib/constants";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();

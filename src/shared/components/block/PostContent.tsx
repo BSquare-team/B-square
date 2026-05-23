@@ -6,6 +6,7 @@ import { ContentBlock } from "@/src/shared/lib/types";
 import ImageSlider from "./ImageSlider";
 import CodeBlock from "./CodeBlock";
 import QuoteBlock from "./QuoteBlock";
+import Image from "next/image";
 
 interface PostContentProps {
   blocks: ContentBlock[];
@@ -26,11 +27,7 @@ export default function PostContent({ blocks }: PostContentProps) {
                 key={index}
                 className="prose prose-invert prose-zinc max-w-none"
               >
-             
-              
-              
-                  {block.content || ""}
-             
+                {block.content || ""}
               </div>
             );
 

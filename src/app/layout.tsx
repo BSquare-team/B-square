@@ -1,4 +1,4 @@
-import "@/styles/globals.css";
+import "@/src/shared/styles/globals.css";
 import {
   APP_NAME,
   APP_DESCRIPTION,
@@ -7,24 +7,8 @@ import {
   SERVER_URL,
 } from "@/src/shared/lib/constants";
 import { Metadata } from "next";
-
-import localFont from "next/font/local";
-import Header from "@/src/shared/components/header";
-import Footer from "@/components/footer";
-
-// فونت هدینگ
-const hankenGrotesk = localFont({
-  src: "../public/font/hanken-grotesk-latin-wght-normal.0zrhm0yfqw_5l.woff2",
-  variable: "--font-heading",
-  display: "swap",
-});
-
-// فونت متن
-const inter = localFont({
-  src: "../public/font/inter-latin-wght-normal.055ydel_y7o6i.woff2",
-  variable: "--font-sans",
-  display: "swap",
-});
+import Footer from "../shared/components/layout/Footer";
+import Header from "../shared/components/layout/Header";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SERVER_URL),
@@ -76,7 +60,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`overflow-x-clip ${hankenGrotesk.variable} ${inter.variable}`}
+      className={`overflow-x-clip`}
       suppressContentEditableWarning
     >
       <body className="min-h-full flex flex-col relative overflow-x-clip">

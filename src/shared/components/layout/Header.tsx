@@ -5,11 +5,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/src/shared/components/ui/button";
 import { useEffect, useState } from "react";
-import LightDarkToggle from "./ui/lightDarkToggle";
-import MobileDrawer from "./ui/mobileDrawer";
+import LightDarkToggle from "../ui/lightDarkToggle";
+import MobileDrawer from "../ui/mobileDrawer";
 import { Headroom } from "nextjs-headroom";
-import { UserIcon } from "lucide-react";
-import LoginPage from "./ui/loginDialog";
+import LoginPage from "../ui/loginDialog";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -52,9 +51,9 @@ export default function Header() {
           </div>
 
           <div className="hidden lg:flex gap-4 text-lg">
-            <a href="/blog" className="font-medium text-gray-500">
+            <Link href="/blog" className="font-medium text-gray-500">
               Blog
-            </a>
+            </Link>
             <a href="#" className="font-medium text-gray-500">
               Guides
             </a>

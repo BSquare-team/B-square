@@ -3,7 +3,7 @@
 import { getAllPosts, getPostBySlug } from "@/src/shared/lib/posts";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import PostContent from "@/src/shared/components/PostContent";
+import PostContent from "@/src/shared/components/block/PostContent";
 import { APP_NAME, SERVER_URL } from "@/src/shared/lib/constants";
 import { Metadata } from "next";
 
