@@ -2,6 +2,7 @@ backend:
   name: github
   repo: aminb9383/OurBlog-Shadcn-Tellwind
   branch: main
+  auth_url: https://auth.sveltia-cms.dev/.well-known/oauth/providers
 
 media_folder: "public/images"
 public_folder: "/images"
@@ -71,21 +72,8 @@ collections:
             fields:
               - { label: "Content", name: "content", widget: "markdown" }
 
-          - label: "Single Image"
-            name: "image"
-            widget: "object"
-            fields:
-              - { label: "Image", name: "src", widget: "image" }
-              - { label: "Alt Text", name: "alt", widget: "string" }
-              - {
-                  label: "Caption",
-                  name: "caption",
-                  widget: "string",
-                  required: false,
-                }
-
-          - label: "Image Slider"
-            name: "slider"
+          - label: "Simple Slider"
+            name: "simpleSlider"
             widget: "object"
             fields:
               - label: "Slides"
@@ -96,6 +84,29 @@ collections:
                   - {
                       label: "Caption",
                       name: "caption",
+                      widget: "string",
+                      required: false,
+                    }
+
+          - label: "Card Slider"
+            name: "cardSlider"
+            widget: "object"
+            fields:
+              - label: "Cards"
+                name: "cards"
+                widget: "list"
+                fields:
+                  - { label: "Image", name: "src", widget: "image" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - {
+                      label: "Description",
+                      name: "description",
+                      widget: "text",
+                      required: false,
+                    }
+                  - {
+                      label: "Link",
+                      name: "link",
                       widget: "string",
                       required: false,
                     }
@@ -123,3 +134,17 @@ collections:
                   widget: "string",
                   required: false,
                 }
+  # ── Changelog ──
+  - name: "changelog"
+    label: "Changelog"
+    label_singular: "Changelog Entry"
+    folder: "content/changelog"
+    create: true
+    extension: "json"
+    format: "json"
+    slug: "{{year}}-{{month}}-{{slug}}"
+
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime", default: "{{now}}" }
+      - { label: "Content", name: "content", widget: "markdown" }
