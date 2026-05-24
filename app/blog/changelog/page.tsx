@@ -101,9 +101,8 @@ export default function page() {
                           top-0 xl:top-14"
           />
         </div>
-
-        
       </div>
+     
     </section>
   );
 }
