@@ -71,9 +71,15 @@ export default function Header() {
               <Button variant={"ghost"} className="hidden lg:flex">
                 EN
               </Button>
-              <Button variant={"ghost"}>
+
+              <div
+                className="inline-flex items-center justify-center gap-2 whitespace-nowrap
+               rounded-md text-sm font-medium transition-colors 
+               hover:bg-accent hover:text-accent-foreground h-10 w-10"
+              >
+                {/* این خودش دکمست و وقتی توی دکمه میزاریم ارور میده */}
                 <LightDarkToggle className=" " />
-              </Button>
+              </div>
             </div>
           </div>
         </div>
