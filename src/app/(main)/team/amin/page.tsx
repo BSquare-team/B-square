@@ -125,24 +125,17 @@ export default function page() {
       {/* comments  */}
       <CommentsSec />
 
-
-  <section className="container m-auto max-w-7xl mt-20 px-6">
+      <section className="container m-auto max-w-7xl mt-20 px-6">
         <div className="flex flex-col md:flex-row justify-between ">
-        
           <div className="prose dark:prose-invert md:w-[60%]">
             <h2>My Resume</h2>
-            <p>
-             work I've done 
-            </p>
+            <p>work I've done</p>
           </div>
         </div>
       </section>
 
-
-
       <section className="container m-auto max-w-7xl mt-20 px-6">
         <div className="flex flex-col md:flex-row justify-between ">
-        
           <div className="prose dark:prose-invert md:w-[60%]">
             <h2>About me</h2>
             <p>
@@ -152,8 +145,10 @@ export default function page() {
             </p>
           </div>
 
-         
-          <Link href="/blog" className="md:w-[40%] group">
+          <Link
+            href="/blog/my-journey-through-iran-s-education-system-and-medical-field-a-raw-personal-story"
+            className="md:w-[40%] group"
+          >
             <div className="rounded-3xl overflow-hidden hover:shadow-2xl shadow-lg dark:bg-[#0a0a0a94] dark:shadow-[0_10px_30px_-10px_rgba(255,255,255,0.03)] dark:hover:shadow-[0_20px_50px_-12px_rgba(255,255,255,0.08)] transition-all duration-300 h-full">
               <div className="p-8 border-t-4 border-blue-800 flex flex-col justify-between h-full">
                 <div>
@@ -161,12 +156,15 @@ export default function page() {
                     My Journey
                   </p>
                   <h2 className="mt-2 text-xl/7 font-bold text-gray-900 dark:text-white line-clamp-3 group-hover:text-blue-400 transition-colors">
-                    My story
+                    My Journey Through Iran's Education System and Medical
+                    Field: A Raw Personal Story
                   </h2>
                   <p className="mt-2 text-sm/6 text-gray-600 dark:text-gray-400 line-clamp-4">
-                    Read about my journey into frontend development, the
-                    challenges I faced, and how I overcame them to become the
-                    developer I am today.
+                    Almost everyone around me believed that education was the
+                    only safe path toward becoming someone valuable. And
+                    honestly, I believed it too. I wanted to become skilled at
+                    something meaningful. I wanted a future I could be proud of.
+                    But the education system I grew up in was deeply broken.
                   </p>
                 </div>
                 <p className="mt-6 text-sm/5 font-medium text-gray-700 dark:text-gray-300">
@@ -179,9 +177,7 @@ export default function page() {
       </section>
 
       <section className="container m-auto max-w-7xl mt-20 px-6">
-       
         <div className="flex flex-col md:flex-row justify-between">
-          
           <div className="md:sticky md:top-40 md:w-[60%] h-fit">
             <div className="prose dark:prose-invert">
               <h2>my first client</h2>
@@ -189,7 +185,6 @@ export default function page() {
             </div>
           </div>
 
-        
           <Link href="/blog" className="md:w-[40%] group">
             <div className="rounded-3xl overflow-hidden hover:shadow-2xl shadow-lg dark:bg-[#0a0a0a94] dark:shadow-[0_10px_30px_-10px_rgba(255,255,255,0.03)] dark:hover:shadow-[0_20px_50px_-12px_rgba(255,255,255,0.08)] transition-all duration-300">
               <div className="p-8 border-t-4 border-blue-800 flex flex-col justify-between">
@@ -198,10 +193,14 @@ export default function page() {
                     My Journey
                   </p>
                   <h2 className="mt-2 text-xl/7 font-bold text-gray-900 dark:text-white line-clamp-3 group-hover:text-blue-400 transition-colors">
-                    My story
+                   My Journey Through Iran's Education System and Medical Field: A Raw Personal Story
                   </h2>
                   <p className="mt-2 text-sm/6 text-gray-600 dark:text-gray-400 line-clamp-4">
-                    Read about my journey into frontend development...
+                      Almost everyone around me believed that education was the
+                    only safe path toward becoming someone valuable. And
+                    honestly, I believed it too. I wanted to become skilled at
+                    something meaningful. I wanted a future I could be proud of.
+                    But the education system I grew up in was deeply broken.
                   </p>
                 </div>
                 <p className="mt-6 text-sm/5 font-medium text-gray-700 dark:text-gray-300">
@@ -210,8 +209,6 @@ export default function page() {
               </div>
             </div>
           </Link>
-
-          
         </div>
       </section>
     </div>
