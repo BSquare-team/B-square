@@ -68,7 +68,7 @@ export default function Page() {
         </h2>
 
         <div className="mt-3 flex items-center gap-2 text-sm text-white/60 transition-all duration-300 group-hover:text-teal-400">
-          <span>مشاهده نمونه کارها</span>
+          <span>See portfolio</span>
           <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
         </div>
       </div>
