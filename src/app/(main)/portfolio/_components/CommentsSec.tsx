@@ -59,7 +59,7 @@ export default function CommentsSec() {
 
   const [ShowAll, setShowAll] = useState(false);
 
-  const visibleComments = ShowAll ? comments : comments.slice(0, 2);
+  const visibleComments = ShowAll ? comments : comments.slice(0, 1);
 
   return (
     <section className="relative container mx-auto max-w-7xl mt-8">
