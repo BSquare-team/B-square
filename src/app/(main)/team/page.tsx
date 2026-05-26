@@ -9,77 +9,72 @@ const members = [
     name: "Omid",
     role: "Frontend Engineer",
     image: omidPic,
-    href: "/portfolio/omid",
+    href: "/team/omid",
   },
   {
     name: "Amin",
     role: "Creative Developer",
     image: aminPic,
-    href: "/portfolio/amin",
+    href: "/team/amin",
   },
 ];
 
 export default function Page() {
   return (
-    <section className="container max-w-7xl mx-auto px-6 py-30 ">
+    <section className="container m-auto max-w-7xl ">
       {/* heading */}
-      <div className="text-center mb-12">
-        <span className="text-sm tracking-[0.3em] uppercase text-teal-500 font-medium">
-          Portfolio
+      <section className="p-6 ">
+        <div className="flex flex-col justify-center prose prose-h1:mb-2 dark:prose-invert">
+          <p>teem</p>
+          <h1>know us more</h1>
+          <p>
+            Stay informed with product updates, company news, and insights on
+            how to sell smarter at your company.
+          </p>
+        </div>
+      </section>
+
+{/* cards */}
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8 pb-20 pt-10 max-w-5xl mx-auto">
+  {members.map((member) => (
+    <Link
+      key={member.name}
+      href={member.href}
+      className="group relative overflow-hidden rounded-2xl bg-white/5 dark:bg-black/20 backdrop-blur-md border border-white/10 shadow-xl transition-all duration-300 hover:shadow-2xl hover:border-teal-500/30"
+    >
+      {/* image container - نسبت ثابت و زیبا */}
+      <div className="relative aspect-[4/3] w-full overflow-hidden bg-gray-800">
+        <Image
+          src={member.image}
+          alt={member.name}
+          fill
+          sizes="(max-width: 768px) 100vw, 50vw"
+          quality={80}
+          className="object-cover object-top transition-transform duration-700 group-hover:scale-110"
+        />
+
+        {/* gradient overlay - نرم‌تر از قبل */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+      </div>
+
+      {/* content - پایین کارت */}
+      <div className="p-5">
+        <span className="text-xs font-mono uppercase tracking-[0.2em] text-teal-400">
+          {member.role}
         </span>
 
-        <h1 className="mt-3 text-3xl sm:text-4xl font-bold tracking-tight">
-          Meet Our Team
-        </h1>
+        <h2 className="mt-1.5 text-2xl font-bold text-white tracking-tight">
+          {member.name}
+        </h2>
 
-        <p className="mt-4 text-gray-600 dark:text-gray-400 max-w-xl mx-auto">
-          Building modern digital experiences with design, motion and scalable
-          frontend systems.
-        </p>
+        <div className="mt-3 flex items-center gap-2 text-sm text-white/60 transition-all duration-300 group-hover:text-teal-400">
+          <span>مشاهده نمونه کارها</span>
+          <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+        </div>
       </div>
-
-      {/* cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        {members.map((member) => (
-          <Link
-            key={member.name}
-            href={member.href}
-            className="group flex gap-4 items-center p-4 rounded-2xl border border-white/10 bg-white/5 dark:bg-black/10 hover:bg-white/10 dark:hover:bg-black/20 transition-all duration-300"
-          >
-            {/* image */}
-            <div className="relative w-24 h-24 sm:w-28 sm:h-28 flex-shrink-0 overflow-hidden rounded-xl">
-              <Image
-                src={member.image}
-                alt={member.name}
-                fill
-                sizes="120px"
-                quality={85}
-                className="object-cover object-top group-hover:scale-110 transition duration-500"
-              />
-            </div>
-
-            {/* content */}
-            <div className="flex flex-col justify-center">
-              <span className="text-xs tracking-[0.2em] uppercase text-teal-500">
-                {member.role}
-              </span>
-
-              <h2 className="text-xl font-semibold text-gray-900 dark:text-white mt-1">
-                {member.name}
-              </h2>
-
-              <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
-                Click to view portfolio
-              </p>
-            </div>
-
-            {/* arrow */}
-            <div className="ml-auto text-gray-400 group-hover:text-teal-400 transition">
-              →
-            </div>
-          </Link>
-        ))}
-      </div>
+    </Link>
+  ))}
+</div>
     </section>
   );
 }

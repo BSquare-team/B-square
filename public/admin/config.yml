@@ -134,7 +134,6 @@ collections:
                   widget: "string",
                   required: false,
                 }
-  # ── Changelog ──
   - name: "changelog"
     label: "Changelog"
     label_singular: "Changelog Entry"
