@@ -50,10 +50,10 @@ export default function MobileDrawer() {
             </Dialog.Close>
             <Dialog.Close asChild>
               <Link
-                href="/"
+                href="/team"
                 className="text-lg font-medium hover:text-blue-600"
               >
-                Alternatives
+                Our Team
               </Link>
             </Dialog.Close>
             <Dialog.Close asChild>
@@ -62,6 +62,14 @@ export default function MobileDrawer() {
                 className="text-lg font-medium hover:text-blue-600"
               >
                 Blog
+              </Link>
+            </Dialog.Close>
+            <Dialog.Close asChild>
+              <Link
+                href="/changelog"
+                className="text-lg font-medium hover:text-blue-600"
+              >
+                Changelog
               </Link>
             </Dialog.Close>
 
