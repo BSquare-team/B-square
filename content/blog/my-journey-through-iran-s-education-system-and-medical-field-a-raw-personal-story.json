@@ -1,0 +1,54 @@
+{
+  "featuredImage": "",
+  "title": "My Journey Through Iran's Education System and Medical Field: A Raw Personal Story",
+  "description": "A honest personal story from Iran about the broken education system, the extreme pressure of the Konkur exam, and the harsh realities of working in the medical field as an Anesthesia Technologist. From financial collapse to hospital shortages, this is a story of ambition, disillusionment, and finding courage to seek a better path.",
+  "author": "Amin",
+  "date": "2026-05-26T23:30:00",
+  "categoryTags": [],
+  "techTags": [],
+  "blocks": [
+    {
+      "type": "text",
+      "content": "Almost everyone around me believed that education was the only safe path toward becoming someone valuable. And honestly, I believed it too.\n\nI wanted to become skilled at something meaningful. I wanted a future I could be proud of.\n\nBut the education system I grew up in was deeply broken.\n\n## The Reality of Education in Iran\n\nNot because students were lazy. Not because people didn’t work hard — actually, people here study unbelievably hard.\n\nThe problem was the system itself.\n\nIt wasn’t designed to help people think bigger or understand why they were learning something. It felt more like a system designed to keep your vision small.\n\nIf I wanted to become a programmer, for example, I’m convinced they would have buried me under years of outdated information and pointless requirements until I hated the subject itself.\n\nInstead of inspiring curiosity, the system trained obedience.\n\n## The Pressure of the Konkur Exam\n\nI entered the science track in high school — the path that leads toward medical careers. In Iran, getting into medical fields depends on an extremely competitive national exam called the \\*\\*Konkur\\*\\*.\n\nFor millions of students, that exam represents survival.\n\nBecause the economy is weak, private business opportunities are limited, and many families depend on government jobs for stability. People either study for the Konkur hoping to secure employment inside the country, or they study hoping education will eventually become their way out of the country.\n\nEven that competition never felt completely fair. There are government-supported quotas called “Sahmieh,” where certain groups receive major advantages in university admissions because of family ties connected to war history.\n\nAnd that word — \\*\\*war\\*\\* — never really disappears here. It quietly shapes the economy, opportunities, and the future young people believe they’re allowed to imagine.\n\nFor three years, my entire life revolved around that exam. In my final year, my family lost almost everything because of a financial scam. We lost our home. The stress at home became overwhelming.\n\nSo most days, I studied in public study halls. Despite everything, I kept pushing.\n\n##"
+    },
+    {
+      "type": "cardSlider",
+      "cards": [
+        {
+          "src": "/images/IMG_20220224_133349_239.jpg",
+          "title": "konkur 1",
+          "description": "",
+          "link": ""
+        },
+        {
+          "src": "/images/IMG_20211130_171345.jpg",
+          "title": "konkur 2",
+          "description": "",
+          "link": ""
+        },
+        {
+          "src": "/images/IMG_20220419_191418.jpg",
+          "title": "konkur 3",
+          "description": "",
+          "link": ""
+        },
+        {
+          "src": "/images/IMG_20220727_203338.jpg",
+          "title": "konkur 4",
+          "description": "",
+          "link": ""
+        },
+        {
+          "src": "/images/IMG_20230301_093943.jpg",
+          "title": "konkur 5",
+          "description": "",
+          "link": ""
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "content": "## Entering the Medical Field\n\nAfter years of pressure and studying, I finally passed the Konkur and got accepted into \\*\\*Anesthesia Technology\\*\\*. Considering the conditions around me, that counted as success.\n\n## The Harsh Reality Inside the Hospital\n\nEverything changed when I entered the hospital.\n\nFor years, people talked about medical careers as if they guaranteed stability, respect, and security. But inside the hospitals, I saw exhausted workers barely surviving financially. There had already been strikes over salaries. Inflation was making life harder every year.\n\nAt the same time, financial pressure inside my own family kept growing. We no longer owned a home, and expectations grew that I should help support the family.\n\nBut the hospital also taught me something important.\n\nIt taught me how vulnerable human beings truly are. When someone enters an operating room, they place their life in your hands with complete trust. One small mistake can leave a permanent impact.\n\nI learned that patients should be treated like family — no matter how exhausted or stressed you are.\n\n## A Broken System Full of Extraordinary People\n\nI genuinely respect medical staff in this country. I don’t know how many of them continue working so professionally despite the enormous workload, emotional pressure, and low salaries.\n\nMeanwhile, I watched the system slowly breaking down:\n\n- Supplies became limited\n- Disposable equipment started getting reused\n- Medications like Propofol became difficult to find\n\nShortages were no longer abstract problems — they became real risks for real patients.\n\n## Finding My Own Path\n\nOver time, I realized that the future I had imagined no longer matched reality. I saw talented people burning themselves out just trying to survive. I saw young people no longer chasing dreams — they were chasing escape.\n\nEven after everything, I don’t regret studying medicine. The hospital gave me something education alone never could: \\*\\*perspective\\*\\*.\n\nIt taught me responsibility, the fragility of life, and the deep trust that exists between strangers in the worst moments of their lives.\n\n***\n\n\\*\\*A broken system can still contain extraordinary people.\\*\\*\n\nAnd maybe that’s why I no longer believe success is simply about following the path people hand to you. Sometimes success is realizing when a system is too small for the future you want to build — and having the courage to search for another path before it slowly crushes your ambition."
+    }
+  ]
+}
