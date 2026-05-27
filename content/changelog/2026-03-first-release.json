@@ -1,5 +1,0 @@
-{
-  "date": "2026-03-15T10:00:00.000Z",
-  "title": "First Release of Our Blog",
-  "content": "Launched the first version of our personal blog.\n\n- Built with **Next.js 16** and **Tailwind CSS**\n- Integrated **Sveltia CMS** for content management\n- Deployed on **Vercel** with custom domain\n- Added dark mode support"
-}

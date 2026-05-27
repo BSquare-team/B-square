@@ -1,5 +1,0 @@
-{
-  "date": "2026-05-15T10:00:00.000Z",
-  "title": "Form Validation with Zod & TypeScript — Full-Stack Security",
-  "content": "Working on a clean, standalone form validation system that goes straight into the database. Using Zod with TypeScript to validate the form — both on the frontend and on the API side (incoming POST requests). This keeps data integrity and security tight.\n\nAlso mixing in some educational videos and leveraging DeepSeek. The things I'm learning right now are more current than what's covered in most courses, and I couldn't really find resources that fit my needs — so I'm moving forward with AI assistance."
-}
