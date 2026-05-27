@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: aminb9383/OurBlog-Shadcn-Tellwind
+  repo: aminb9383/B-square
   branch: main
   auth_url: https://auth.sveltia-cms.dev/.well-known/oauth/providers
 
