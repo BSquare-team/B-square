@@ -13,6 +13,7 @@ function formatDateRange(dateStr: string): string {
   return date.toLocaleDateString("en-US", {
     year: "numeric",
     month: "short",
+    day: "numeric",
   });
 }
 
@@ -28,11 +29,11 @@ export default function ChangelogTimeline({ entries }: ChangelogTimelineProps) {
   }
 
   return (
-    <div className="container max-w-7xl mt-24 flex flex-col items-center items-center">
+    <div className="container max-w-7xl mt-24 flex flex-col items-center">
       {entries.map((entry) => (
         <div
           key={entry.slug}
-          className="relative flex justify-start py-6 w-full "
+          className="relative flex justify-start py-6 w-full"
         >
           {/* Date - sticky on desktop */}
           <div className="sticky hidden md:flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
@@ -52,10 +53,20 @@ export default function ChangelogTimeline({ entries }: ChangelogTimelineProps) {
               {entry.title}
             </h3>
 
-            <div className="text-gray-600 dark:text-gray-400">
-              <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                {entry.content}
-              </ReactMarkdown>
+            {/* Entries with Author + Content */}
+            <div className="mt-4 space-y-6 gap-8">
+              {entry.entries?.map((item, index) => (
+                <div key={index}>
+                  <p className="text-sm font-medium text-blue-600 dark:text-blue-400 ">
+                    — {item.author}
+                  </p>
+                  <div className="text-gray-600 dark:text-gray-400 mb-200">
+                    <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                      {item.content}
+                    </ReactMarkdown>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 

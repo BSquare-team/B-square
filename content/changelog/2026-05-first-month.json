@@ -1,0 +1,15 @@
+{
+  "title": "First Month of Development",
+  "date": "2026-05-27T10:00:00.000Z",
+  "entries": [
+        {
+      "author": "Omid",
+      "content": "Designed the initial layout and created the first version of:\n\n- **Header** with navigation\n- **Blog page** with card grid\n- **Changelog page** with timeline\n\nAlso started working on the dark mode implementation."
+    },
+    {
+      "author": "Amin",
+      "content": "Started learning **Next.js App Router** and set up the project structure.\n\n- Configured Tailwind CSS v4\n- Set up Shadcn/ui components\n- Created the blog collection with Sveltia CMS"
+    }
+
+  ]
+}

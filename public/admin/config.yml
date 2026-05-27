@@ -1,8 +1,5 @@
 backend:
-  name: github
-  repo: aminb9383/B-square
-  branch: main
-  auth_url: https://auth.sveltia-cms.dev/.well-known/oauth/providers
+  name: test-repo
 
 media_folder: "public/images"
 public_folder: "/images"
@@ -135,15 +132,26 @@ collections:
                   required: false,
                 }
   - name: "changelog"
-    label: "Changelog"
+    label: "Changelog888"
     label_singular: "Changelog Entry"
     folder: "content/changelog"
     create: true
     extension: "json"
     format: "json"
-    slug: "{{year}}-{{month}}-{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
 
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime", default: "{{now}}" }
-      - { label: "Content", name: "content", widget: "markdown" }
+      - label: "Entries"
+        name: "entries"
+        widget: "list"
+        fields:
+          - {
+              label: "Author",
+              name: "author",
+              widget: "select",
+              options: ["Amin", "Omid"],
+              default: "Amin",
+            }
+          - { label: "Content", name: "content", widget: "markdown" }
