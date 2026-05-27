@@ -1,6 +1,8 @@
 // src/app/(main)/changelog/_components/ChangelogTimeline.tsx
 
 import { ChangelogEntry } from "@/src/features/changelog/types/changelog.types";
+import { Button } from "@/src/shared/components/ui/button";
+import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
@@ -49,22 +51,24 @@ export default function ChangelogTimeline({ entries }: ChangelogTimelineProps) {
               {formatDateRange(entry.date)}
             </span>
 
-            <h3 className="lg:text-xl mt-0 text-gray-900 dark:text-white">
-              {entry.title}
-            </h3>
-
             {/* Entries with Author + Content */}
             <div className="mt-4 space-y-6 gap-8">
               {entry.entries?.map((item, index) => (
                 <div key={index}>
-                  <p className="text-sm font-medium text-blue-600 dark:text-blue-400 ">
-                    — {item.author}
-                  </p>
-                  <div className="text-gray-600 dark:text-gray-400 mb-8">
+                  <div className="text-gray-600 dark:text-gray-400 ">
                     <ReactMarkdown remarkPlugins={[remarkGfm]}>
                       {item.content}
                     </ReactMarkdown>
                   </div>
+                  <Link className="mb-10" href={`/team/${item.author.toLocaleLowerCase()}`}>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="mb-6 text-gray-500 bg-white dark:bg-gray-900/50 rounded-4xl font-medium text-[12px]"
+                    >
+                      {item.author}
+                    </Button>
+                  </Link>
                 </div>
               ))}
             </div>
