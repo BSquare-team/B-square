@@ -60,7 +60,7 @@ export default function ChangelogTimeline({ entries }: ChangelogTimelineProps) {
                   <p className="text-sm font-medium text-blue-600 dark:text-blue-400 ">
                     — {item.author}
                   </p>
-                  <div className="text-gray-600 dark:text-gray-400 mb-200">
+                  <div className="text-gray-600 dark:text-gray-400 mb-8">
                     <ReactMarkdown remarkPlugins={[remarkGfm]}>
                       {item.content}
                     </ReactMarkdown>
