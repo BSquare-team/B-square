@@ -3,12 +3,12 @@
 import { Button } from "@/src/shared/components/ui/button";
 import Image from "next/image";
 
-import picMe2 from "@/src/assets/image/omidProfile.jpg";
-import hp6 from "@/src/assets/image/hp6.jpg";
-import hp5 from "@/src/assets/image/hp5.jpg";
-import hp4 from "@/src/assets/image/hp4.jpg";
-import hp3 from "@/src/assets/image/hp3.jpg";
-import hp2 from "@/src/assets/image/hp2.jpg";
+import picMe2 from "@/src/assets/image/omidPic.webp";
+import hp6 from "@/src/assets/image/op1.jpg";
+import hp5 from "@/src/assets/image/op2.jpg";
+import hp4 from "@/src/assets/image/op3.jpg";
+import hp3 from "@/src/assets/image/op4.jpg";
+import hp2 from "@/src/assets/image/op5.jpg";
 
 import { LucideStar } from "lucide-react";
 
@@ -115,7 +115,8 @@ export default function page() {
                       alt="Hero"
                       width={500}
                       height={500}
-                      quality={100}
+                      quality={80}
+                      loading="eager"
                       className="w-full h-auto object-cover"
                     />
                   </div>

@@ -33,8 +33,8 @@
           "link": ""
         },
         {
-          "src": "/images/IMG_20220727_203338.jpg",
-          "title": "konkur 4",
+          "src": "/images/IMG_20230301_093943.jpg",
+          "title": "konkur 5",
           "description": "",
           "link": ""
         },
@@ -54,8 +54,20 @@
       "type": "cardSlider",
       "cards": [
         {
-          "src": "/images/sample-products/p2-1.jpg",
-          "title": "The Harsh Reality Inside the Hospital",
+          "src": "/images/20250217_084758.jpg",
+          "title": "Hospital 1",
+          "description": "",
+          "link": ""
+        },
+        {
+          "src": "/images/20231218_020413.jpg",
+          "title": "Hospital 2",
+          "description": "",
+          "link": ""
+        },
+        {
+          "src": "/images/20251225_111124.jpg",
+          "title": "Hospital 3",
           "description": "",
           "link": ""
         }
@@ -69,8 +81,20 @@
       "type": "cardSlider",
       "cards": [
         {
-          "src": "/images/sample-products/p1-1.jpg",
-          "title": "Lessons from Side Jobs and Construction Work",
+          "src": "/images/20250225_145523.jpg",
+          "title": "Construction 1",
+          "description": "",
+          "link": ""
+        },
+        {
+          "src": "/images/20240130_103454.jpg",
+          "title": "Construction 2",
+          "description": "",
+          "link": ""
+        },
+        {
+          "src": "/images/20240328_145536.jpg",
+          "title": "Construction 3",
           "description": "",
           "link": ""
         }
@@ -78,7 +102,7 @@
     },
     {
       "type": "text",
-      "content": "## From Hospital Shifts to Building Websites\n\nWhile working at the hospital, I started shifting my side work toward digital skills. I learned video editing and took on clients. I lost one client because the internet was cut for three months. That experience pushed me further — now, even while the internet is being cut again, I build websites from scratch.\n\n## Why This Story Matters\n\nYou might ask — why am I telling you all of this?\n\nBecause this whole journey taught me:\n\n- In the operating room → how to make the right decisions under extreme pressure  \n- In construction → that giving up means killing the project  \n- In the Konkur system → the system won’t help you. You have to find your own way.  \n- During internet blackouts → how to solve problems even without access to resources or communities\n\nIf you're looking for someone whose \\*\\*priority is always doing the job right\\*\\* — no matter the financial pressure, technical issues, or external limitations — I’d love to work with you."
+      "content": "## From Hospital Shifts to Building Websites\n\nWhile working at the hospital, I started shifting my side work toward digital skills. I learned video editing and took on clients. I lost one client because the internet was cut for three months. That experience pushed me further — now, even while the internet is being cut again, I build websites from scratch.\n\n### You might ask — why am I telling you all of this?\n\nBecause this whole journey taught me:\n\n- In the operating room → how to make the right decisions under extreme pressure  \n- In construction → that giving up means killing the project  \n- In the Konkur system → the system won’t help you. You have to find your own way.  \n- During internet blackouts → how to solve problems even without access to resources or communities\n\nIf you're looking for someone whose \\*\\*priority is always doing the job right\\*\\* — no matter the financial pressure, technical issues, or external limitations — I’d love to work with you."
     }
   ]
 }
