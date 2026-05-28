@@ -4,11 +4,11 @@ import { Button } from "@/src/shared/components/ui/button";
 import Image from "next/image";
 
 import picMe2 from "@/src/assets/image/omidProfile.jpg";
-import hp6 from "@/src/assets/image/hp6.jpg";
-import hp5 from "@/src/assets/image/hp5.jpg";
-import hp4 from "@/src/assets/image/hp4.jpg";
-import hp3 from "@/src/assets/image/hp3.jpg";
-import hp2 from "@/src/assets/image/hp2.jpg";
+import hp6 from "@/src/assets/image/op1.jpg";
+import hp5 from "@/src/assets/image/op2.jpg";
+import hp4 from "@/src/assets/image/op3.jpg";
+import hp3 from "@/src/assets/image/op4.jpg";
+import hp2 from "@/src/assets/image/op5.jpg";
 
 import { LucideStar } from "lucide-react";
 
