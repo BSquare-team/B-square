@@ -11,11 +11,11 @@ export default function HomePage() {
             We help designers and developers finish their projects on time and
             ship faster.
           </p>
-          <Link href={"/portfolio/amin"}>
+          <Link href={"/team"}>
             <Button
               className="w-44.25 rounded-full bg-[#2d53fe] hover:bg-[#0533ff] border-0 shadow-2xl shadow-[#2d53fe]"
             >
-              View my portfolio
+              View our profiles
             </Button>
           </Link>
 

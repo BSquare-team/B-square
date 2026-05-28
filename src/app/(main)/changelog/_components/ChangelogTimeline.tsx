@@ -1,6 +1,8 @@
 // src/app/(main)/changelog/_components/ChangelogTimeline.tsx
 
 import { ChangelogEntry } from "@/src/features/changelog/types/changelog.types";
+import { Button } from "@/src/shared/components/ui/button";
+import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
@@ -13,6 +15,7 @@ function formatDateRange(dateStr: string): string {
   return date.toLocaleDateString("en-US", {
     year: "numeric",
     month: "short",
+    day: "numeric",
   });
 }
 
@@ -28,11 +31,11 @@ export default function ChangelogTimeline({ entries }: ChangelogTimelineProps) {
   }
 
   return (
-    <div className="container max-w-7xl mt-24 flex flex-col items-center items-center">
+    <div className="container max-w-7xl mt-24 flex flex-col items-center">
       {entries.map((entry) => (
         <div
           key={entry.slug}
-          className="relative flex justify-start py-6 w-full "
+          className="relative flex justify-start py-6 w-full"
         >
           {/* Date - sticky on desktop */}
           <div className="sticky hidden md:flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
@@ -48,14 +51,26 @@ export default function ChangelogTimeline({ entries }: ChangelogTimelineProps) {
               {formatDateRange(entry.date)}
             </span>
 
-            <h3 className="lg:text-xl mt-0 text-gray-900 dark:text-white">
-              {entry.title}
-            </h3>
-
-            <div className="text-gray-600 dark:text-gray-400">
-              <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                {entry.content}
-              </ReactMarkdown>
+            {/* Entries with Author + Content */}
+            <div className="mt-4 space-y-6 gap-8">
+              {entry.entries?.map((item, index) => (
+                <div key={index}>
+                  <div className="text-gray-600 dark:text-gray-400 ">
+                    <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                      {item.content}
+                    </ReactMarkdown>
+                  </div>
+                  <Link className="mb-10" href={`/team/${item.author.toLocaleLowerCase()}`}>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="mb-6 text-gray-500 bg-white dark:bg-gray-900/50 rounded-4xl font-medium text-[12px]"
+                    >
+                      {item.author}
+                    </Button>
+                  </Link>
+                </div>
+              ))}
             </div>
           </div>
 

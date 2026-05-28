@@ -1,0 +1,14 @@
+{
+  "title": "05/19",
+  "date": "2026-05-19T21:27:00",
+  "entries": [
+    {
+      "author": "Omid",
+      "content": "### Using Zod with TypeScript for Form Validation\n\nI'm using Zod with TypeScript to validate my forms. It can handle validation both on the frontend (form side) and on the backend (API requests like POST requests). This approach significantly improves data security.\n\nI'm combining it with insights from some tutorial videos and AI tools (like DeepSeek). The things I'm learning right now are newer than what's covered in the courses I've watched, and I couldn't find resources that fully addressed my needs — so I'm moving forward with AI assistance."
+    },
+    {
+      "author": "Amin",
+      "content": "### First site map\n\nI’m currently working on finding a visual style for the site. So far, I’ve created the blog page, a sample post, and the sitemap. The problem is that we only have one SIM card for internet, so I have to wait until nighttime to start researching and browsing other websites that might spark some ideas for our site’s design. In the meantime, I found a style I like for the portfolio section and I’ve started writing the code for it."
+    }
+  ]
+}

@@ -21,11 +21,11 @@ const members = [
 
 export default function Page() {
   return (
-    <section className="container m-auto max-w-7xl ">
+    <section className="container m-auto max-w-7xl px-6">
       {/* heading */}
       <section className="p-6 ">
         <div className="flex flex-col justify-center prose prose-h1:mb-2 dark:prose-invert">
-          <p>teem</p>
+          <p>Team</p>
           <h1>know us more</h1>
           <p>
             Stay informed with product updates, company news, and insights on

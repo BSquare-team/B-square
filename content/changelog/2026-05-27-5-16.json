@@ -1,0 +1,10 @@
+{
+  "title": "5/16",
+  "date": "2026-05-16T21:25:00",
+  "entries": [
+    {
+      "author": "Omid",
+      "content": "### From Payload to Sveltia CMS\n\nMy research into how to build a dynamic and free website started with Payload CMS. I had already learned it and honestly thought it was incredible. The plan was to use Neon's free tier for PostgreSQL as the database — that way, I could run a full-featured CMS completely for free. On top of that, it would let Omid build Payload block by block for future projects.\n\nBut unfortunately, based on what I found out, deploying Payload on Vercel comes with a lot of headaches. So I switched to a different approach — Sveltia CMS, which is a Git-based CMS. It's essentially still a dynamic site, but with a lightweight panel where we can upload and manage our content. For our situation right now — with all the limitations and restrictions we're dealing with — this approach is more than enough.\n\nAlong the way, I pushed to make the site as dynamic as possible, especially giving us real flexibility inside the blog. Thankfully, that part went well and it's working the way I imagined.\n\nThen came deployment and debugging — pushing the project to GitHub and deploying it on Vercel. And honestly, that part is still held up because of the internet."
+    }
+  ]
+}

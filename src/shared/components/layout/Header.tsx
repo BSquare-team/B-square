@@ -30,7 +30,7 @@ export default function Header() {
   return (
     <Headroom>
       <header
-        className={`w-full transition-all duration-300 ${
+        className={`w-full transition-all duration-300 z-999 ${
           isScrolled
             ? "bg-white/80 dark:bg-gray-900/80 backdrop-blur-md  border-gray-200 dark:border-gray-800 shadow-sm"
             : "bg-transparent"
@@ -76,9 +76,9 @@ export default function Header() {
             </div>
 
             <div className=" flex-row hidden lg:flex">
-              <div className="hidden lg:flex">
+              {/* <div className="hidden lg:flex">
                 <LoginPage />
-              </div>
+              </div> */}
               <Button variant={"ghost"} className="hidden lg:flex">
                 EN
               </Button>
