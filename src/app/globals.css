@@ -7,7 +7,7 @@
 
 /* ========== متغیرهای رنگی (بر اساس استایل دوم - oklch) ========== */
 :root {
-  --background: #ffffff;
+  --background: #f0ede7;
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
@@ -89,7 +89,7 @@
     right: 0;
     top: -40vw;
     height: 70vh;
-    background: #fcfcfc;
+    background: #eeebe0;
     z-index: -1;
     box-shadow:
       inset 0 0 100px rgba(24, 29, 39, 0.015),
