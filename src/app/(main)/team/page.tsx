@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import omidPic from "@/src/assets/image/omidProfile.jpg";
+import omidPic from "@/src/assets/image/omidPic.webp";
 import aminPic from "@/src/assets/image/mePic.jpg";
 
 const members = [
@@ -40,6 +40,7 @@ export default function Page() {
     <Link
       key={member.name}
       href={member.href}
+       prefetch={false}
       className="group relative overflow-hidden rounded-2xl bg-white/5 dark:bg-black/20 backdrop-blur-md border border-white/10 shadow-xl transition-all duration-300 hover:shadow-2xl hover:border-teal-500/30"
     >
       {/* image container - نسبت ثابت و زیبا */}
@@ -48,8 +49,9 @@ export default function Page() {
           src={member.image}
           alt={member.name}
           fill
-          sizes="(max-width: 768px) 100vw, 50vw"
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 512px"
           quality={80}
+           fetchPriority="high"
           className="object-cover object-top transition-transform duration-700 group-hover:scale-110"
         />
 
