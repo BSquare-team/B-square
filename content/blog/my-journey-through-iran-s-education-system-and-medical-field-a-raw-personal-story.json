@@ -1,6 +1,6 @@
 {
   "featuredImage": "",
-  "title": "How I Got Here",
+  "title": "Know more: How I Got Here",
   "description": "Almost everyone around me believed that education was the only safe path toward a good future. I believed it too. So I started studying hard, hoping to build a proper, respectable career.",
   "author": "Amin",
   "date": "2026-05-26T23:30:00",
@@ -15,25 +15,19 @@
       "type": "cardSlider",
       "cards": [
         {
-          "src": "/images/konkur 01 .jpg",
+          "src": "/images/konkur 01 .webp",
           "title": "konkur 1",
           "description": "",
           "link": ""
         },
         {
-          "src": "/images/konkur 02 .jpg",
+          "src": "/images/konkur 02 .webp",
           "title": "konkur 2",
           "description": "",
           "link": ""
         },
         {
-          "src": "/images/konkur 04.jpg",
-          "title": "konkur 3",
-          "description": "",
-          "link": ""
-        },
-        {
-          "src": "/images/konkur 03 .jpg",
+          "src": "/images/konkur 03 .webp",
           "title": "konkur 5",
           "description": "",
           "link": ""
@@ -48,19 +42,19 @@
       "type": "cardSlider",
       "cards": [
         {
-          "src": "/images/20250217_084758.jpg",
+          "src": "/images/Hospital 01.webp",
           "title": "Hospital 1",
           "description": "",
           "link": ""
         },
         {
-          "src": "/images/20231218_020413.jpg",
+          "src": "/images/Hospital 02.webp",
           "title": "Hospital 2",
           "description": "",
           "link": ""
         },
         {
-          "src": "/images/20251225_111124.jpg",
+          "src": "/images/Hospital 03.webp",
           "title": "Hospital 3",
           "description": "",
           "link": ""
@@ -75,20 +69,8 @@
       "type": "cardSlider",
       "cards": [
         {
-          "src": "/images/20250225_145523.jpg",
+          "src": "/images/amin-El 3.webp",
           "title": "Construction 1",
-          "description": "",
-          "link": ""
-        },
-        {
-          "src": "/images/20240130_103454.jpg",
-          "title": "Construction 2",
-          "description": "",
-          "link": ""
-        },
-        {
-          "src": "/images/20240328_145536.jpg",
-          "title": "Construction 3",
           "description": "",
           "link": ""
         }
