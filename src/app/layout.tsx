@@ -1,4 +1,4 @@
-import "@/src/shared/styles/globals.css";
+import "./globals.css";
 import {
   APP_NAME,
   APP_DESCRIPTION,
