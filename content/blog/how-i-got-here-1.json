@@ -15,25 +15,25 @@
       "type": "cardSlider",
       "cards": [
         {
-          "src": "/images/IMG_20220224_133345_974.jpg",
+          "src": "/images/IMG_20220224_133345_974.webp",
           "title": "konkur 1",
           "description": "",
           "link": ""
         },
         {
-          "src": "/images/IMG_20211130_171345.jpg",
+          "src": "/images/IMG_20211130_171345.webp",
           "title": "konkur 2",
           "description": "",
           "link": ""
         },
         {
-          "src": "/images/IMG_20220419_191418.jpg",
+          "src": "/images/IMG_20220419_191418.webp",
           "title": "konkur 3",
           "description": "",
           "link": ""
         },
         {
-          "src": "/images/IMG_20230301_093943.jpg",
+          "src": "/images/IMG_20230301_093943.webp",
           "title": "konkur 5",
           "description": "",
           "link": ""
@@ -48,19 +48,19 @@
       "type": "cardSlider",
       "cards": [
         {
-          "src": "/images/Hospital 01.jpg",
+          "src": "/images/Hospital 01.webp",
           "title": "Hospital 1",
           "description": "",
           "link": ""
         },
         {
-          "src": "/images/Hospital 02.jpg",
+          "src": "/images/Hospital 02.webp",
           "title": "Hospital 2",
           "description": "",
           "link": ""
         },
         {
-          "src": "/images/Hospital 03.jpg",
+          "src": "/images/Hospital 03.webp",
           "title": "Hospital 3",
           "description": "",
           "link": ""
@@ -75,19 +75,19 @@
       "type": "cardSlider",
       "cards": [
         {
-          "src": "/images/amin-El 3.jpg",
+          "src": "/images/amin-El 3.webp",
           "title": "Construction 1",
           "description": "",
           "link": ""
         },
         {
-          "src": "/images/amin-El 2.jpg",
+          "src": "/images/amin-El 2.webp",
           "title": "Construction 2",
           "description": "",
           "link": ""
         },
         {
-          "src": "/images/amin-El 03.jpg",
+          "src": "/images/amin-El 03.webp",
           "title": "Construction 3",
           "description": "",
           "link": ""

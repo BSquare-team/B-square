@@ -1,5 +1,3 @@
-"use client";
-
 import { Button } from "@/src/shared/components/ui/button";
 import Image from "next/image";
 

@@ -1,5 +1,3 @@
-"use client";
-
 import { Button } from "@/src/shared/components/ui/button";
 import Image from "next/image";
 
@@ -193,10 +191,11 @@ export default function page() {
                     My Journey
                   </p>
                   <h2 className="mt-2 text-xl/7 font-bold text-gray-900 dark:text-white line-clamp-3 group-hover:text-blue-400 transition-colors">
-                   My Journey Through Iran's Education System and Medical Field: A Raw Personal Story
+                    My Journey Through Iran's Education System and Medical
+                    Field: A Raw Personal Story
                   </h2>
                   <p className="mt-2 text-sm/6 text-gray-600 dark:text-gray-400 line-clamp-4">
-                      Almost everyone around me believed that education was the
+                    Almost everyone around me believed that education was the
                     only safe path toward becoming someone valuable. And
                     honestly, I believed it too. I wanted to become skilled at
                     something meaningful. I wanted a future I could be proud of.
