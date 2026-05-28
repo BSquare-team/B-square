@@ -1,7 +1,7 @@
 {
   "featuredImage": "",
-  "title": "My Journey Through Iran's Education System and Medical Field: A Raw Personal Story",
-  "description": "A honest personal story from Iran about the broken education system, the extreme pressure of the Konkur exam, and the harsh realities of working in the medical field as an Anesthesia Technologist. From financial collapse to hospital shortages, this is a story of ambition, disillusionment, and finding courage to seek a better path.",
+  "title": "How I Got Here",
+  "description": "Almost everyone around me believed that education was the only safe path toward a good future. I believed it too. So I started studying hard, hoping to build a proper, respectable career.",
   "author": "Amin",
   "date": "2026-05-26T23:30:00",
   "categoryTags": [],
@@ -9,7 +9,7 @@
   "blocks": [
     {
       "type": "text",
-      "content": "Almost everyone around me believed that education was the only safe path toward becoming someone valuable. And honestly, I believed it too.\n\nI wanted to become skilled at something meaningful. I wanted a future I could be proud of.\n\nBut the education system I grew up in was deeply broken.\n\n## The Reality of Education in Iran\n\nNot because students were lazy. Not because people didn’t work hard — actually, people here study unbelievably hard.\n\nThe problem was the system itself.\n\nIt wasn’t designed to help people think bigger or understand why they were learning something. It felt more like a system designed to keep your vision small.\n\nIf I wanted to become a programmer, for example, I’m convinced they would have buried me under years of outdated information and pointless requirements until I hated the subject itself.\n\nInstead of inspiring curiosity, the system trained obedience.\n\n## The Pressure of the Konkur Exam\n\nI entered the science track in high school — the path that leads toward medical careers. In Iran, getting into medical fields depends on an extremely competitive national exam called the \\*\\*Konkur\\*\\*.\n\nFor millions of students, that exam represents survival.\n\nBecause the economy is weak, private business opportunities are limited, and many families depend on government jobs for stability. People either study for the Konkur hoping to secure employment inside the country, or they study hoping education will eventually become their way out of the country.\n\nEven that competition never felt completely fair. There are government-supported quotas called “Sahmieh,” where certain groups receive major advantages in university admissions because of family ties connected to war history.\n\nAnd that word — \\*\\*war\\*\\* — never really disappears here. It quietly shapes the economy, opportunities, and the future young people believe they’re allowed to imagine.\n\nFor three years, my entire life revolved around that exam. In my final year, my family lost almost everything because of a financial scam. We lost our home. The stress at home became overwhelming.\n\nSo most days, I studied in public study halls. Despite everything, I kept pushing.\n\n##"
+      "content": "But our education system is designed in a way that shrinks your mind. It’s not that people are lazy — far from it. The paths are simply wrong.\n\nIf I had gone into programming through the system they created, I’m sure they would have buried me under years of outdated lessons and useless topics until I burned out from their exams and ended up hating the field. Instead, I chose the science track that led me to medicine.\n\n## The Intense Pressure of Konkur in Iran\n\nIn Iran, most people either want to leave the country or secure a government job. Many, like me, don’t have the capital to start their own business. On top of that, there are quota students — those whose family members served the regime. This makes the competition even harder for people like me.\n\nIn my final year of Konkur, a financial scam took almost everything my family owned. We became homeless, turned into renters, and endless arguments filled our home. There was no peace left. So I studied in public study halls every day.\n\nI studied for years under heavy pressure. This exam mostly led to government jobs. I’ve always wanted to work so hard at something that I disappear into it until I truly master it. The only problem was that many lessons were full of scientific flaws. We had to memorize Islamic rulings instead of reading real medical research on PubMed."
     },
     {
       "type": "cardSlider",
@@ -48,7 +48,37 @@
     },
     {
       "type": "text",
-      "content": "## Entering the Medical Field\n\nAfter years of pressure and studying, I finally passed the Konkur and got accepted into \\*\\*Anesthesia Technology\\*\\*. Considering the conditions around me, that counted as success.\n\n## The Harsh Reality Inside the Hospital\n\nEverything changed when I entered the hospital.\n\nFor years, people talked about medical careers as if they guaranteed stability, respect, and security. But inside the hospitals, I saw exhausted workers barely surviving financially. There had already been strikes over salaries. Inflation was making life harder every year.\n\nAt the same time, financial pressure inside my own family kept growing. We no longer owned a home, and expectations grew that I should help support the family.\n\nBut the hospital also taught me something important.\n\nIt taught me how vulnerable human beings truly are. When someone enters an operating room, they place their life in your hands with complete trust. One small mistake can leave a permanent impact.\n\nI learned that patients should be treated like family — no matter how exhausted or stressed you are.\n\n## A Broken System Full of Extraordinary People\n\nI genuinely respect medical staff in this country. I don’t know how many of them continue working so professionally despite the enormous workload, emotional pressure, and low salaries.\n\nMeanwhile, I watched the system slowly breaking down:\n\n- Supplies became limited\n- Disposable equipment started getting reused\n- Medications like Propofol became difficult to find\n\nShortages were no longer abstract problems — they became real risks for real patients.\n\n## Finding My Own Path\n\nOver time, I realized that the future I had imagined no longer matched reality. I saw talented people burning themselves out just trying to survive. I saw young people no longer chasing dreams — they were chasing escape.\n\nEven after everything, I don’t regret studying medicine. The hospital gave me something education alone never could: \\*\\*perspective\\*\\*.\n\nIt taught me responsibility, the fragility of life, and the deep trust that exists between strangers in the worst moments of their lives.\n\n***\n\n\\*\\*A broken system can still contain extraordinary people.\\*\\*\n\nAnd maybe that’s why I no longer believe success is simply about following the path people hand to you. Sometimes success is realizing when a system is too small for the future you want to build — and having the courage to search for another path before it slowly crushes your ambition."
+      "content": "## The Harsh Reality Inside the Hospital\n\nEventually, I passed the Konkur and got accepted into \\*\\*Anesthesia Technology\\*\\*. I started working in the hospital.\n\nThere, I faced the truth. Salaries were so low that staff had gone on strike multiple times. Inflation had eaten away at everything. After losing our home, the pressure to financially support my family also fell on me.\n\nYet this field taught me something deeply valuable: When a person puts their most precious thing — their life — in your hands, you must treat them like your own family. You don’t bring your financial or personal problems into the operating room. Because one small mistake can affect a patient for the rest of their life.\n\nHonestly, I still don’t know how the medical staff in this country continue to work so professionally with this workload and these salaries. Things kept getting worse — we had to reuse disposable LMA airways multiple times, and for a while, we didn’t even have Propofol."
+    },
+    {
+      "type": "cardSlider",
+      "cards": [
+        {
+          "src": "/images/sample-products/p2-1.jpg",
+          "title": "The Harsh Reality Inside the Hospital",
+          "description": "",
+          "link": ""
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "content": "## Lessons from Side Jobs and Construction Work\n\nBefore and during university, I worked with my uncle doing electrical contracting on buildings — parking ramp wiring, full electrical systems, and renovations. It didn’t matter if it was freezing cold or burning hot. I worked to cover university expenses while still going to the hospital.\n\nFrom construction, I learned one important lesson: When a problem appears, it doesn’t matter how difficult or how long it takes. What matters is that you don’t give up."
+    },
+    {
+      "type": "cardSlider",
+      "cards": [
+        {
+          "src": "/images/sample-products/p1-1.jpg",
+          "title": "Lessons from Side Jobs and Construction Work",
+          "description": "",
+          "link": ""
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "content": "## From Hospital Shifts to Building Websites\n\nWhile working at the hospital, I started shifting my side work toward digital skills. I learned video editing and took on clients. I lost one client because the internet was cut for three months. That experience pushed me further — now, even while the internet is being cut again, I build websites from scratch.\n\n## Why This Story Matters\n\nYou might ask — why am I telling you all of this?\n\nBecause this whole journey taught me:\n\n- In the operating room → how to make the right decisions under extreme pressure  \n- In construction → that giving up means killing the project  \n- In the Konkur system → the system won’t help you. You have to find your own way.  \n- During internet blackouts → how to solve problems even without access to resources or communities\n\nIf you're looking for someone whose \\*\\*priority is always doing the job right\\*\\* — no matter the financial pressure, technical issues, or external limitations — I’d love to work with you."
     }
   ]
 }
