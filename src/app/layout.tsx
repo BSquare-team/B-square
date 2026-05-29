@@ -86,7 +86,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Header />
 
-          {children}
+           <main className="flex-1 py-8">{children}</main>
 
           <div
             className="bg-linear-to-r via-[#ee87cb] from-[#fff1be] to-[#b060ff] dark:bg-linear-to-r 
