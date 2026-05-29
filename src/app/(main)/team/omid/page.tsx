@@ -8,7 +8,7 @@ import op5 from "@/src/assets/image/op5.jpg";
 const subImages = [op1, op2, op3, op4, op5];
 
 import Link from "next/link";
-import PageHeroSec from "@/src/features/team/components/PageHeroSec";
+import PageHeroSec from "@/src/features/team/components/singlePost/PageHeroSec";
 
 export default function page() {
   return (

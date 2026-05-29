@@ -1,11 +1,11 @@
 // src/app/(main)/blog/[slug]/page.tsx
 
 import { getPostBySlug, getAllPosts } from "@/src/features/blog/lib/posts";
+import PostHeader from "@/src/features/blog/components/singlePost/PostHeader";
+import PostContent from "@/src/features/blog/components/singlePost/PostContent";
+import { APP_NAME, SERVER_URL } from "@/src/shared/lib/constants";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import PostHeader from "./_components/PostHeader";
-import PostContent from "./_components/PostContent";
-import { APP_NAME, SERVER_URL } from "@/src/shared/lib/constants";
 import { Metadata } from "next";
 
 export const revalidate = 3600;

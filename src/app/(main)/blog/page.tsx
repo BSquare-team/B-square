@@ -1,11 +1,11 @@
 // src/app/(main)/blog/page.tsx
 
-import HeroSection from "./_components/HeroSection";
-import BlogPostsSection from "./_components/BlogPostsSection";
+import HeroSection from "../../../features/blog/components/HeroSection";
+import BlogPostsSection from "../../../features/blog/components/BlogPostsSection";
+import ChangelogCTA from "../../../features/blog/components/ChangelogCTA";
 import { getAllPosts } from "@/src/features/blog/lib/posts";
 import { APP_NAME, SERVER_URL } from "@/src/shared/lib/constants";
 import { Metadata } from "next";
-import ChangelogCTA from "./_components/ChangelogCTA";
 
 export const metadata: Metadata = {
   title: "Blog",

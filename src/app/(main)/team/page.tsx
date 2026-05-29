@@ -1,5 +1,5 @@
 import { members } from "@/src/features/team/lib/data";
-import MemberCard from "./_components/MemberCard";
+import MemberCard from "../../../features/team/components/MemberCard";
 
 export default function Page() {
   return (

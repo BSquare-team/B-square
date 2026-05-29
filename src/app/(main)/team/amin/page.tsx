@@ -9,7 +9,7 @@ import hp3 from "@/src/assets/image/hp3.jpg";
 import hp2 from "@/src/assets/image/hp2.jpg";
 
 import { LucideStar } from "lucide-react";
-import CommentsSec from "../_components/CommentsSec";
+import CommentsSec from "../../../../features/team/components/singlePost/CommentsSec";
 import Link from "next/link";
 
 export default function page() {

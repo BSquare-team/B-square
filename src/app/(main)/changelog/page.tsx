@@ -1,7 +1,7 @@
 // src/app/(main)/changelog/page.tsx
 
 import { getAllChangelogEntries } from "@/src/features/changelog/lib/changelog";
-import ChangelogTimeline from "./_components/ChangelogTimeline";
+import ChangelogTimeline from "../../../features/changelog/components/ChangelogTimeline";
 import { APP_NAME, SERVER_URL } from "@/src/shared/lib/constants";
 import { Metadata } from "next";
 

@@ -2,6 +2,7 @@
 
 import PostCard from "./PostCard";
 
+
 interface BlogPostsSectionProps {
   posts: {
     slug: string;
