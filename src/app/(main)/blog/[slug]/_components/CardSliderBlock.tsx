@@ -27,7 +27,7 @@ interface CardSliderBlockProps {
 
 export default function CardSliderBlock({ cards }: { cards: CardSlide[] }) {
   return (
-    <div className="lg:w-1/2">
+    <div className="lg:w-full mt-1.5 mb-3">
       {/* {cards.map((e) => (
         <p>{e.title}</p>
       ))} */}
