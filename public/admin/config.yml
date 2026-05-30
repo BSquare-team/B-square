@@ -1,8 +1,5 @@
 backend:
-  name: github
-  repo: BSquare-team/B-square
-  branch: main
-  auth_url: https://auth.sveltia-cms.dev/.well-known/oauth/providers
+  name: test-repo
 
 media_folder: "public/images"
 public_folder: "/images"
