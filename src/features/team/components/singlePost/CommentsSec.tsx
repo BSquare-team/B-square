@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import React, { useState } from "react";
@@ -70,9 +70,12 @@ export default function CommentsSec() {
           className="space-y-6 col-span-1
             flex flex-col h-full"
         >
-          {visibleComments.map((item) => (
+          {visibleComments.map((item, index) => (
             <>
-              <li className="flex flex-col p-6 gap-4 w-full bg-[hsl(210,40%,95%)] dark:bg-[#161f2c] rounded-2xl ">
+              <li
+                key={index}
+                className="flex flex-col p-6 gap-4 w-full bg-[hsl(210,40%,95%)] dark:bg-[#161f2c] rounded-2xl "
+              >
                 <div className="flex flex-row justify-between gap-3 ">
                   <div className="rounded-full w-10 h-10  overflow-hidden">
                     <Image
@@ -99,9 +102,12 @@ export default function CommentsSec() {
           className="space-y-6 col-span-1
             flex flex-col h-full"
         >
-          {visibleComments.map((item) => (
+          {visibleComments.map((item, index) => (
             <>
-              <li className="flex flex-col p-6 gap-4 w-full bg-[hsl(210,40%,95%)] dark:bg-[#161f2c] rounded-2xl ">
+              <li
+                key={index}
+                className="flex flex-col p-6 gap-4 w-full bg-[hsl(210,40%,95%)] dark:bg-[#161f2c] rounded-2xl "
+              >
                 <div className="flex flex-row justify-between gap-3 ">
                   <div className="rounded-full w-10 h-10  overflow-hidden">
                     <Image
@@ -128,9 +134,12 @@ export default function CommentsSec() {
           className="space-y-6 col-span-1
             flex flex-col h-full"
         >
-          {visibleComments.map((item) => (
+          {visibleComments.map((item, index) => (
             <>
-              <li className="flex flex-col p-6 gap-4 w-full bg-[hsl(210,40%,95%)] dark:bg-[#161f2c] rounded-2xl ">
+              <li
+                key={index}
+                className="flex flex-col p-6 gap-4 w-full bg-[hsl(210,40%,95%)] dark:bg-[#161f2c] rounded-2xl "
+              >
                 <div className="flex flex-row justify-between gap-3 ">
                   <div className="rounded-full w-10 h-10  overflow-hidden">
                     <Image
@@ -154,7 +163,7 @@ export default function CommentsSec() {
           ))}
         </ul>
       </div>
-      <div className="inset-x-0 bottom-0 flex justify-center bg-linear-to-t from-white pt-32 pb-8 pointer-events-none dark:from-[#030712] absolute">
+      <div className="inset-x-0 bottom-0 flex justify-center bg-linear-to-t from-background pt-32 pb-8 pointer-events-none dark:from-[#030712] absolute">
         <Button
           onClick={() => setShowAll(!ShowAll)}
           className="relative pointer-events-auto"

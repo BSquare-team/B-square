@@ -123,42 +123,35 @@ export default function page() {
       {/* comments  */}
       <CommentsSec />
 
-      <section className="container m-auto max-w-7xl mt-20 px-6">
+      {/* <section className="container m-auto max-w-7xl mt-20 px-6">
         <div className="flex flex-col md:flex-row justify-between ">
           <div className="prose dark:prose-invert md:w-[60%]">
             <h2>My Resume</h2>
             <p>work I've done</p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="container m-auto max-w-7xl mt-20 px-6">
         <div className="flex flex-col md:flex-row justify-between ">
           <div className="prose dark:prose-invert md:w-[60%]">
             <h2>About me</h2>
             <p>
-              I'm Amin Bagheri <br />i write most part story about how i got
-              here to front end development and what i've been throw so far you
-              can read in this blog
+              I'm Amin Bagheri. <br />
+              Most of my story — how I got into front-end development and what
+              I've been through so far — you can read on this blog.
             </p>
           </div>
 
-          <Link
-            href="/blog/how-i-got-here"
-            className="md:w-[40%] group mt-4"
-          >
+          <Link href="/blog/how-i-got-here" className="md:w-[40%] group mt-4">
             <div className="rounded-3xl overflow-hidden hover:shadow-2xl shadow-lg dark:bg-[#0a0a0a94] dark:shadow-[0_10px_30px_-10px_rgba(255,255,255,0.03)] dark:hover:shadow-[0_20px_50px_-12px_rgba(255,255,255,0.08)] transition-all duration-300 h-full">
               <div className="p-8 border-t-4 border-blue-800 flex flex-col justify-between h-full">
                 <div>
-                  <p className="text-sm/5 text-gray-500 dark:text-gray-400">
-                   
-                  </p>
+                  <p className="text-sm/5 text-gray-500 dark:text-gray-400"></p>
                   <h2 className="mt-2 text-xl/7 font-bold text-gray-900 dark:text-white line-clamp-3 group-hover:text-blue-400 transition-colors">
                     How I got here
                   </h2>
-                  <p className="mt-2 text-sm/6 text-gray-600 dark:text-gray-400 line-clamp-4">
-                    
-                  </p>
+                  <p className="mt-2 text-sm/6 text-gray-600 dark:text-gray-400 line-clamp-4"></p>
                 </div>
                 <p className="mt-6 text-sm/5 font-medium text-gray-700 dark:text-gray-300">
                   Read more →
@@ -173,24 +166,26 @@ export default function page() {
         <div className="flex flex-col md:flex-row justify-between">
           <div className="md:sticky md:top-40 md:w-[60%] h-fit">
             <div className="prose dark:prose-invert">
-              <h2>my first client</h2>
-              <p>opportunities that could change my life but they didn't.</p>
+              <h2>Opportunities </h2>
+              <p>
+                Stories of the valuable opportunities I've had — and what I
+                learned from each one.
+              </p>
             </div>
           </div>
 
-          <Link href="/blog/first-real-client" className="md:w-[40%] group mt-4">
+          <Link
+            href="/blog/first-real-client"
+            className="md:w-[40%] group mt-4"
+          >
             <div className="rounded-3xl overflow-hidden hover:shadow-2xl shadow-lg dark:bg-[#0a0a0a94] dark:shadow-[0_10px_30px_-10px_rgba(255,255,255,0.03)] dark:hover:shadow-[0_20px_50px_-12px_rgba(255,255,255,0.08)] transition-all duration-300">
               <div className="p-8 border-t-4 border-blue-800 flex flex-col justify-between">
                 <div>
-                  <p className="text-sm/5 text-gray-500 dark:text-gray-400">
-                
-                  </p>
+                  <p className="text-sm/5 text-gray-500 dark:text-gray-400"></p>
                   <h2 className="mt-2 text-xl/7 font-bold text-gray-900 dark:text-white line-clamp-3 group-hover:text-blue-400 transition-colors">
-                  My first real client
+                    First real client
                   </h2>
-                  <p className="mt-2 text-sm/6 text-gray-600 dark:text-gray-400 line-clamp-4">
-   
-                  </p>
+                  <p className="mt-2 text-sm/6 text-gray-600 dark:text-gray-400 line-clamp-4"></p>
                 </div>
                 <p className="mt-6 text-sm/5 font-medium text-gray-700 dark:text-gray-300">
                   Read more →

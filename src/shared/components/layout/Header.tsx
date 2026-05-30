@@ -28,14 +28,17 @@ export default function Header() {
   }, []);
 
   return (
+    <header className="z-40">
     <Headroom>
-      <header
-        className={`w-full transition-all duration-300 z-999 ${
+      <div
+        className={`w-full transition-all duration-300  ${
           isScrolled
             ? "bg-white/80 dark:bg-gray-900/80 backdrop-blur-md  border-gray-200 dark:border-gray-800 shadow-sm"
             : "bg-transparent"
         }`}
       >
+
+        
         <div className="container m-auto flex-between h-14 px-6 py-8 max-w-7xl   ">
           <div className="flex-start">
             <Link href="/" className="flex-start">
@@ -94,7 +97,9 @@ export default function Header() {
             </div>
           </div>
         </div>
-      </header>
+      </div>
     </Headroom>
+    </header>
+
   );
 }
