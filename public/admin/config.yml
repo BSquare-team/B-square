@@ -174,6 +174,17 @@ collections:
                   widget: "string",
                   required: false,
                 }
+
+          - label: "FAQ"
+            name: "faq"
+            widget: "object"
+            fields:
+              - label: "Questions"
+                name: "questions"
+                widget: "list"
+                fields:
+                  - { label: "Question", name: "question", widget: "string" }
+                  - { label: "Answer", name: "answer", widget: "markdown" }
   - name: "changelog"
     label: "Changelog888"
     label_singular: "Changelog Entry"

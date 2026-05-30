@@ -16,8 +16,13 @@ export interface CardSlide {
   link?: string;
 }
 
+export interface FAQItem {
+  question: string;
+  answer: string;
+}
+
 export interface ContentBlock {
-  type: "text" | "simpleSlider" | "cardSlider" | "code" | "quote";
+  type: "text" | "simpleSlider" | "cardSlider" | "code" | "quote" | "faq";
   content?: string;
   slides?: SimpleSlide[];
   cards?: CardSlide[];
@@ -25,6 +30,7 @@ export interface ContentBlock {
   code?: string;
   text?: string;
   author?: string;
+  questions?: FAQItem[];
 }
 
 export interface BlogPost {

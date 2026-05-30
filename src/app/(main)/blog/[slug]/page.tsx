@@ -7,12 +7,30 @@ import { APP_NAME, SERVER_URL } from "@/src/shared/lib/constants";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Metadata } from "next";
+import { FAQItem } from "@/src/features/blog/types/blog.types";
 
 export const revalidate = 3600;
 
 export function generateStaticParams() {
   const posts = getAllPosts();
   return posts.map((post) => ({ slug: post.slug }));
+}
+
+function generateFAQSchema(faqs: FAQItem[]): object | null {
+  if (!faqs || faqs.length === 0) return null;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer.replace(/<[^>]*>/g, ""), // حذف تگ‌های HTML
+      },
+    })),
+  };
 }
 
 export async function generateMetadata({
@@ -28,12 +46,9 @@ export async function generateMetadata({
   }
 
   const seo = post.seo;
-
-  // SEO Title: اول meta title، بعد title معمولی
   const metaTitle = seo?.metaTitle || post.title;
   const metaDescription = seo?.metaDescription || post.description;
 
-  // Keywords: ترکیب SEO keywords + تگ‌های پست
   const seoKeywords = seo?.keywords?.map((k) => k.keyword) || [];
   const postTags = [
     ...post.categoryTags.map((t) => t.tag),
@@ -42,6 +57,12 @@ export async function generateMetadata({
   const allKeywords = [...seoKeywords, ...postTags];
 
   const postUrl = seo?.canonical || `${SERVER_URL}/blog/${slug}`;
+
+  // ⬇️ پیدا کردن اولین بلاک FAQ توی محتوا
+  const faqBlock = post.blocks.find((block) => block.type === "faq");
+  const faqSchema = faqBlock?.questions
+    ? generateFAQSchema(faqBlock.questions)
+    : null;
 
   return {
     title: metaTitle,
@@ -73,6 +94,12 @@ export async function generateMetadata({
       images: post.featuredImage ? [post.featuredImage] : undefined,
     },
     alternates: { canonical: postUrl },
+    // ⬇️ JSON-LD Schema
+    other: faqSchema
+      ? {
+          "application/ld+json": JSON.stringify(faqSchema),
+        }
+      : undefined,
   };
 }
 

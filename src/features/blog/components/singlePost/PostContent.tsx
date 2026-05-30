@@ -6,6 +6,7 @@ import CardSliderBlock from "./CardSliderBlock";
 import CodeBlock from "./CodeBlock";
 import QuoteBlock from "./QuoteBlock";
 import type { ContentBlock } from "@/src/features/blog/types/blog.types";
+import FAQBlock from "./FAQBlock";
 
 interface PostContentProps {
   blocks: ContentBlock[];
@@ -51,6 +52,10 @@ export default function PostContent({ blocks }: PostContentProps) {
             return (
               <QuoteBlock key={index} text={block.text} author={block.author} />
             );
+            
+          case "faq":
+            if (!block.questions || block.questions.length === 0) return null;
+            return <FAQBlock key={index} questions={block.questions} />;
 
           default:
             return null;
