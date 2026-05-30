@@ -1,0 +1,31 @@
+{
+  "featuredImage": "/images/omidPic.webp",
+  "title": "From Public Health to Modern Web Development — My Real, Unfiltered Story",
+  "description": "How I went from failing university entrance exams to building production-ready websites with Next.js during internet blackouts.",
+  "slug": "my-story",
+  "author": "Omid",
+  "date": "2026-05-30T12:00:00.000Z",
+  "published": true,
+  "categoryTags": [{ "tag": "Personal" }, { "tag": "Career" }],
+  "techTags": [
+    { "tag": "Next.js" },
+    { "tag": "React" },
+    { "tag": "TypeScript" }
+  ],
+  "seo": {
+    "metaTitle": "My Journey from Public Health to Web Development — Omid Bagheri",
+    "metaDescription": "The real story of Omid Bagheri, full-stack developer. From failing Konkoor to learning React during internet blackouts and building real products with Next.js.",
+    "keywords": [
+      { "keyword": "web development journey" },
+      { "keyword": "learning React in Iran" },
+      { "keyword": "internet blackout developer story" }
+    ],
+    "canonical": ""
+  },
+  "blocks": [
+    {
+      "type": "text",
+      "content": "## Trying Everything, Searching for My Path\n\nAfter that, there was no clear road ahead..."
+    }
+  ]
+}
