@@ -51,10 +51,11 @@ export interface BlogPost {
   description: string;
   author: string;
   date: string;
+  published?: boolean;
   categoryTags: Tag[];
   techTags: Tag[];
   featuredImage?: string;
   blocks: ContentBlock[];
   slug: string;
-  seo?: SEOData; // ⬅️ جدید
+  seo?: SEOData;
 }

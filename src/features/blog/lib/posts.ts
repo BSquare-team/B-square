@@ -29,6 +29,7 @@ export function getAllPosts(): BlogPost[] {
         slug,
       } as BlogPost;
     })
+    .filter((post) => post.published !== false)
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   return allPosts;

@@ -45,6 +45,14 @@ collections:
           widget: "datetime",
           default: "{{now}}",
         }
+        # ── Published Toggle ──
+      - {
+          label: "Published",
+          name: "published",
+          widget: "boolean",
+          default: true,
+          hint: "Unpublish instead of deleting. Keeps the file, hides it from the blog.",
+        }
 
       # ── Tags ──
       - label: "Category Tags"
