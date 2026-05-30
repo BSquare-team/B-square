@@ -38,3 +38,23 @@ export interface BlogPost {
   blocks: ContentBlock[];
   slug: string;
 }
+
+export interface SEOData {
+  metaTitle?: string;
+  metaDescription?: string;
+  keywords?: { keyword: string }[];
+  canonical?: string;
+}
+
+export interface BlogPost {
+  title: string;
+  description: string;
+  author: string;
+  date: string;
+  categoryTags: Tag[];
+  techTags: Tag[];
+  featuredImage?: string;
+  blocks: ContentBlock[];
+  slug: string;
+  seo?: SEOData; // ⬅️ جدید
+}

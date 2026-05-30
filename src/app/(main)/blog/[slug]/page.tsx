@@ -27,21 +27,30 @@ export async function generateMetadata({
     return { title: `Post Not Found | ${APP_NAME}` };
   }
 
-  const tags = [
+  const seo = post.seo;
+
+  // SEO Title: اول meta title، بعد title معمولی
+  const metaTitle = seo?.metaTitle || post.title;
+  const metaDescription = seo?.metaDescription || post.description;
+
+  // Keywords: ترکیب SEO keywords + تگ‌های پست
+  const seoKeywords = seo?.keywords?.map((k) => k.keyword) || [];
+  const postTags = [
     ...post.categoryTags.map((t) => t.tag),
     ...post.techTags.map((t) => t.tag),
   ];
+  const allKeywords = [...seoKeywords, ...postTags];
 
-  const postUrl = `${SERVER_URL}/blog/${slug}`;
+  const postUrl = seo?.canonical || `${SERVER_URL}/blog/${slug}`;
 
   return {
-    title: post.title,
-    description: post.description,
-    keywords: tags,
+    title: metaTitle,
+    description: metaDescription,
+    keywords: allKeywords,
     authors: [{ name: post.author }],
     openGraph: {
-      title: `${post.title} | ${APP_NAME}`,
-      description: post.description,
+      title: `${metaTitle} | ${APP_NAME}`,
+      description: metaDescription,
       type: "article",
       publishedTime: post.date,
       authors: [post.author],
@@ -51,7 +60,7 @@ export async function generateMetadata({
               url: post.featuredImage,
               width: 1200,
               height: 630,
-              alt: post.title,
+              alt: metaTitle,
             },
           ]
         : undefined,
@@ -59,8 +68,8 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: post.title,
-      description: post.description,
+      title: metaTitle,
+      description: metaDescription,
       images: post.featuredImage ? [post.featuredImage] : undefined,
     },
     alternates: { canonical: postUrl },
