@@ -5,7 +5,7 @@ import Script from "next/script";
 
 export function WistiaPlayer({ mediaId }: { mediaId: string }) {
   return (
-    <div className="w-40 mx-auto">
+    <div className="w-30 md:w-40 mx-auto">
       {" "}
       {/* عرض محدود برای ویدیو عمودی */}
       <Script

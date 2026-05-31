@@ -34,8 +34,8 @@ export default function SwiperThreeView({ videos }: SwiperThreeViewProps) {
         }}
         className=" rounded-xl  "
       >
-        {videos.map((template) => (
-          <SwiperSlide key={template.id} className=" ">
+        {videos.map((template , index) => (
+          <SwiperSlide key={index} >
            <WistiaPlayer mediaId={template.embedId}  />
           </SwiperSlide>
         ))}
