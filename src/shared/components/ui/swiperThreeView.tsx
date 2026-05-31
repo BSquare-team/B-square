@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import { EmbedData, embedData } from "@/data/embedData";
-import { WistiaPlayer } from "@/src/app/(main)/team/_components/WistiaPlayer";
+import { WistiaPlayer } from "@/src/features/team/components/singlePost/WistiaPlayer";
 
 
 interface SwiperThreeViewProps {
@@ -23,7 +23,7 @@ export default function SwiperThreeView({ videos }: SwiperThreeViewProps) {
       <Swiper
         modules={[Navigation, Pagination]}
         slidesPerView={3}
-        spaceBetween={0}
+        spaceBetween={5}
         centeredSlides={true}
         pagination={{ clickable: true }}
         loop={true}
@@ -35,7 +35,7 @@ export default function SwiperThreeView({ videos }: SwiperThreeViewProps) {
         className=" rounded-xl  "
       >
         {videos.map((template) => (
-          <SwiperSlide key={template.id} className="">
+          <SwiperSlide key={template.id} className=" ">
            <WistiaPlayer mediaId={template.embedId}  />
           </SwiperSlide>
         ))}

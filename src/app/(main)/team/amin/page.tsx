@@ -11,11 +11,10 @@ import hp2 from "@/src/assets/image/hp2.jpg";
 import { LucideStar } from "lucide-react";
 import CommentsSec from "../../../../features/team/components/singlePost/CommentsSec";
 import Link from "next/link";
-import { CompanyBanner } from "../_components/CompanyBanner";
 
-import { WistiaPlayer } from "../_components/WistiaPlayer";
 import { embedData } from "@/data/embedData";
 import SwiperThreeView from "@/src/shared/components/ui/swiperThreeView";
+import { CompanyBanner } from "@/src/features/team/components/singlePost/CompanyBanner";
 
 export default function page() {
   return (
@@ -129,7 +128,7 @@ export default function page() {
       {/* comments  */}
       <CommentsSec />
 
-      {/* <section className="container m-auto max-w-7xl mt-20 px-6">
+      <section className="container m-auto max-w-7xl mt-20 px-6">
         <div className="flex flex-col md:flex-row justify-between ">
           <div className="prose dark:prose-invert md:w-[60%]">
             <h2>My Resume</h2>
@@ -139,7 +138,7 @@ export default function page() {
             <SwiperThreeView videos={embedData} />
           </div>
         </div>
-      </section> */}
+      </section>
 
       <section className="container m-auto max-w-7xl mt-20 px-6">
         <div className="flex flex-col md:flex-row justify-between ">
