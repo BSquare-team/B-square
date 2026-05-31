@@ -15,6 +15,7 @@ import Header from "../shared/components/layout/Header";
 import Footer from "../shared/components/layout/Footer";
 import { ThemeProvider } from "next-themes";
 
+import { Inter } from "next/font/google";
 
 // // فونت هدینگ
 // const hankenGrotesk = localFont({
@@ -29,6 +30,12 @@ import { ThemeProvider } from "next-themes";
 //   variable: "--font-sans",
 //   display: "swap",
 // });
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter", // نام متغیر CSS
+  display: "swap", // بهینه‌سازی نمایش فونت
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(SERVER_URL),
@@ -80,7 +87,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`overflow-x-clip`}
+      className={`overflow-x-clip ${inter.variable}`}
       suppressContentEditableWarning
       suppressHydrationWarning
     >
