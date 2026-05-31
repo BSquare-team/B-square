@@ -1,8 +1,8 @@
 // src/app/(main)/blog/page.tsx
 
-import HeroSection from "./_components/HeroSection";
-import CategorySection from "./_components/CategorySection";
-import BlogPostsSection from "./_components/BlogPostsSection";
+import HeroSection from "../../../features/blog/components/HeroSection";
+import BlogPostsSection from "../../../features/blog/components/BlogPostsSection";
+import ChangelogCTA from "../../../features/blog/components/ChangelogCTA";
 import { getAllPosts } from "@/src/features/blog/lib/posts";
 import { APP_NAME, SERVER_URL } from "@/src/shared/lib/constants";
 import { Metadata } from "next";
@@ -28,7 +28,7 @@ export default function BlogPage() {
   return (
     <div className="container m-auto max-w-7xl">
       <HeroSection />
-      <CategorySection />
+      <ChangelogCTA />
       <BlogPostsSection posts={posts} />
     </div>
   );

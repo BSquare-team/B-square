@@ -1,18 +1,36 @@
 // src/app/(main)/blog/[slug]/page.tsx
 
 import { getPostBySlug, getAllPosts } from "@/src/features/blog/lib/posts";
+import PostHeader from "@/src/features/blog/components/singlePost/PostHeader";
+import PostContent from "@/src/features/blog/components/singlePost/PostContent";
+import { APP_NAME, SERVER_URL } from "@/src/shared/lib/constants";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import PostHeader from "./_components/PostHeader";
-import PostContent from "./_components/PostContent";
-import { APP_NAME, SERVER_URL } from "@/src/shared/lib/constants";
 import { Metadata } from "next";
+import { FAQItem } from "@/src/features/blog/types/blog.types";
 
 export const revalidate = 3600;
 
 export function generateStaticParams() {
   const posts = getAllPosts();
   return posts.map((post) => ({ slug: post.slug }));
+}
+
+function generateFAQSchema(faqs: FAQItem[]): object | null {
+  if (!faqs || faqs.length === 0) return null;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer.replace(/<[^>]*>/g, ""), // حذف تگ‌های HTML
+      },
+    })),
+  };
 }
 
 export async function generateMetadata({
@@ -27,21 +45,33 @@ export async function generateMetadata({
     return { title: `Post Not Found | ${APP_NAME}` };
   }
 
-  const tags = [
+  const seo = post.seo;
+  const metaTitle = seo?.metaTitle || post.title;
+  const metaDescription = seo?.metaDescription || post.description;
+
+  const seoKeywords = seo?.keywords?.map((k) => k.keyword) || [];
+  const postTags = [
     ...post.categoryTags.map((t) => t.tag),
     ...post.techTags.map((t) => t.tag),
   ];
+  const allKeywords = [...seoKeywords, ...postTags];
 
-  const postUrl = `${SERVER_URL}/blog/${slug}`;
+  const postUrl = seo?.canonical || `${SERVER_URL}/blog/${slug}`;
+
+  // ⬇️ پیدا کردن اولین بلاک FAQ توی محتوا
+  const faqBlock = post.blocks.find((block) => block.type === "faq");
+  const faqSchema = faqBlock?.questions
+    ? generateFAQSchema(faqBlock.questions)
+    : null;
 
   return {
-    title: post.title,
-    description: post.description,
-    keywords: tags,
+    title: metaTitle,
+    description: metaDescription,
+    keywords: allKeywords,
     authors: [{ name: post.author }],
     openGraph: {
-      title: `${post.title} | ${APP_NAME}`,
-      description: post.description,
+      title: `${metaTitle} | ${APP_NAME}`,
+      description: metaDescription,
       type: "article",
       publishedTime: post.date,
       authors: [post.author],
@@ -51,7 +81,7 @@ export async function generateMetadata({
               url: post.featuredImage,
               width: 1200,
               height: 630,
-              alt: post.title,
+              alt: metaTitle,
             },
           ]
         : undefined,
@@ -59,11 +89,17 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: post.title,
-      description: post.description,
+      title: metaTitle,
+      description: metaDescription,
       images: post.featuredImage ? [post.featuredImage] : undefined,
     },
     alternates: { canonical: postUrl },
+    // ⬇️ JSON-LD Schema
+    other: faqSchema
+      ? {
+          "application/ld+json": JSON.stringify(faqSchema),
+        }
+      : undefined,
   };
 }
 

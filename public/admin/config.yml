@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: aminb9383/B-square
+  repo: BSquare-team/B-square
   branch: main
   auth_url: https://auth.sveltia-cms.dev/.well-known/oauth/providers
 
@@ -15,10 +15,10 @@ collections:
     create: true
     extension: "json"
     format: "json"
-    slug: "{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
 
     fields:
-      # ── Featured Image (Optional, for Blog Card) ──
+      # ── Featured Image ──
       - {
           label: "Featured Image",
           name: "featuredImage",
@@ -28,7 +28,13 @@ collections:
 
       # ── Header Section ──
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "description", name: "description", widget: "text" }
+      - { label: "Description", name: "description", widget: "text" }
+      - {
+          label: "URL Slug",
+          name: "slug",
+          widget: "string",
+          hint: "e.g., my-story",
+        }
       - {
           label: "Author",
           name: "author",
@@ -41,15 +47,21 @@ collections:
           name: "date",
           widget: "datetime",
           default: "{{now}}",
-          width: "1/2",
+        }
+        # ── Published Toggle ──
+      - {
+          label: "Published",
+          name: "published",
+          widget: "boolean",
+          default: true,
+          hint: "Unpublish instead of deleting. Keeps the file, hides it from the blog.",
         }
 
-      # ── Tags (Two Categories, Each Max 3 Words) ──
+      # ── Tags ──
       - label: "Category Tags"
         name: "categoryTags"
         widget: "list"
         required: false
-        hint: "e.g., Frontend, Backend, DevOps"
         max: 3
         field: { label: "Tag", name: "tag", widget: "string" }
 
@@ -57,11 +69,42 @@ collections:
         name: "techTags"
         widget: "list"
         required: false
-        hint: "e.g., React, TypeScript, Next.js"
         max: 3
         field: { label: "Tag", name: "tag", widget: "string" }
 
-      # ── Main Content Blocks ──
+      # ── SEO Section ──
+      - label: "SEO Settings"
+        name: "seo"
+        widget: "object"
+        required: false
+        fields:
+          - {
+              label: "Meta Title",
+              name: "metaTitle",
+              widget: "string",
+              required: false,
+            }
+          - {
+              label: "Meta Description",
+              name: "metaDescription",
+              widget: "text",
+              required: false,
+            }
+          - {
+              label: "Keywords",
+              name: "keywords",
+              widget: "list",
+              required: false,
+              field: { label: "Keyword", name: "keyword", widget: "string" },
+            }
+          - {
+              label: "Canonical URL",
+              name: "canonical",
+              widget: "string",
+              required: false,
+            }
+
+      # ── Content Blocks ──
       - label: "Content Blocks"
         name: "blocks"
         widget: "list"
@@ -134,6 +177,17 @@ collections:
                   widget: "string",
                   required: false,
                 }
+
+          - label: "FAQ"
+            name: "faq"
+            widget: "object"
+            fields:
+              - label: "Questions"
+                name: "questions"
+                widget: "list"
+                fields:
+                  - { label: "Question", name: "question", widget: "string" }
+                  - { label: "Answer", name: "answer", widget: "markdown" }
   - name: "changelog"
     label: "Changelog888"
     label_singular: "Changelog Entry"
