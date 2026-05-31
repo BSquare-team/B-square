@@ -130,11 +130,11 @@ export default function page() {
 
       <section className="container m-auto max-w-7xl mt-20 px-6">
         <div className="flex flex-col md:flex-row justify-between ">
-          <div className="prose dark:prose-invert md:w-[60%]">
+          <div className="prose dark:prose-invert lg:w-[60%] md:w-1/2">
             <h2>My Resume</h2>
             <p>work I've done</p>
           </div>
-          <div className="md:w-1/2 w-full h32">
+          <div className=" w-full lg::w-[40%] md:w-1/2 ">
             <SwiperThreeView videos={embedData} />
           </div>
         </div>
@@ -191,16 +191,9 @@ export default function page() {
                 <div>
                   <p className="text-sm/5 text-gray-500 dark:text-gray-400"></p>
                   <h2 className="mt-2 text-xl/7 font-bold text-gray-900 dark:text-white line-clamp-3 group-hover:text-blue-400 transition-colors">
-                    My Journey Through Iran's Education System and Medical
-                    Field: A Raw Personal Story
+                    First real client
                   </h2>
-                  <p className="mt-2 text-sm/6 text-gray-600 dark:text-gray-400 line-clamp-4">
-                    Almost everyone around me believed that education was the
-                    only safe path toward becoming someone valuable. And
-                    honestly, I believed it too. I wanted to become skilled at
-                    something meaningful. I wanted a future I could be proud of.
-                    But the education system I grew up in was deeply broken.
-                  </p>
+                  <p className="mt-2 text-sm/6 text-gray-600 dark:text-gray-400 line-clamp-4"></p>
                 </div>
                 <p className="mt-6 text-sm/5 font-medium text-gray-700 dark:text-gray-300">
                   Read more →
