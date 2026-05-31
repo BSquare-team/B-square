@@ -1,31 +1,82 @@
 {
-  "featuredImage": "/images/omidPic.webp",
+  "featuredImage": "",
   "title": "From Public Health to Modern Web Development — My Real, Unfiltered Story",
-  "description": "How I went from failing university entrance exams to building production-ready websites with Next.js during internet blackouts.",
+  "description": "How I went from failing university entrance exams and studying public health, to learning React during internet blackouts and shipping a production-ready product with Next.js.",
   "slug": "my-story",
   "author": "Omid",
   "date": "2026-05-30T12:00:00.000Z",
   "published": true,
-  "categoryTags": [{ "tag": "Personal" }, { "tag": "Career" }],
+  "categoryTags": [
+    "Personal",
+    "Career"
+  ],
   "techTags": [
-    { "tag": "Next.js" },
-    { "tag": "React" },
-    { "tag": "TypeScript" }
+    "Next.js",
+    "React",
+    "TypeScript"
   ],
   "seo": {
     "metaTitle": "My Journey from Public Health to Web Development — Omid Bagheri",
     "metaDescription": "The real story of Omid Bagheri, full-stack developer. From failing Konkoor to learning React during internet blackouts and building real products with Next.js.",
     "keywords": [
-      { "keyword": "web development journey" },
-      { "keyword": "learning React in Iran" },
-      { "keyword": "internet blackout developer story" }
+      "web development journey",
+      "learning React in Iran",
+      "internet blackout developer story"
     ],
     "canonical": ""
   },
   "blocks": [
     {
       "type": "text",
-      "content": "## Trying Everything, Searching for My Path\n\nAfter that, there was no clear road ahead..."
+      "content": "## Growing up, everyone told me the same thing: focus on the Konkoor, get into a good field, and you'll be \"set for life.\"\n\nI wanted something different. Something that was actually mine. So alongside studying, I dipped my toes into trading — hoping to build a parallel path for myself after the exam.\n\nI didn't pass the first year. I studied again and made it into Public Health at Mashhad Azad University the second time around. Once university started, I pushed harder into trading. But it didn't take long to realize the truth: this was a game for the already-rich. Without real income and peace of mind, you can't survive it. So I walked away.\n\n## Trying Everything, Searching for My Path\n\nAfter that, there was no clear road ahead. No financial safety net. No mentor to light the way. But I knew there had to be a path out there that I could fall in love with — something where the money wasn't the only thing that mattered. I was willing to do whatever it took to find it.\n\nSo I started testing every job I could, earning some income along the way to see which one fit. Banquet halls. Kitchens. Sales. Venue management. I tried them all. The one I did most was electrical wiring. It was decent work. But it didn't satisfy me. Deep down, I wanted something scalable — something not tied to physical location or hourly labor. Something that could one day earn in dollars.\n\nSo I picked up Illustrator and Photoshop. I learned to design posters and cards, put them up on Envato for sale. But still, that nagging feeling wouldn't leave. \"This isn't quite it.\"\n\n## \n\nThe Spark: Discovering WordPress\n\nOne day, I overheard my brother's coworkers talking about WordPress. It hit me like a spark. Here was something I could use to build a real product. Something I could actually sell.\n\nI taught myself. Built simple designs. Kept pushing forward until Ms. Rahdar — a frontend developer at Intech — took the time to mentor me. She showed me what a real product needed to have. That conversation shifted my entire perspective. It gave me enough confidence that the very next day, I landed a job as a full-stack (low-code) developer at ParsinDo, a web design agency.\n\n## The WordPress Ceiling\n\nAt ParsinDo, I learned a ton. I saw how a real team works together. I became a useful part of that team — dynamic site builds, SEO prep, performance optimization with minimal plugins. I did my job well.\n\nBut something kept eating at me. I wanted more control. Deeper understanding. Better output.\n\nI poured hours into HTML, CSS, JavaScript, and PHP. But in the WordPress world, most of it went unused. My daily work was wrestling with page builders, scattered PHP filters, and JS snippets stuffed into corners of a product. Even Git was useless to me — all the code had to be crammed into the WordPress dashboard.\n\nI wanted to move beyond Elementor. I wanted to use Bricks Builder. But the agency wouldn't take the risk. And I couldn't juggle university, work, and learning Bricks all at once. So I left. I wanted to build something that was truly mine.\n\n## The Internet Went Down — Again, and Harder\n\nThat was around the time protests erupted in Iran. The internet was cut for about 25 days. I went back to the agency afterward, but there was no real work. They were just keeping us busy with meaningless tasks. Ten days later, I left for good.\n\nI dove deep into Bricks Builder. I built a custom styling system using utility classes — essentially a personal version of the ACSS plugin, which introduced me to the world of principled, efficient styling.\n\nThen war broke out. And for the third time, the internet went dark.\n\nThis time, I was ready. I'd heard about The Odin Project and its excellent full-stack curriculum. The day before the complete shutdown, I downloaded every page I could, one by one. When the connection died, I started learning JavaScript — deeply — from those fragmented offline files.\n\nI'd spent time on JS before, but never really understood it. As a WordPress designer, serious coding wasn't required. But this time was different. No resources. No mentor. Just me and code that had to work.\n\nSomething clicked. I built a system with GSAP and used it in a small project. The feeling was indescribable. For the first time, I felt like a real developer."
+    },
+    {
+      "type": "quote",
+      "text": "I learned React during an internet blackout. If you can debug without documentation, you can debug anything.",
+      "author": "Omid Bagheri"
+    },
+    {
+      "type": "text",
+      "content": "## React During an Internet Blackout — The Point of No Return\n\nAfter that, I built a full Todo App. I felt I knew JS well enough. Time for a framework.\n\nI called someone I admired. He told me to start with Vue. I didn't listen. I went for React — the king of frontend.\n\nBut npm wouldn't work. I couldn't even start a React project.\n\nI called him again. I asked if he could at least send me a node_modules folder from one of his projects so I could practice. He said: \"Forget it. Even experienced devs are struggling right now. You're just starting — don't bother.\"\n\nI didn't give up. I started writing code in an empty VS Code window. Scattered files. Whatever I remembered. Then, in the comments of some tutorial site, I found a mention of local npm mirrors. I used one. It worked. I started my first React project.\n\nThen I realized none of the raw code I'd written actually worked inside a real project. Back to zero. Learning again. Errors and debugging. But this time it was different — I knew I'd find a way.\n\nI built the next project with axios, useContext, useReducer, and React Router. Then I looked at Redux Toolkit and realized Next.js mattered more. Redux could wait."
+    },
+    {
+      "type": "code",
+      "language": "typescript",
+      "code": "// My first React project — no npm, no docs, just code\nimport { useState, useEffect } from \"react\";\nimport { BrowserRouter, Routes, Route } from \"react-router-dom\";\n\nfunction App() {\n  const [data, setData] = useState([]);\n\n  useEffect(() => {\n    fetch(\"/api/movies\")\n      .then((res) => res.json())\n      .then(setData);\n  }, []);\n\n  return (\n    <BrowserRouter>\n      <Routes>\n        <Route path=\"/\" element={<HomePage movies={data} />} />\n        <Route path=\"*\" element={<PageNotFound />} />\n      </Routes>\n    </BrowserRouter>\n  );\n}"
+    },
+    {
+      "type": "text",
+      "content": "## Next.js and a Team — The Birth of a Real Product\n\nI started Next.js and — once again — it felt like I knew nothing. I learned Page Router. Built a practice project. But I couldn't wait anymore. I wanted to build something real.\n\nOne problem: I still didn't know TypeScript. Hadn't touched App Router. My UI work wasn't polished. The need for a real teammate had never felt stronger.\n\nEver since my WordPress days, I'd been searching for someone like me — someone who truly cared about the craft, who wanted to learn relentlessly, who was willing to sacrifice comfort to push the work forward. The harder my own journey became, the more I fell in love with this field. But there was only one person who had all the qualities I was looking for. Someone who, like me, did the most with the least. Someone who gave up everything else to make progress. That person was my brother.\n\nThe internet blackouts brought us closer. I started introducing him to programming. And honestly? That turned out to be more rewarding than any technology or external help I could have asked for. Finally, we could speak the same language. Finally, we could build together.\n\nAmin had already learned HTML and CSS during the earlier blackout. His situation mirrored mine exactly. I guided him. He absorbed JS fundamentals in 4 days. Then we jumped straight into projects. In less than half the time it took me, Amin walked the same path and reached React.\n\nThen we made a strategic call: Amin would focus on Tailwind and frontend output. I'd focus on understanding Next.js deeply, backend concepts, finding solutions, and solving hard problems. This was exactly what I'd been wanting.\n\n## Backend, Authentication, and Building the Foundation\n\nI explored Payload CMS. It was solid, but it needed a real host for deployment. More importantly, I still lacked a real understanding of databases and backend architecture.\n\nBack to self-learning. Still without full documentation. I had to choose between competing tools for authentication, ORMs, and databases. I landed on Drizzle ORM and SQLite (to eventually migrate to PostgreSQL). For authentication, I wrote it with JWT first, then moved to Better-Auth.\n\nI built a complete project: authentication, route protection, REST API endpoints, full CRUD operations. End to end."
+    },
+    {
+      "type": "code",
+      "language": "typescript",
+      "code": "// Authentication with Better-Auth + Drizzle ORM\nimport { betterAuth } from \"better-auth\";\nimport { drizzleAdapter } from \"better-auth/adapters/drizzle\";\nimport { db } from \"@/db\";\n\nexport const auth = betterAuth({\n  database: drizzleAdapter(db, {\n    provider: \"sqlite\",\n  }),\n  emailAndPassword: {\n    enabled: true,\n  },\n  session: {\n    expiresIn: 60 * 60 * 24 * 7, // 7 days\n  },\n});"
+    },
+    {
+      "type": "text",
+      "content": "## 10 Days That Proved Everything\n\nAmin pushed us to ship something — anything. I suggested we could deploy for free on GitHub and Vercel.\n\nAmin dove into GitHub and team workflows. I went hunting for a CMS to make the site dynamic. (My WordPress years had burned one lesson into me: a site without an admin panel is a dead site.) I found Sveltia CMS. After wrestling with GitHub — where projects wouldn't push because of the unstable connection — I finally got it working.\n\nAnd then — in 10 days — we built the site. With a working admin panel. With complete design. With speed on Vercel that felt like a native app.\n\n## What This Journey Taught Me\n\nThis path taught me that \"impossible\" is an illusion.\n\nI learned React during an internet blackout. I started a project without npm. I figured out Next.js without full documentation. And with a two-person team, I shipped a complete product in 10 days.\n\nI discovered every possible workaround to stay connected and keep working. We solved every problem that came our way and kept building, iteration after iteration. While everyone else was worried about the next internet shutdown, we were developing our application — and turned it into a real, live product, completely for free.\n\nThe difference between giving up and shipping something isn't talent. It's whether you stop looking for the solution or not.\n\nToday, I build with the tools I love, alongside my brother — real, fast, modern websites. Next.js. TypeScript. Tailwind."
+    },
+    {
+      "type": "faq",
+      "questions": [
+        {
+          "question": "How did you learn to code without internet access?",
+          "answer": "I downloaded documentation pages one by one before the internet went down. During the blackout, I worked entirely offline — no npm, no Stack Overflow, no Google. I learned to read error messages carefully and solve problems through trial and error. It was hard, but it made me a much stronger developer."
+        },
+        {
+          "question": "Why did you switch from WordPress to Next.js?",
+          "answer": "WordPress taught me a lot about building websites, but I hit a ceiling. I wanted more control over performance, architecture, and user experience. Next.js gives me complete control — server components, static generation, and the ability to build truly fast, modern web apps without relying on dozens of plugins."
+        },
+        {
+          "question": "What's it like working with your brother?",
+          "answer": "It's the best decision we made. We understand each other's struggles because we've lived through the same conditions. I focus on backend, architecture, and problem-solving while Amin crafts the frontend with Tailwind. Having someone you trust completely, who works as hard as you do — that's rare and invaluable."
+        },
+        {
+          "question": "Do you build custom admin panels for clients?",
+          "answer": "Yes. Every site we build includes a CMS-powered admin panel (Sveltia CMS). Clients can edit text, add blog posts, manage images, and update content without touching code. It's Git-based, so all content is version-controlled and can be deployed instantly."
+        }
+      ]
     }
   ]
 }
