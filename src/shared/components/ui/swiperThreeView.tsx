@@ -22,7 +22,7 @@ export default function SwiperThreeView({ videos }: SwiperThreeViewProps) {
     <div className="relative w-full my-12">
       <Swiper
         modules={[Navigation, Pagination]}
-        slidesPerView={3}
+        slidesPerView={2}
         spaceBetween={5}
         centeredSlides={true}
         pagination={{ clickable: true }}
