@@ -17,10 +17,10 @@ export function WistiaPlayer({ mediaId }: { mediaId: string }) {
         strategy="afterInteractive"
         type="module"
       />
-
+      {/* @ts-ignore */}
       <wistia-player
         media-id={mediaId}
-        aspect="0.5625" // ← این رو به 0.5625 تغییر بده (9÷16)
+        aspect="0.5625"
         style={{ width: "100%", height: "100%" }}
       />
     </div>
