@@ -1,4 +1,6 @@
-import "@/src/shared/styles/globals.css";
+
+import "../shared/styles/globals.css";
+import "../shared/styles/company-banner.css";
 import {
   APP_NAME,
   APP_DESCRIPTION,
