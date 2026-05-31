@@ -1,9 +1,3 @@
-/**
- * @author © ColdByDefault
- * @license Copyright (c) 2026 ColdByDefault. All rights reserved.
- * @version 6.x.x
- */
-
 export interface CompanyLogo {
   id: string;
   name: string;
@@ -17,63 +11,63 @@ export const companiesData: CompanyLogo[] = [
     id: "power100",
     name: "power100",
     logo: "/assets/companies/power100.png",
-    url: "https://avarno.de",
+    url: "",
     period: "2025~",
   },
   {
     id: "Ryze",
     name: "Ryze",
     logo: "/assets/companies/ryze2.png",
-    url: "https://Ryze.de",
+    url: "",
     period: "2025~",
   },
   {
     id: "Fittdesign",
-    name: "Fittdesign",
+    name: "FittDesign",
     logo: "/assets/companies/Fittdesign.png",
-    url: "https://berich-hub.vercel.app/",
+    url: "",
     period: "2024~",
-  },
+  },  
   {
     id: "power100",
     name: "power100",
     logo: "/assets/companies/power100.png",
-    url: "https://avarno.de",
+    url: "",
     period: "2025~",
   },
   {
-    id: "Botgenossen",
-    name: "Botgenossen",
+    id: "Ryze",
+    name: "Ryze",
     logo: "/assets/companies/ryze2.png",
-    url: "https://botgenossen.de",
+    url: "",
     period: "2025~",
   },
   {
     id: "Fittdesign",
-    name: "Fittdesign",
+    name: "FittDesign",
     logo: "/assets/companies/Fittdesign.png",
-    url: "https://berich-hub.vercel.app/",
+    url: "",
     period: "2024~",
   },
   {
     id: "power100",
     name: "power100",
     logo: "/assets/companies/power100.png",
-    url: "https://avarno.de",
+    url: "",
     period: "2025~",
   },
   {
     id: "Botgenossen",
     name: "Ryze",
     logo: "/assets/companies/ryze2.png",
-    url: "https://Ryze.de",
+    url: "",
     period: "2025~",
   },
   {
     id: "Fittdesign",
-    name: "Fittdesign",
+    name: "FittDesign",
     logo: "/assets/companies/Fittdesign.png",
-    url: "https://berich-hub.vercel.app/",
+    url: "",
     period: "2024~",
   },
 ];
