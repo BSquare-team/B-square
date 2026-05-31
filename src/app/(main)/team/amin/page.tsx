@@ -13,6 +13,11 @@ import hp2 from "@/src/assets/image/hp2.jpg";
 import { LucideStar } from "lucide-react";
 import CommentsSec from "../_components/CommentsSec";
 import Link from "next/link";
+import { CompanyBanner } from "../_components/CompanyBanner";
+
+import { WistiaPlayer } from "../_components/WistiaPlayer";
+import { embedData } from "@/data/embedData";
+import SwiperThreeView from "@/src/shared/components/ui/swiperThreeView";
 
 export default function page() {
   return (
@@ -122,6 +127,7 @@ export default function page() {
         </div>
       </section>
 
+      <CompanyBanner />
       {/* comments  */}
       <CommentsSec />
 
@@ -130,6 +136,9 @@ export default function page() {
           <div className="prose dark:prose-invert md:w-[60%]">
             <h2>My Resume</h2>
             <p>work I've done</p>
+          </div>
+          <div className="md:w-1/2 w-full h32">
+            <SwiperThreeView videos={embedData} />
           </div>
         </div>
       </section>
@@ -193,10 +202,11 @@ export default function page() {
                     My Journey
                   </p>
                   <h2 className="mt-2 text-xl/7 font-bold text-gray-900 dark:text-white line-clamp-3 group-hover:text-blue-400 transition-colors">
-                   My Journey Through Iran's Education System and Medical Field: A Raw Personal Story
+                    My Journey Through Iran's Education System and Medical
+                    Field: A Raw Personal Story
                   </h2>
                   <p className="mt-2 text-sm/6 text-gray-600 dark:text-gray-400 line-clamp-4">
-                      Almost everyone around me believed that education was the
+                    Almost everyone around me believed that education was the
                     only safe path toward becoming someone valuable. And
                     honestly, I believed it too. I wanted to become skilled at
                     something meaningful. I wanted a future I could be proud of.
