@@ -12,6 +12,10 @@ import { LucideStar } from "lucide-react";
 import CommentsSec from "../../../../features/team/components/singlePost/CommentsSec";
 import Link from "next/link";
 
+import { embedData } from "@/data/embedData";
+import SwiperThreeView from "@/src/shared/components/ui/swiperThreeView";
+import { CompanyBanner } from "@/src/features/team/components/singlePost/CompanyBanner";
+
 export default function page() {
   return (
     <div className="">
@@ -120,17 +124,21 @@ export default function page() {
         </div>
       </section>
 
+      <CompanyBanner />
       {/* comments  */}
       <CommentsSec />
 
-      {/* <section className="container m-auto max-w-7xl mt-20 px-6">
+      <section className="container m-auto max-w-7xl mt-20 px-6">
         <div className="flex flex-col md:flex-row justify-between ">
-          <div className="prose dark:prose-invert md:w-[60%]">
+          <div className="prose dark:prose-invert lg:w-[60%] md:w-1/2">
             <h2>My Resume</h2>
             <p>work I've done</p>
           </div>
+          <div className=" w-full lg::w-[40%] md:w-1/2 ">
+            <SwiperThreeView videos={embedData} />
+          </div>
         </div>
-      </section> */}
+      </section>
 
       <section className="container m-auto max-w-7xl mt-20 px-6">
         <div className="flex flex-col md:flex-row justify-between ">

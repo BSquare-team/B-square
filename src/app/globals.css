@@ -76,6 +76,7 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --font-sans: var(--font-inter);
 }
 
 /* ========== Utility Classes (از استایل اول) ========== */
@@ -177,6 +178,14 @@
       line-height: 2rem;
     }
   }
+
+  .prose p {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.625;
+  }
 }
 
 @utility grid-bg {
@@ -212,7 +221,7 @@
 
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: var(--font-sans);
+     font-family: var(--font-inter);
   }
   h1,
   h2,
