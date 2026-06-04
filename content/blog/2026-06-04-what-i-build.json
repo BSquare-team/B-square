@@ -1,0 +1,26 @@
+{
+  "featuredImage": "",
+  "title": "What I Build",
+  "description": "The technologies I use, the products I build, and the principles that guide my development process.",
+  "slug": "omid-builds",
+  "author": "Omid",
+  "date": "2026-06-04T17:23:00",
+  "published": true,
+  "categoryTags": [
+    "Development",
+    "Engineering",
+    "Portfolio"
+  ],
+  "techTags": [
+    "Next.js",
+    "TypeScript",
+    "Tailwind CSS"
+  ],
+  "seo": null,
+  "blocks": [
+    {
+      "type": "text",
+      "content": "## Building Modern Web Experiences\n\nI build modern websites and web applications with a strong focus on performance, scalability, and user experience.\n\nMy goal is not simply creating attractive interfaces. I aim to build products that solve real problems, remain maintainable over time, and provide a smooth experience for both users and developers.\n\nWhether it's a company website, a SaaS platform, an internal dashboard, or a custom web application, I approach every project with the same mindset: create something reliable, fast, and easy to evolve.\n\n## Technologies I Work With\n\nMy primary stack revolves around Next.js, React, TypeScript, and Tailwind CSS.\n\nFor building modern user interfaces, I frequently use tools such as shadcn/ui, React Hook Form, Zod, and other libraries that help create maintainable and type-safe applications.\n\nI have also worked with JWT-based authentication systems and can quickly adapt to authentication solutions such as Better Auth, NextAuth, and similar tools when project requirements demand them.\n\nRather than being attached to specific libraries, I focus on understanding the underlying concepts and choosing the right tool for the job.\n\n## My Development Philosophy\n\nTechnology evolves quickly, but solid engineering principles remain valuable.\n\nWhen building products, I pay close attention to project structure, code quality, maintainability, and long-term scalability. I prefer solutions that remain understandable months later instead of quick fixes that create technical debt.\n\nGood software should be easy to extend, easy to debug, and enjoyable for both developers and users.\n\n## What Matters Most To Me\n\n### Performance\n\nFast-loading websites create better user experiences and often lead to better business outcomes. Performance is considered from the beginning, not as an afterthought.\n\n### Scalability\n\nProjects should be able to grow without becoming difficult to maintain. Clear architecture and reusable components help make that possible.\n\n### User Experience\n\nA product should feel intuitive and responsive. Clean interfaces, thoughtful interactions, and accessibility play an important role in achieving that goal.\n\n### Maintainability\n\nCode is read more often than it is written. I value consistency, readability, and project structures that make future development easier.\n\n## My Journey Into Modern Development\n\nI started my journey with graphic design and WordPress development, which helped me understand both design principles and client needs.\n\nOver time, I became increasingly interested in modern web development and moved toward building applications with React, Next.js, and TypeScript.\n\nThis transition allowed me to combine visual thinking with software engineering practices and focus on creating products that are both functional and scalable.\n\n## Current Focus\n\nToday, my primary focus is modern frontend development with React and Next.js.\n\nI enjoy building real-world applications, improving development workflows, learning better architectural patterns, and continuously expanding my understanding of modern web technologies.\n\nThe tools may change over time, but the objective remains the same: building useful, reliable, and high-quality digital products."
+    }
+  ]
+}
