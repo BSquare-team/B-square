@@ -1,4 +1,3 @@
-
 import picMe2 from "@/src/assets/image/omidPic.webp";
 import op1 from "@/src/assets/image/op1.jpg";
 import op2 from "@/src/assets/image/op2.jpg";
@@ -9,6 +8,7 @@ const subImages = [op1, op2, op3, op4, op5];
 
 import Link from "next/link";
 import PageHeroSec from "@/src/features/team/components/singlePost/PageHeroSec";
+import { CompanyBanner } from "@/src/features/team/components/singlePost/CompanyBanner";
 
 export default function page() {
   return (
@@ -62,7 +62,7 @@ export default function page() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {/* کارت ۱: داستان من */}
               <Link
-                href="/blog/my-story"
+                href="/blog/omid-journey"
                 className="group block p-8 rounded-3xl border border-gray-200 dark:border-gray-800 
                    bg-white dark:bg-gray-900/50 hover:shadow-xl dark:hover:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.3)] 
                    transition-all duration-300 hover:-translate-y-1"
@@ -97,7 +97,7 @@ export default function page() {
 
               {/* کارت ۲: تخصص و مهارت */}
               <Link
-                href="/blog"
+                href="/blog/omid-builds"
                 className="group block p-8 rounded-3xl border border-gray-200 dark:border-gray-800 
                    bg-white dark:bg-gray-900/50 hover:shadow-xl dark:hover:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.3)] 
                    transition-all duration-300 hover:-translate-y-1"
@@ -168,7 +168,7 @@ export default function page() {
                   </div>
                 </div>
                 <a
-                  href="mailto:your-email@example.com"
+                  href="mailto:omid.b193@gmail.com"
                   className="inline-flex items-center gap-2 px-5 py-2.5 bg-teal-600 hover:bg-teal-700 
                      text-white text-sm font-medium rounded-full transition-colors shadow-lg 
                      shadow-teal-500/25 hover:shadow-teal-500/40 shrink-0"
