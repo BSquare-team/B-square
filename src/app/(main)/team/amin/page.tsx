@@ -30,27 +30,28 @@ export default function page() {
         <div className="absolute right-0 top-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-linear-to-r from-primary/10 via-primary/5 to-transparent dark:from-primary/20 dark:via-primary/10 blur-3xl -z-10" />
 
         <div className="container mx-auto max-w-7xl px-6 lg:px-8 py-12 lg:py-20">
-          <div className="flex flex-col-reverse lg:flex-row gap-12 lg:gap-20 items-center">
+          <div className="flex flex-col-reverse lg:flex-row gap-12 lg:gap-0 items-center">
             {/* سمت چپ: محتوای متنی */}
-            <div className="flex-1 text-center lg:text-left space-y-6 max-w-2xl mx-auto lg:mx-0">
+            <div className=" text-center lg:text-left space-y-6 max-w-2xl mx-auto lg:mx-0">
               <Button
                 variant="ghost"
                 size="sm"
                 className="mx-auto lg:mx-0 w-fit text-xs font-medium bg-white dark:bg-gray-900/50 text-gray-600 dark:text-gray-300 rounded-full px-4 py-1.5 border border-gray-200 dark:border-gray-800 shadow-sm"
               >
-                SOFTWARE ALTERNATIVES DIRECTORY
+                Frontend Developer | Next.js, React, Tailwind | Former Video
+                Editor
               </Button>
 
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
+              <h1 className=" text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
                 ELEVATING BRANDS <br /> through <br />{" "}
-                <span className="text-transparent bg-clip-text bg-linear-to-r from-teal-600 to-cyan-600 dark:from-teal-400 dark:to-cyan-400">
-                  ENGAGING VIDEOS
+                <span className="w-full text-transparent bg-clip-text bg-linear-to-r from-teal-600 to-cyan-600 dark:from-teal-400 dark:to-cyan-400">
+                  CREATIVE SOLUTIONS
                 </span>
               </h1>
 
               <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-xl mx-auto lg:mx-0">
-                Over 27 alternatives across 7 categories. Free, open source, and
-                paid. Compare and switch with confidence.
+                Over 3 years of creative work, helping companies and creators
+                strengthen their digital presence.
               </p>
 
               {/* ردیف آواتارها و امتیاز */}
@@ -87,9 +88,9 @@ export default function page() {
                   <span className="text-sm text-gray-500 dark:text-gray-400">
                     Trusted by{" "}
                     <span className="font-semibold text-gray-900 dark:text-teal-400">
-                      2,000+
+                      300+
                     </span>{" "}
-                    developers
+                    developers and editors
                   </span>
                 </div>
               </div>
