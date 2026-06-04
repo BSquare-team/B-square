@@ -1,9 +1,5 @@
 // src/features/blog/types/blog.types.ts
 
-export interface Tag {
-  tag: string;
-}
-
 export interface SimpleSlide {
   src: string;
   caption?: string;
@@ -36,7 +32,7 @@ export interface ContentBlock {
 export interface SEOData {
   metaTitle?: string;
   metaDescription?: string;
-  keywords?: { keyword: string }[];
+  keywords?: string[];
   canonical?: string;
 }
 
@@ -46,8 +42,8 @@ export interface BlogPost {
   author: string;
   date: string;
   published?: boolean;
-  categoryTags: Tag[];
-  techTags: Tag[];
+  categoryTags: string[];
+  techTags: string[];
   featuredImage?: string;
   blocks: ContentBlock[];
   slug: string;

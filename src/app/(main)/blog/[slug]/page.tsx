@@ -49,11 +49,8 @@ export async function generateMetadata({
   const metaTitle = seo?.metaTitle || post.title;
   const metaDescription = seo?.metaDescription || post.description;
 
-  const seoKeywords = seo?.keywords?.map((k) => k.keyword) || [];
-  const postTags = [
-    ...post.categoryTags.map((t) => t.tag),
-    ...post.techTags.map((t) => t.tag),
-  ];
+  const seoKeywords = seo?.keywords || [];
+  const postTags = [...post.categoryTags, ...post.techTags];
   const allKeywords = [...seoKeywords, ...postTags];
 
   const postUrl = seo?.canonical || `${SERVER_URL}/blog/${slug}`;
