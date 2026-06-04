@@ -33,18 +33,6 @@ export interface ContentBlock {
   questions?: FAQItem[];
 }
 
-export interface BlogPost {
-  title: string;
-  description: string;
-  author: string;
-  date: string;
-  categoryTags: Tag[];
-  techTags: Tag[];
-  featuredImage?: string;
-  blocks: ContentBlock[];
-  slug: string;
-}
-
 export interface SEOData {
   metaTitle?: string;
   metaDescription?: string;
