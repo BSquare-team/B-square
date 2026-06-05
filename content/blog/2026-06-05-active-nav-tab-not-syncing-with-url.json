@@ -1,7 +1,7 @@
 {
   "featuredImage": "",
   "title": "Active Nav Tab Not Syncing with URL",
-  "description": "A problem that I ho",
+  "description": "Fixed navbar highlight desync by replacing local activeTab state with usePathname() from Next.js — now the URL is the single source of truth",
   "slug": "usePathname",
   "author": "Amin",
   "date": "2026-06-05T18:52:00",
