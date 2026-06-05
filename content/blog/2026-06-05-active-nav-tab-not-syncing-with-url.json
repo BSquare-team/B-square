@@ -1,0 +1,20 @@
+{
+  "featuredImage": "",
+  "title": "Active Nav Tab Not Syncing with URL",
+  "description": "A problem that I ho",
+  "slug": "usePathname",
+  "author": "Amin",
+  "date": "2026-06-05T18:52:00",
+  "published": true,
+  "categoryTags": [
+    "Problem"
+  ],
+  "techTags": [],
+  "seo": null,
+  "blocks": [
+    {
+      "type": "text",
+      "content": "#### What Was Happening\n\nThe navbar used a local React state (`activeTab`) to track which tab was \"active\":\n\njs\n\n```plain\nconst [activeTab, setActiveTab] = useState(\"Home\");\n```\n\nIt only updated when the user **clicked directly on a nav link**:\n\njs\n\n```plain\nonClick={() => setActiveTab(item.name)}\n```\n\nSo if navigation happened from **anywhere else** — a button, a redirect, a programmatic `router.push()`, or a back/forward browser action — the URL would change, but `activeTab` stayed the same. The highlighted tab was out of sync with the actual page.\n\n***\n\n#### Root Cause\n\nThe active tab was driven by **component state**, not by the **actual URL**. These two sources of truth can easily diverge in Next.js apps where navigation can be triggered from many places.\n\n***\n\n#### The Fix\n\nReplace the manual state with `usePathname()` from `next/navigation`, which always reflects the current URL:\n\njs\n\n```plain\nconst pathname = usePathname();\n```\n\nThen derive `isActive` directly from it:\n\njs\n\n```plain\nconst isActive = pathname === item.url;\n```\n\nNow there's **a single source of truth** — the URL itself. No matter how the user navigates (clicking a nav link, pressing a button, using the browser back/forward, or a programmatic redirect), the navbar always reads the current path and highlights the correct tab automatically.\n\n***\n\n#### Key Takeaway\n\n> Never use local state to track something that is already represented in the URL. In Next.js, `usePathname()` gives you that value reactively — use it instead of maintaining a parallel state that can go out of sync."
+    }
+  ]
+}
