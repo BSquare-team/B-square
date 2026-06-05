@@ -2,12 +2,18 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { usePathname } from "next/navigation"; // 👈 اضافه کن
+import { usePathname } from "next/navigation";
 import { Home, User, Briefcase, Mail } from "lucide-react";
 import { cn } from "@/src/shared/lib/utils";
 
-export function NavBar({ className }: { className?: string }) {
-  const pathname = usePathname(); // 👈 URL فعلی
+export function NavBar({
+  className,
+  id = "default",
+}: {
+  className?: string;
+  id?: string;
+}) {
+  const pathname = usePathname();
   const [isMobile, setIsMobile] = useState(false);
 
   const items = [
@@ -25,11 +31,16 @@ export function NavBar({ className }: { className?: string }) {
   }, []);
 
   return (
-    <div className={cn("sm:mx-auto sm:w-fit sm:left-auto sm:translate-x-0 sm:static fixed bottom-0 left-1/2 -translate-x-1/2 z-50 mb-6 sm:pt-6", className)}>
+    <div
+      className={cn(
+        "md:mx-auto md:w-fit md:left-auto md:translate-x-0 md:static fixed bottom-0 left-1/2 -translate-x-1/2 z-50 mb-6 md:pt-6 ",
+        className,
+      )}
+    >
       <div className="flex items-center gap-3 bg-background/5 border border-border backdrop-blur-lg py-1 px-1 rounded-full shadow-lg">
         {items.map((item) => {
           const Icon = item.icon;
-          const isActive = pathname === item.url; // 👈 مستقیم از pathname چک کن
+          const isActive = pathname === item.url;
 
           return (
             <Link
@@ -47,7 +58,7 @@ export function NavBar({ className }: { className?: string }) {
               </span>
               {isActive && (
                 <motion.div
-                  layoutId="lamp"
+                  layoutId={`lamp-${id}`}
                   className="absolute inset-0 w-full bg-primary/5 rounded-full -z-10"
                   initial={false}
                   transition={{ type: "spring", stiffness: 300, damping: 30 }}

@@ -65,24 +65,8 @@ export default function Header() {
               </Link>
             </div>
 
-            <div className="hidden lg:flex gap-4 text-lg">
-              <Link href="/team" className="font-medium text-gray-500">
-                Our Team
-              </Link>
-
-              <Link href="/blog" className="font-medium text-gray-500">
-                Blog
-              </Link>
-
-              <Link href="/changelog" className="font-medium text-gray-500">
-                Changelog
-              </Link>
-            </div>
+            <NavBar className="hidden md:flex "  id="md"/>
             <div dir="rtl" className="min-w-34.5 ">
-              <div className=" lg:hidden ">
-                <MobileDrawer />
-              </div>
-
               <div className=" flex-row hidden lg:flex">
                 {/* <div className="hidden lg:flex">
                 <LoginPage />
@@ -104,7 +88,7 @@ export default function Header() {
           </div>
         </div>
       </Headroom>
-      <NavBar />
+      <NavBar className="md:hidden " id="mobile" />
     </header>
   );
 }
