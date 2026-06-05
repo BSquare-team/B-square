@@ -16,6 +16,7 @@ import Footer from "../shared/components/layout/Footer";
 import { ThemeProvider } from "next-themes";
 
 import { Inter } from "next/font/google";
+import { Providers } from "../shared/lib/providers";
 
 // // فونت هدینگ
 // const hankenGrotesk = localFont({
@@ -92,7 +93,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col relative overflow-x-clip">
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+       <Providers>
           <Header />
 
            <main className="flex-1 py-8">{children}</main>
@@ -103,7 +104,7 @@ export default function RootLayout({
           ></div>
 
           <Footer />
-        </ThemeProvider>
+       </Providers>
       </body>
     </html>
   );
