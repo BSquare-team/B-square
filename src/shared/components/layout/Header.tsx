@@ -104,7 +104,6 @@ export default function Header() {
           </div>
         </div>
       </Headroom>
-
       <NavBar />
     </header>
   );

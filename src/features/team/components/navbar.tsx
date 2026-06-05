@@ -1,50 +1,40 @@
 "use client";
-
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Home, User, Briefcase, Mail, Settings } from "lucide-react";
+import { usePathname } from "next/navigation"; // 👈 اضافه کن
+import { Home, User, Briefcase, Mail } from "lucide-react";
 import { cn } from "@/src/shared/lib/utils";
 
 export function NavBar({ className }: { className?: string }) {
-  const [activeTab, setActiveTab] = useState("Home");
+  const pathname = usePathname(); // 👈 URL فعلی
   const [isMobile, setIsMobile] = useState(false);
 
   const items = [
     { name: "Home", url: "/", icon: Home },
     { name: "Team", url: "/team", icon: User },
-    { name: "Services", url: "/services", icon: Briefcase },
-    { name: "Contact", url: "/contact", icon: Mail },
-    { name: "Settings", url: "/settings", icon: Settings },
+    { name: "Blog", url: "/blog", icon: Briefcase },
+    { name: "Changelog", url: "/changelog", icon: Mail },
   ];
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
-    <div
-      className={cn(
-        "fixed bottom-0 sm:top-0 left-1/2 -translate-x-1/2 z-50 mb-6 sm:pt-6",
-        className,
-      )}
-    >
+    <div className={cn("sm:mx-auto sm:w-fit sm:left-auto sm:translate-x-0 sm:static fixed bottom-0 left-1/2 -translate-x-1/2 z-50 mb-6 sm:pt-6", className)}>
       <div className="flex items-center gap-3 bg-background/5 border border-border backdrop-blur-lg py-1 px-1 rounded-full shadow-lg">
         {items.map((item) => {
           const Icon = item.icon;
-          const isActive = activeTab === item.name;
+          const isActive = pathname === item.url; // 👈 مستقیم از pathname چک کن
 
           return (
             <Link
               key={item.name}
               href={item.url}
-              onClick={() => setActiveTab(item.name)}
               className={cn(
                 "relative cursor-pointer text-sm font-semibold px-6 py-2 rounded-full transition-colors",
                 "text-foreground/80 hover:text-primary",
@@ -60,11 +50,7 @@ export function NavBar({ className }: { className?: string }) {
                   layoutId="lamp"
                   className="absolute inset-0 w-full bg-primary/5 rounded-full -z-10"
                   initial={false}
-                  transition={{
-                    type: "spring",
-                    stiffness: 300,
-                    damping: 30,
-                  }}
+                  transition={{ type: "spring", stiffness: 300, damping: 30 }}
                 >
                   <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-8 h-1 bg-primary rounded-t-full">
                     <div className="absolute w-12 h-6 bg-primary/20 rounded-full blur-md -top-2 -left-2" />
