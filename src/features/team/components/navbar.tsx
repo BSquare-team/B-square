@@ -5,7 +5,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Home, User, Briefcase, Mail } from "lucide-react";
 import { cn } from "@/src/shared/lib/utils";
-import { useNav } from "@/src/shared/lib/providers"; // 👈 ۱. اضافه کن
 
 export function NavBar({
   className,
@@ -15,7 +14,7 @@ export function NavBar({
   id?: string;
 }) {
   const pathname = usePathname();
-  const { navigate } = useNav(); // 👈 ۲. اضافه کن
+  const [isMobile, setIsMobile] = useState(false);
 
   const items = [
     { name: "Home", url: "/", icon: Home },
@@ -24,10 +23,17 @@ export function NavBar({
     { name: "Changelog", url: "/changelog", icon: Mail },
   ];
 
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div
       className={cn(
-        "md:mx-auto md:w-fit md:left-auto md:translate-x-0 md:static fixed bottom-0 left-1/2 -translate-x-1/2 z-50 mb-6 md:pt-6",
+        "md:mx-auto md:w-fit md:left-auto md:translate-x-0 md:static fixed bottom-0 left-1/2 -translate-x-1/2 z-50 mb-6 md:pt-6 ",
         className,
       )}
     >
@@ -40,7 +46,6 @@ export function NavBar({
             <Link
               key={item.name}
               href={item.url}
-              onClick={() => navigate(item.url)} // 👈 ۳. اضافه کن
               className={cn(
                 "relative cursor-pointer text-sm font-semibold px-6 py-2 rounded-full transition-colors",
                 "text-foreground/80 hover:text-primary",
