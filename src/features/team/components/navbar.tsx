@@ -46,6 +46,7 @@ export function NavBar({
             <Link
               key={item.name}
               href={item.url}
+              prefetch={true}
               className={cn(
                 "relative cursor-pointer text-sm font-semibold px-6 py-2 rounded-full transition-colors",
                 "text-foreground/80 hover:text-primary",
