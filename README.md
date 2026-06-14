@@ -506,8 +506,8 @@ The site is deployed on [Vercel](https://vercel.com) with automatic CI/CD. Every
 
 | Member           | Role                | GitHub                                     | LinkedIn                                              |
 | :--------------- | :------------------ | :----------------------------------------- | :---------------------------------------------------- |
-| **Amin Bagheri** | Front-End Developer | [@aminb9383](https://github.com/aminb9383) | —                                                     |
-| **Omid Bagheri** | Front-End Developer | [@omid193](https://github.com/omid193)     | [LinkedIn](https://www.linkedin.com/in/omid-baghery/) |
+| **Amin Bagheri** | Front-End Developer | [aminb9383](https://github.com/aminb9383) | [LinkedIn](https://www.linkedin.com/in/amin-baghery/) |—                                                     |
+| **Omid Bagheri** | Front-End Lead & Architect| [omid-baghery](https://github.com/omid-baghery)     | [LinkedIn](https://www.linkedin.com/in/omid-baghery/) |
 
 </div>
 
@@ -518,7 +518,7 @@ The site is deployed on [Vercel](https://vercel.com) with automatic CI/CD. Every
 ---
 
 <div align="center">
-  <p>Built with ❤️ by the <strong>B-Square Team</strong></p>
+  <p>Built with ❤️ by the <strong>BSquare Team</strong></p>
   <p>
     <a href="https://b-square.vercel.app">🌐 Live Site</a>
     <span>·</span>
