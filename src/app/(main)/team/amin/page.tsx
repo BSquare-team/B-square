@@ -21,7 +21,7 @@ import { WistiaPlayer } from "@/src/features/team/components/singlePost/WistiaPl
 import { WistiaPlayerPopOver } from "@/src/features/team/components/WistiaPlaterPopOver";
 import FeaturedProjects from "@/src/features/team/components/singlePost/FeaturedProjects";
 import LetsCallSection from "@/src/features/team/components/singlePost/LetsCallSection";
-
+import { ProjectsAminData } from "@/data/FeaturedProjectsData";
 
 export default function page() {
   return (
@@ -128,12 +128,11 @@ export default function page() {
       <CompanyBanner />
       {/* comments  */}
 
-      <FeaturedProjects />
+      <FeaturedProjects  data={ProjectsAminData}/>
 
       <CommentsSec />
 
-  <LetsCallSection />
-
+      <LetsCallSection />
 
       <section className="container m-auto max-w-7xl mt-20 px-6">
         <div className="flex flex-col md:flex-row justify-between ">
@@ -146,7 +145,6 @@ export default function page() {
           </div>
         </div>
       </section>
-
 
       <section className="container m-auto max-w-7xl mt-20 px-6">
         <div className="flex flex-col md:flex-row justify-between ">
