@@ -138,7 +138,7 @@ export default function page() {
 
       <LetsCallSection />
 
-      <section className="container m-auto max-w-7xl mt-20 px-6">
+      {/* <section className="container m-auto max-w-7xl mt-20 px-6">
         <div className="flex flex-col md:flex-row justify-between ">
           <div className="prose dark:prose-invert lg:w-[60%] md:w-1/2">
             <h2>My Resume</h2>
@@ -148,7 +148,7 @@ export default function page() {
             <SwiperThreeView videos={embedData} />
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="container m-auto max-w-7xl mt-20 px-6">
         <div className="flex flex-col md:flex-row justify-between ">
