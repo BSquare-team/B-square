@@ -22,6 +22,8 @@ import { WistiaPlayerPopOver } from "@/src/features/team/components/WistiaPlater
 import FeaturedProjects from "@/src/features/team/components/singlePost/FeaturedProjects";
 import LetsCallSection from "@/src/features/team/components/singlePost/LetsCallSection";
 import { ProjectsAminData } from "@/data/FeaturedProjectsData";
+import Workflow from "@/src/features/team/components/singlePost/Workflow";
+import { workFlowData } from "@/data/workFlowData";
 
 export default function page() {
   return (
@@ -128,7 +130,9 @@ export default function page() {
       <CompanyBanner />
       {/* comments  */}
 
-      <FeaturedProjects  data={ProjectsAminData}/>
+      <FeaturedProjects data={ProjectsAminData} />
+
+      <Workflow WorkflowProps={workFlowData} />
 
       <CommentsSec />
 
