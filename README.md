@@ -38,7 +38,6 @@
 - [Deployment](#-deployment)
 - [Team](#-team)
 
-
 ## 📁 Project Structure
 
 ```
@@ -130,8 +129,9 @@ src/
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
-
 ## 🛠 Tech Stack
+
+<div align="center">
 
 | Layer               | Technology                  | Why                                             |
 | :------------------ | :-------------------------- | :---------------------------------------------- |
@@ -145,8 +145,9 @@ src/
 | **SEO**             | Next.js Metadata API        | Dynamic Open Graph, Twitter Cards, JSON-LD      |
 | **Performance**     | Static Generation + ISR     | Pages pre-rendered, revalidated every hour      |
 
-<p align="right"><a href="#readme-top">back to top</a></p>
+</div>
 
+<p align="right"><a href="#readme-top">back to top</a></p>
 
 ## ✨ Key Features
 
@@ -171,6 +172,8 @@ Sveltia CMS is a **Git-based headless CMS**. It stores content as JSON files in 
 
 **Why we chose Sveltia over other CMS options:**
 
+<div align="center">
+
 | Feature                | Sveltia CMS                    | Payload CMS               | WordPress         |
 | :--------------------- | :----------------------------- | :------------------------ | :---------------- |
 | **Cost**               | Free                           | Free (self-hosted)        | Hosting required  |
@@ -180,6 +183,8 @@ Sveltia CMS is a **Git-based headless CMS**. It stores content as JSON files in 
 | **Admin Panel**        | Clean, modern                  | Professional              | Classic           |
 | **Learning Curve**     | Low                            | Medium                    | Low               |
 | **Best For**           | Portfolios, blogs, small sites | Complex apps, large sites | Any site          |
+
+</div>
 
 ### 🔍 SEO & Performance
 
@@ -194,6 +199,8 @@ Sveltia CMS is a **Git-based headless CMS**. It stores content as JSON files in 
 
 Each blog post is built from modular content blocks:
 
+<div align="center">
+
 | Block Type        | Description             | Example Use Case           |
 | :---------------- | :---------------------- | :------------------------- |
 | **Text**          | Markdown content        | Article body               |
@@ -202,6 +209,8 @@ Each blog post is built from modular content blocks:
 | **Simple Slider** | Image carousel          | Photo galleries            |
 | **Card Slider**   | Card-based slider       | Project showcases          |
 | **FAQ**           | Accordion Q&A           | Frequently asked questions |
+
+</div>
 
 ### 📱 User Experience
 
@@ -217,7 +226,6 @@ Each blog post is built from modular content blocks:
 - **GitHub Organization** — collaborative development workflow
 
 <p align="right"><a href="#readme-top">back to top</a></p>
-
 
 ## 🚀 Getting Started
 
@@ -263,7 +271,6 @@ NEXT_PUBLIC_SERVER_URL="https://b-square.vercel.app"
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
-
 ## 📝 Content Management (Sveltia CMS)
 
 ### Accessing the Admin Panel
@@ -283,6 +290,7 @@ NEXT_PUBLIC_SERVER_URL="https://b-square.vercel.app"
 
 1. In the admin panel, click **Blog Posts** → **New Blog Post**
 2. Fill in the fields:
+   <div align="center">
 
    | Field              | Description                                               |
    | :----------------- | :-------------------------------------------------------- |
@@ -297,6 +305,8 @@ NEXT_PUBLIC_SERVER_URL="https://b-square.vercel.app"
    | **Tech Tags**      | Up to 3 technology tags (e.g., Next.js, React).           |
    | **SEO Settings**   | Optional. Custom meta title, description, keywords.       |
    | **Content Blocks** | Add one or more content blocks (Text, Quote, Code, etc.). |
+
+</div>
 
 3. Click **Save** — Sveltia will commit the file to GitHub and Vercel will redeploy the site.
 
@@ -339,12 +349,15 @@ Accordion-style questions and answers. Automatically generates JSON-LD Schema fo
 
 1. In the admin panel, click **Changelog** → **New Changelog Entry**
 2. Fill in the fields:
+   <div align="center">
 
    | Field       | Description                                                 |
    | :---------- | :---------------------------------------------------------- |
    | **Title**   | The changelog entry title.                                  |
    | **Date**    | Auto-filled with current date/time.                         |
    | **Entries** | Multiple entries, each with an author and Markdown content. |
+
+</div>
 
 3. Click **Save**.
 
@@ -369,6 +382,8 @@ Each feature (blog, changelog, team) is **self-contained** with its own:
 
 ### Why Sveltia CMS?
 
+<div align="center">
+
 | Requirement           | Sveltia CMS                                       |
 | :-------------------- | :------------------------------------------------ |
 | **Free forever**      | ✅ Open-source, no hosting costs                  |
@@ -378,6 +393,7 @@ Each feature (blog, changelog, team) is **self-contained** with its own:
 | **Customizable**      | ✅ Define your own content types via `config.yml` |
 | **Works offline**     | ✅ Admin panel loads as a PWA                     |
 
+</div>
 ### Why ISR (Incremental Static Regeneration)?
 
 Pages are **pre-rendered at build time** for maximum speed, then **revalidated every hour** to pick up content changes.
@@ -403,7 +419,6 @@ We chose JSON over Markdown files because:
 - **Sveltia CMS support** — native JSON editing with custom widgets
 
 <p align="right"><a href="#readme-top">back to top</a></p>
-
 
 ## 🔍 SEO & Performance
 
@@ -458,7 +473,6 @@ function generateFAQSchema(faqs: FAQItem[]): object {
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
-
 ## 🚢 Deployment
 
 ### Deploy on Vercel (Recommended)
@@ -486,18 +500,18 @@ function generateFAQSchema(faqs: FAQItem[]): object {
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
-
 ## 👥 Team
+
+  <div align="center">
 
 | Member           | Role                | GitHub                                     | LinkedIn                                              |
 | :--------------- | :------------------ | :----------------------------------------- | :---------------------------------------------------- |
 | **Amin Bagheri** | Front-End Developer | [@aminb9383](https://github.com/aminb9383) | —                                                     |
 | **Omid Bagheri** | Front-End Developer | [@omid193](https://github.com/omid193)     | [LinkedIn](https://www.linkedin.com/in/omid-baghery/) |
 
+</div>
+
 <p align="right"><a href="#readme-top">back to top</a></p>
-
-
-
 
 <br />
 
