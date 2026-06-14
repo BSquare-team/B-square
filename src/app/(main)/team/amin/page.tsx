@@ -20,6 +20,7 @@ import { CompanyBanner } from "@/src/features/team/components/singlePost/Company
 import { WistiaPlayer } from "@/src/features/team/components/singlePost/WistiaPlayer";
 import { WistiaPlayerPopOver } from "@/src/features/team/components/WistiaPlaterPopOver";
 import FeaturedProjects from "@/src/features/team/components/singlePost/FeaturedProjects";
+import LetsCallSection from "@/src/features/team/components/singlePost/LetsCallSection";
 
 
 export default function page() {
@@ -131,6 +132,9 @@ export default function page() {
 
       <CommentsSec />
 
+  <LetsCallSection />
+
+
       <section className="container m-auto max-w-7xl mt-20 px-6">
         <div className="flex flex-col md:flex-row justify-between ">
           <div className="prose dark:prose-invert lg:w-[60%] md:w-1/2">
@@ -143,7 +147,7 @@ export default function page() {
         </div>
       </section>
 
-      
+
       <section className="container m-auto max-w-7xl mt-20 px-6">
         <div className="flex flex-col md:flex-row justify-between ">
           <div className="prose dark:prose-invert md:w-[60%]">
