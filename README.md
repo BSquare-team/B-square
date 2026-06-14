@@ -3,11 +3,11 @@
 <br />
 
 <div align="center">
-  <a href="https://b-square.vercel.app">
-    <img src="/images/logo.svg" alt="B-Square Logo" width="120" height="120" style="border-radius: 16px;">
-  </a>
+<a href="https://b-square.vercel.app">
+  <img src="https://raw.githubusercontent.com/BSquare-team/B-square/main/public/images/logo.svg" alt="B-Square Logo" width="120" height="120" style="border-radius: 16px;">
+</a>
 
-  <h1 style="font-size: 2.5rem; font-weight: 800; margin-top: 16px;">B-Square</h1>
+  <h1 style="font-size: 2.5rem; font-weight: 800; margin-top: 16px;">BSquare</h1>
 
   <p style="font-size: 1.125rem; color: #71717a; max-width: 600px; margin: 0 auto;">
     A high-performance portfolio & blog built with <strong>Next.js 16</strong>, <strong>TypeScript</strong>, <strong>Tailwind CSS v4</strong>, and <strong>Sveltia CMS</strong> — deployed for free on Vercel.
@@ -475,34 +475,34 @@ function generateFAQSchema(faqs: FAQItem[]): object {
 
 ## 🚢 Deployment
 
-### Deploy on Vercel (Recommended)
+The site is deployed on [Vercel](https://vercel.com) with automatic CI/CD. Every push to `main` triggers a rebuild.
 
-1. Push your repository to GitHub
-2. Go to [vercel.com](https://vercel.com) and sign in with GitHub
-3. Click **Add New Project** → import your repository
-4. Vercel automatically detects Next.js — no configuration needed
-5. Click **Deploy**
+### Our Workflow
 
-**That's it.** Every push to `main` triggers an automatic deployment.
+1. Write or edit a post in [Sveltia CMS](/admin/)
+2. Sveltia commits the JSON file to the [GitHub repository](https://github.com/BSquare-team/B-square)
+3. Vercel detects the commit and redeploys the site automatically
 
-### Setting Up the CMS on Production
+**We never need to touch the command line to publish content.** The entire pipeline — CMS → GitHub → Vercel — is fully automated.
 
-1. After deployment, go to `https://your-site.vercel.app/admin/`
-2. Sign in with the same GitHub access token
-3. Create posts — Sveltia commits directly to your GitHub repository
-4. Vercel detects the commit and redeploys automatically
+### Tech
 
-### Custom Domain (Optional)
+<div align="center">
 
-1. In your Vercel project dashboard, go to **Settings → Domains**
-2. Add your custom domain
-3. Update your DNS records as instructed by Vercel
+| Layer               | Tool                                                                           |
+| :------------------ | :----------------------------------------------------------------------------- |
+| **Hosting**         | [Vercel](https://vercel.com) (Hobby plan — free)                               |
+| **CMS**             | [Sveltia CMS](https://sveltia-cms.dev) (Git-based — free)                      |
+| **Version Control** | [GitHub](https://github.com/BSquare-team/B-square) (BSquare-team Organization) |
+| **Domain**          | `b-square.vercel.app` (custom domain coming soon)                              |
+
+</div>
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
 ## 👥 Team
 
-  <div align="center">
+<div align="center">
 
 | Member           | Role                | GitHub                                     | LinkedIn                                              |
 | :--------------- | :------------------ | :----------------------------------------- | :---------------------------------------------------- |
