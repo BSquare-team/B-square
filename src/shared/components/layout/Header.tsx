@@ -65,12 +65,12 @@ export default function Header() {
               </Link>
             </div>
 
-            <NavBar className="hidden md:flex "  id="md"/>
+            <NavBar className="hidden md:flex " id="md" />
+
+
             <div dir="rtl" className="min-w-34.5 ">
-              <div className=" flex-row hidden lg:flex">
-                {/* <div className="hidden lg:flex">
-                <LoginPage />
-              </div> */}
+              <div className=" flex-row flex ">
+             
                 <Button variant={"ghost"} className="hidden lg:flex">
                   EN
                 </Button>
@@ -80,11 +80,12 @@ export default function Header() {
                rounded-md text-sm font-medium transition-colors 
                hover:bg-accent hover:text-accent-foreground h-10 w-10"
                 >
-                  {/* این خودش دکمست و وقتی توی دکمه میزاریم ارور میده */}
                   <LightDarkToggle className=" " />
                 </div>
               </div>
             </div>
+
+            
           </div>
         </div>
       </Headroom>
