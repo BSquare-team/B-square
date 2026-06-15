@@ -43,7 +43,7 @@ export default function FeaturedProjects({ data }: FeaturedProjectsProps) {
   // if (!data) null;
   return (
     <>
-      <section className="container mx-auto max-w-7xl px-[64px] py-[100px] ">
+      <section className="container mx-auto max-w-7xl px-[34px] py-[100px] ">
         <div className="flex items-center gap-4 text-[13px] font-medium text-(--text) mb-14">
           Featured projects
           <ArrowBigDown size={"15px"} />

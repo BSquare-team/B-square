@@ -13,7 +13,7 @@ interface workflowTypes {
 export default function Workflow({ WorkflowProps }: workflowTypes) {
   return (
     <>
-      <section className="container mx-auto max-w-7xl px-16 py-25 ">
+      <section className="container mx-auto max-w-7xl px-[34px] py-25 ">
         <div className="flex items-center gap-4 text-[13px] font-medium text-(--text) mb-14">
           Production Workflow
           <ArrowBigDown size={"15px"} />

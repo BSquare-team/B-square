@@ -131,13 +131,13 @@ export default function page() {
       {/* comments  */}
 
       <FeaturedProjects data={ProjectsAminData} />
-
+      <div className="h-0.5 bg-border"></div>
       <Workflow WorkflowProps={workFlowData} />
-
+      <div className="h-0.5 bg-border"></div>
       <CommentsSec />
-
+      <div className="h-0.5 bg-border mt-20"></div>
       <LetsCallSection />
-
+      <div className="h-0.5 bg-border"></div>
       {/* <section className="container m-auto max-w-7xl mt-20 px-6">
         <div className="flex flex-col md:flex-row justify-between ">
           <div className="prose dark:prose-invert lg:w-[60%] md:w-1/2">
