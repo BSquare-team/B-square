@@ -44,8 +44,7 @@ export default function page() {
                 size="sm"
                 className="mx-auto lg:mx-0 w-fit sm:text-xs text-[10px] font-medium bg-white dark:bg-gray-900/50 text-gray-600 dark:text-gray-300 rounded-full px-4 py-1.5 border border-gray-200 dark:border-gray-800 shadow-sm"
               >
-                Frontend Developer| Next.js, React, Tailwind| Former Video
-                Editor
+                Frontend Developer| Video Editor
               </Button>
 
               <h1 className=" text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
