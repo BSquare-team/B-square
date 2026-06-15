@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Button } from "@/src/shared/components/ui/button";
 import cp1 from "@/src/assets/image/cp1.jpg";
 import cp2 from "@/src/assets/image/cp2.jpg";
@@ -10,17 +10,19 @@ import cp4 from "@/src/assets/image/hp3.jpg";
 import cp5 from "@/src/assets/image/cp5.jpg";
 
 export default function CommentsSec() {
+  const sectionRef = useRef<HTMLElement>(null);
+
   const [comments] = useState([
     {
       profile: cp5,
       name: "Hamed Tavakoli",
-      job: "NYTimes Best sellers’ video editor",
+      job: "NYTimes Best sellers' video editor",
       comment: "That was a perfect edit, well done amin",
     },
     {
       profile: cp1,
       name: "Farzane Fazelian",
-      job: "Let’s Grow through My Edits /Video editor helping brands & creators tell their story",
+      job: "Let's Grow through My Edits /Video editor helping brands & creators tell their story",
       comment: "Powerful edit👌",
     },
     {
@@ -46,17 +48,41 @@ export default function CommentsSec() {
   const [showAll, setShowAll] = useState(false);
   const displayedComments = showAll ? comments : comments.slice(0, 3);
 
+  const handleToggle = () => {
+    if (showAll) {
+      // وقتی جمع میکنیم، scroll به بالای section برگرده
+      sectionRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+    setShowAll(!showAll);
+  };
+
   return (
-    <section className="relative container mx-auto max-w-7xl mt-8">
-      {/* Grid با ۱ ستون در موبایل، ۲ ستون در تبلت، ۳ ستون در دسکتاپ */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-9 px-6">
+    <section
+      ref={sectionRef}
+      className="relative container mx-auto max-w-7xl px-[34px] pt-25"
+    >
+      <div className="flex items-center gap-4 text-[13px] font-medium text-(--text) mb-14">
+        Production Workflow
+      </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-border border-[0.5px] border-border">
         {displayedComments.map((item, idx) => (
           <div
-            key={idx}
-            className="flex flex-col p-6 gap-4 w-full bg-[hsl(210,40%,95%)] dark:bg-[#161f2c] rounded-2xl"
+            key={idx} // ✅ key اضافه شد
+            className={`bg-background px-7 py-8 flex flex-col gap-2.5 transition-colors duration-200 min-w-0
+              ${
+                // ✅ آخرین آیتم فرد، full-width میشه
+                idx === displayedComments.length - 1 &&
+                displayedComments.length % 2 !== 0
+                  ? "sm:col-span-2"
+                  : ""
+              }`}
           >
-            <div className="flex flex-row justify-between gap-3">
-              <div className="rounded-full w-10 h-10 overflow-hidden shrink-0">
+            <div className="flex flex-row gap-3">
+              <div className="rounded-full w-10 h-10 overflow-hidden shrink-0 bg-amber-800">
                 <Image
                   src={item.profile}
                   alt={item.name}
@@ -65,27 +91,38 @@ export default function CommentsSec() {
                   className="object-cover h-full w-full"
                 />
               </div>
-              <div className="flex flex-col flex-1">
-                <div className="text-base font-semibold">{item.name}</div>
-                <span className="text-sm/6 text-gray-600 line-clamp-2">
+              <div>
+                <div className="text-[18px] font-light text-(--text)">
+                  {item.name}
+                </div>
+                <div className="text-[11px] text-[#555] tracking-widest mb-4 transition-colors duration-250">
                   {item.job}
-                </span>
+                </div>
               </div>
             </div>
-            <div className="text-[15px]">{item.comment}</div>
+
+            <div className="text-[13px] text-(--muted2) leading-[1.78] font-light transition-colors duration-250">
+              {item.comment}
+            </div>
           </div>
         ))}
       </div>
 
-      <div className="inset-x-0 bottom-0 flex justify-center bg-linear-to-t from-background pt-32 pb-8 pointer-events-none dark:from-[#030712] absolute">
-        <Button
-          onClick={() => setShowAll(!showAll)}
-          className="relative pointer-events-auto"
+      <button
+        className={` mx-auto p-dur-tag w-fit px-2 py-1 flex flex-row gap-2 items-center`}
+      >
+        <span
+          className="p-dur-tag-dot inline-block"
+          style={{ "--text": "#ffffff" } as React.CSSProperties}
+        />
+        <span
+          onClick={handleToggle}
+          className="relative z-[3] text-[11px] tracking-[0.04em] text-[var(--text)] font-medium transition-colors duration-[250ms] whitespace-nowrap"
         >
-          {" "}
-          {showAll ? "show less" : "Show more ..."}{" "}
-        </Button>
-      </div>
+          {showAll ? "Show less" : "Show more ..."}
+        </span>
+      </button>
+      <div className="inset-x-0 bottom-5 bg-linear-to-t from-background pt-32 pb-8 pointer-events-none dark:from-[#030712] absolute"></div>
     </section>
   );
 }
