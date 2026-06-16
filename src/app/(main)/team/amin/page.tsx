@@ -65,7 +65,7 @@ export default function page() {
 
             <div className="flex-1 flex justify-center lg:justify-end">
               <div className="relative w-[280px] sm:w-[320px] lg:w-[380px]">
-                <div className="absolute inset-0 rounded-full bg-teal-500/20 dark:bg-teal-400/20 blur-3xl -z-10 transform scale-110" />
+             
 
                 <div className="rounded-3xl  shadow-2xl border border-white/20 dark:border-white/10 bg-white/5 dark:bg-black/20 backdrop-blur-sm p-2">
                   <div className="relative rounded-2xl ">
@@ -75,10 +75,10 @@ export default function page() {
                       width={500}
                       height={500}
                       quality={100}
-                      className=" w-full h-auto object-cover"
+                      className=" w-full h-auto object-cover rounded-2xl"
                     />
 
-                    <div className="flex flex-col items-center w-45 p-3 rounded-2xl gap-4 justify-center absolute -bottom-8 -right-4 scale-80 bg-white/10 backdrop-blur-md border border-white/20">
+                    <div className="flex flex-col items-center w-45 p-3 rounded-2xl gap-4 justify-center absolute -bottom-10 -right-9 scale-80 md:scale-100 dark:bg-white/10 bg-black/70 backdrop-blur-md border border-white/20">
                       <div className="flex items-center -space-x-3.5 sm:-space-x-2">
                         {[hp6, hp4, hp3, hp2, hp5].map((pic, i) => (
                           <div
@@ -110,7 +110,7 @@ export default function page() {
                         </div>
                         <span className="text-sm text-gray-500 dark:text-gray-400  ">
                           Trusted by{" "}
-                          <span className="font-semibold text-gray-900 dark:text-teal-400">
+                          <span className="font-semibold text-teal-400">
                             300+
                           </span>{" "}
                           developers and editors
