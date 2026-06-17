@@ -104,8 +104,8 @@ export default function FeaturedProjects({ data }: FeaturedProjectsProps) {
                       src={project.YoutubeEmbed}
                       height="500"
                       width="100%"
-                      frameborder="0"
-                      allowfullscreen=""
+                      frameBorder="0"
+                      allowFullScreen
                       title="Embedded post"
                     ></iframe>
                   </div>
