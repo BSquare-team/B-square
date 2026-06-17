@@ -1,0 +1,18 @@
+{
+  "featuredImage": "",
+  "title": "Fixing Per-Card Embed Modals in React — One State, Wrong Video",
+  "description": "When each card in a list needs to open its own embedded video modal, a single shared boolean state causes every modal to fire at once — always showing the wrong embed. This covers how to fix it with index-based state tracking, so each card opens only its own embed.",
+  "slug": "001fixingbugs",
+  "author": "Amin",
+  "date": "2026-06-17T23:07",
+  "published": true,
+  "categoryTags": [],
+  "techTags": [],
+  "seo": null,
+  "blocks": [
+    {
+      "type": "text",
+      "content": "## The Bug & Fix — Documented\n\n### What Was Happening\n\nYou had **one shared state** for all cards:\n\n```plain\nconst [isOpen, setIsOpen] = useState(false); // one boolean for EVERYONE\n\n```\n\nWhen any card was clicked → `isOpen = true` → **every card** rendered its modal at the same time. With 4 projects, you got 4 stacked overlays. The last one in the DOM won — so you always saw the wrong video.\n\n**Think of it like this:** Imagine a classroom with 30 students, and one light switch controls all their desk lamps. You click one lamp → all 30 turn on.\n\n***\n\n### The Fix\n\nTrack **which** card is open, not just _whether_ something is open:\n\n```plain\nconst [openIndex, setOpenIndex] = useState<number | null>(null);\n// null = nothing open\n// 0 = first card open\n// 2 = third card open\n\n```\n\nNow when you click card #2:\n\n```plain\nsetOpenIndex(2); // only card 2 knows it's open\n\n```\n\nAnd in the render:\n\n```plain\n{openIndex === index && ( // only THIS card's modal shows\n  <div className=\"fixed inset-0 ...\">\n    <iframe src={project.YoutubeEmbed} />\n  </div>\n)}\n\n```\n\n**Same classroom analogy:** Now each student has their own switch. Click student 3's lamp → only lamp 3 turns on.\n\n***\n\n### The Empty Embed Problem\n\nYour second project has an empty `YoutubeEmbed: \"\"`. Without a guard, clicking it opens a modal with a blank/broken iframe.\n\n```plain\nconst hasEmbed = !!project.YoutubeEmbed; // true if URL exists, false if \"\"\n\n// Only show play button if there's something to play\n{hasEmbed && (\n  <div className=\"absolute inset-0 flex items-center justify-center ...\">\n    <Play />\n  </div>\n)}\n\n// Only open modal if there's something to show\nonClick={() => hasEmbed && setOpenIndex(index)}\n\n```\n\n***\n\n### The JSX Attribute Problem\n\nHTML and React JSX use different attribute names:\n\n| HTML | React JSX |\n| --- | --- |\n| `frameborder=\"0\"` | `frameBorder=\"0\"` |\n| `allowfullscreen=\"\"` | `allowFullScreen` |\n\nReact uses **camelCase** for all attributes. Writing HTML-style attributes in JSX either silently fails or throws a warning — the iframe may not behave correctly.\n\n***\n\n### Summary\n\n| Problem | Before | After |\n| --- | --- | --- |\n| Shared state | `useState(false)` | `useState<number | null>(null)` |\n| Which modal opens | All of them | Only `openIndex === index` |\n| Empty embed | Broken iframe | `hasEmbed` guard |\n| Attributes | `frameborder` | `frameBorder` |"
+    }
+  ]
+}
