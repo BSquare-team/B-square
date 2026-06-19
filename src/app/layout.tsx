@@ -1,4 +1,3 @@
-"use client";
 import "../app/globals.css";
 import "../app/company-banner.css";
 import {
@@ -24,62 +23,51 @@ const inter = Inter({
   display: "swap", // بهینه‌سازی نمایش فونت
 });
 
-// export const metadata: Metadata = {
-//   metadataBase: new URL(SERVER_URL),
-//   title: {
-//     default: APP_NAME,
-//     template: `%s | ${APP_NAME}`,
-//   },
-//   description: APP_DESCRIPTION,
-//   keywords: APP_KEYWORDS,
-//   authors: APP_AUTHORS,
-//   openGraph: {
-//     type: "website",
-//     locale: "en_US",
-//     siteName: APP_NAME,
-//     title: APP_NAME,
-//     description: APP_DESCRIPTION,
-//     images: [
-//       {
-//         url: "/images/og-default.jpg",
-//         width: 1200,
-//         height: 630,
-//         alt: APP_NAME,
-//       },
-//     ],
-//   },
-//   twitter: {
-//     card: "summary_large_image",
-//     title: APP_NAME,
-//     description: APP_DESCRIPTION,
-//     images: ["/images/og-default.jpg"],
-//   },
-//   robots: {
-//     index: true,
-//     follow: true,
-//     googleBot: {
-//       index: true,
-//       follow: true,
-//       "max-video-preview": -1,
-//       "max-image-preview": "large",
-//       "max-snippet": -1,
-//     },
-//   },
-// };
-
-const FadeInBackground = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.9 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 1, ease: "easeIn" }}
-      className=" absolute -top-20 -right-5 " // ← fixed رو امتحان کن
-    >
-      {children}
-    </motion.div>
-  );
+export const metadata: Metadata = {
+  metadataBase: new URL(SERVER_URL),
+  title: {
+    default: APP_NAME,
+    template: `%s | ${APP_NAME}`,
+  },
+  description: APP_DESCRIPTION,
+  keywords: APP_KEYWORDS,
+  authors: APP_AUTHORS,
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    siteName: APP_NAME,
+    title: APP_NAME,
+    description: APP_DESCRIPTION,
+    images: [
+      {
+        url: "/images/og-default.jpg",
+        width: 1200,
+        height: 630,
+        alt: APP_NAME,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: APP_NAME,
+    description: APP_DESCRIPTION,
+    images: ["/images/og-default.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "fEgYbjqmkpoBfN0zHoSpdzTHg9R-S4tG-orc9uQm9go",
+  },
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -97,13 +85,11 @@ export default function RootLayout({
           <Header />
 
           <main className="flex-1 py-8">{children}</main>
-          
-          <FadeInBackground >
-            <div
-              className="bg-linear-to-r via-[#ee87cb] from-[#fff1be] to-[#b060ff] dark:bg-linear-to-r 
-               dark:from-[#06b6d4] dark:via-[#3b82f6] dark:to-[#df10ff]  rounded-2xl h-44 w-80 absolute -top-20 -right-5  blur-[80px] dark:blur-[110px] "
-            ></div>
-          </FadeInBackground>
+
+          <div
+            className="bg-linear-to-r via-[#ee87cb] from-[#fff1be] to-[#b060ff] dark:bg-linear-to-r 
+               dark:from-[#06b6d4] dark:via-[#3b82f6] dark:to-[#df10ff]  rounded-2xl h-44 w-80 absolute -top-20 -right-5 z-[-1] blur-[80px] dark:blur-[110px] "
+          ></div>
 
           <Footer />
         </ThemeProvider>

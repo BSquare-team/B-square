@@ -49,6 +49,8 @@
   --border: oklch(0.269 0 0);
   --input: oklch(0.269 0 0);
   --ring: oklch(0.556 0 0);
+
+  --bg3: #0f0f0f;
 }
 
 /* ========== Theme Inline برای دسترسی آسان به متغیرها ========== */
@@ -80,7 +82,83 @@
 }
 
 /* ========== Utility Classes (از استایل اول) ========== */
+
+@property --ptag-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes ptag-spin {
+  from {
+    --ptag-angle: 0deg;
+  }
+  to {
+    --ptag-angle: 360deg;
+  }
+}
+
+@keyframes dot-pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.2);
+  }
+}
+
 @layer utilities {
+  .p-dur-tag {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      border-radius: 21px;
+      z-index: 0;
+      background: conic-gradient(
+        from var(--ptag-angle),
+        transparent 0deg,
+        transparent 60deg,
+        rgba(255 255 255 / 0.4) 78deg,
+        rgba(255 255 255 / 0.75) 90deg,
+        rgba(255 255 255 / 0.4) 102deg,
+        transparent 120deg,
+        transparent 360deg
+      );
+      animation: ptag-spin 3s linear infinite;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0.5px;
+      border-radius: 20px;
+      background: var(--bg3);
+      z-index: 1;
+      transition: background 0.25s;
+      pointer-events: none;
+    }
+  }
+
+  .p-dur-tag-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--text);
+    flex-shrink: 0;
+    animation: dot-pulse 2s ease-in-out infinite;
+    position: relative;
+    z-index: 3;
+    transition: background 0.25s;
+    box-shadow:
+      0 0 5px rgba(232, 229, 223, 0.5),
+      0 0 10px rgba(232, 229, 223, 0.2);
+  }
+
   /* app/home.css */
   .home-gradient::after {
     content: "";
@@ -221,7 +299,7 @@
 
   body {
     @apply bg-background text-foreground antialiased;
-     font-family: var(--font-inter);
+    font-family: var(--font-inter);
   }
   h1,
   h2,
