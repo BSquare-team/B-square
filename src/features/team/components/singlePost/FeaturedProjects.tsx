@@ -14,23 +14,39 @@ interface FeaturedProjectsProps {
 }
 
 function getColSpan(total: number, index: number) {
-  const remaining = total % 3;
+  const isLastIndex = index === total - 1;
+  const isOddTotal = total % 2 === 1;
 
-  if (remaining === 0) return { colSpan: "", isLastRow: false };
+  const classes: string[] = [];
+  let isWideCard = false; // فقط آیتمی که واقعاً عریض می‌شه (col-span-2/3) لازم داره flex-row بگیره
 
-  if (remaining === 1) {
-    if (index === total - 1)
-      return { colSpan: "lg:col-span-3", isLastRow: true };
+  // ===== md (۲ ستونه) =====
+  // اگه کل آیتم‌ها فرد بود، آخرین آیتم (که تک‌وتنها تو ردیف آخر می‌مونه)
+  // تمام عرض (md:col-span-2) رو می‌گیره تا گپ خالی نسازه.
+  // اگه زوج بود، نیازی به override نیست (پیش‌فرض col-span-1 درسته).
+  if (isOddTotal && isLastIndex) {
+    classes.push("md:col-span-2");
   }
 
-  if (remaining === 2) {
-    if (index === total - 2)
-      return { colSpan: "lg:col-span-2", isLastRow: true };
-    if (index === total - 1)
-      return { colSpan: "lg:col-span-1", isLastRow: true };
+  // ===== lg (۳ ستونه) =====
+  const remainder = total % 3;
+
+  if (remainder === 1 && isLastIndex) {
+    // یکی بیشتر از مضرب ۳ → آخرین آیتم تمام عرض (col-span-3) و flex-row
+    classes.push("lg:col-span-3");
+    isWideCard = true;
+  } else if (remainder === 2 && isLastIndex) {
+    // دو تا بیشتر از مضرب ۳ → فقط آخرین آیتم col-span-2 و flex-row می‌گیره
+    // ماقبل‌آخر دست‌نخورده و معمولی (col-span-1 + flex-col) می‌مونه
+    classes.push("lg:col-span-2");
+    isWideCard = true;
+  } else if (remainder === 0 && isLastIndex && isOddTotal) {
+    // تو lg همه‌چی دقیقاً پر می‌شه (نیاز به span خاصی نیست)، ولی چون از md
+    // کلاس col-span-2 به ارث رسیده، باید این‌جا صراحتاً ریست بشه
+    classes.push("lg:col-span-1");
   }
 
-  return { colSpan: "", isLastRow: false };
+  return { colSpan: classes.join(" "), isLastRow: isWideCard };
 }
 
 export default function FeaturedProjects({ data }: FeaturedProjectsProps) {
@@ -53,12 +69,14 @@ export default function FeaturedProjects({ data }: FeaturedProjectsProps) {
               key={index}
               className={`bg-background px-6 pt-6 pb-7 flex flex-col gap-2.5 min-w-0 
                 ${colSpan}
-                ${isLastRow ? "lg:flex lg:flex-row items-start lg:gap-4" : "flex flex-col"}`}
+                ${isLastRow ? "lg:flex lg:flex-row items-start lg:gap-4 lg:items-center" : "flex flex-col"}`}
             >
               {/* ===== ویدیو تامبیل ===== */}
               <div
-                className={`w-full aspect-video bg-bg3 rounded-[2px] overflow-hidden mb-1 border-[0.5px] border-border relative 
-                  ${hasEmbed ? "cursor-pointer" : "cursor-default"}`}
+                className={` w-full aspect-video bg-bg3 rounded-[2px] overflow-hidden mb-1 border-[0.5px] border-border relative 
+                  ${hasEmbed ? "cursor-pointer" : "cursor-default"}
+                       ${isLastRow ? "" : "" }
+                `}
                 onClick={() => hasEmbed && setOpenIndex(index)}
               >
                 <video
@@ -114,7 +132,7 @@ export default function FeaturedProjects({ data }: FeaturedProjectsProps) {
 
               {/* ===== محتوای متن ===== */}
               <div
-                className={`${isLastRow ? "flex flex-col lg:gap-4 lg:my-auto" : "flex flex-col gap-2.5"}`}
+                className={`gap-2.5 ${isLastRow ? "flex flex-col lg:gap-4 lg:my-auto " : "flex flex-col gap-2.5"}`}
               >
                 <div className="text-[13px] font-medium text-(--text) leading-[1.4]">
                   {project.topText}
