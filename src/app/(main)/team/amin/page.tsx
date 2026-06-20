@@ -15,26 +15,29 @@ import CommentsSec from "../../../../features/team/components/singlePost/Comment
 import Link from "next/link";
 
 import { embedData } from "@/data/embedData";
-import SwiperThreeView from "@/src/shared/components/ui/swiperThreeView";
 import { CompanyBanner } from "@/src/features/team/components/singlePost/CompanyBanner";
-import { WistiaPlayer } from "@/src/features/team/components/singlePost/WistiaPlayer";
-import { WistiaPlayerPopOver } from "@/src/features/team/components/WistiaPlaterPopOver";
 import FeaturedProjects from "@/src/features/team/components/singlePost/FeaturedProjects";
 import LetsCallSection from "@/src/features/team/components/singlePost/LetsCallSection";
 import { ProjectsAminData } from "@/data/FeaturedProjectsData";
 import Workflow from "@/src/features/team/components/singlePost/Workflow";
 import { workFlowData } from "@/data/workFlowData";
+import PageHeader from "@/src/features/team/components/singlePost/PageHeader";
 
 export default function page() {
   return (
     <div className="">
       {/* hero section  */}
+
+      <PageHeader
+        heroTitle="Amin Bagheri "
+        description="  Over 3 years of creative work for one goal — helping great products
+              get the attention they deserve."
+      />
+
       <section className="relative overflow-hidden shadow-xl dark:shadow-2xl">
         <div className="absolute inset-0 -z-10 ">
           <div className="absolute inset-0 bg-[radial-gradient(circle,#73737340_1px,transparent_1px)] bg-size-[24px_24px] mask-[radial-gradient(ellipse_80%_50%_at_50%_50%,#000_70%,transparent_100%)]" />
         </div>
-
-        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-linear-to-r from-primary/10 via-primary/5 to-transparent dark:from-primary/20 dark:via-primary/10 blur-3xl -z-10" />
 
         <div className="container mx-auto max-w-7xl px-6 lg:px-8 py-12 lg:py-20">
           <div className="flex flex-col-reverse lg:flex-row gap-12 lg:gap-0 items-center">
@@ -47,7 +50,7 @@ export default function page() {
                 Frontend Developer| Video Editor
               </Button>
 
-              <h1 className=" text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
+              <h1 className=" text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight">
                 ELEVATING BRANDS <br /> through <br />{" "}
                 <span className="w-full text-transparent bg-clip-text bg-linear-to-r from-teal-600 to-cyan-600 dark:from-teal-400 dark:to-cyan-400">
                   CREATIVE SOLUTIONS
@@ -58,15 +61,10 @@ export default function page() {
                 Over 3 years of creative work, helping companies and creators
                 strengthen their digital presence.
               </p>
-
-              {/* ردیف آواتارها و امتیاز */}
-            
             </div>
 
             <div className="flex-1 flex justify-center lg:justify-end">
-              <div className="relative w-[280px] sm:w-[320px] lg:w-[380px]">
-             
-
+              <div className="relative w-[180px] sm:w-[220px] lg:w-[280px]">
                 <div className="rounded-3xl  shadow-2xl border border-white/20 dark:border-white/10 bg-white/5 dark:bg-black/20 backdrop-blur-sm p-2">
                   <div className="relative rounded-2xl ">
                     <Image
@@ -119,9 +117,6 @@ export default function page() {
                     </div>
                   </div>
                 </div>
-
-                <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-teal-500/20 rounded-full blur-2xl -z-10" />
-                <div className="absolute -top-6 -right-6 w-32 h-32 bg-purple-500/20 rounded-full blur-2xl -z-10" />
               </div>
             </div>
           </div>
