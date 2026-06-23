@@ -15,20 +15,7 @@ import Footer from "../shared/components/layout/Footer";
 import { ThemeProvider } from "next-themes";
 
 import { Inter } from "next/font/google";
-
-// // فونت هدینگ
-// const hankenGrotesk = localFont({
-//   src: "../p/hanken-grotesk-latin-wght-normal.0zrhm0yfqw_5l.woff2",
-//   variable: "--font-heading",
-//   display: "swap",
-// });
-
-// // فونت متن
-// const inter = localFont({
-//   src: "../public/font/inter-latin-wght-normal.055ydel_y7o6i.woff2",
-//   variable: "--font-sans",
-//   display: "swap",
-// });
+import { motion } from "motion/react";
 
 const inter = Inter({
   subsets: ["latin"],
