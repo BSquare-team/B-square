@@ -6,6 +6,8 @@ export const ProjectsAminData = [
     YoutubeEmbed:
       "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7395027531776585728?compact=1",
     thumbNail: "D14-1.webm",
+    params:"",
+    linkText:"View case study"
   },
   {
     topText: "From 2022 to 2025 — In 30 Seconds",
@@ -14,6 +16,8 @@ export const ProjectsAminData = [
     YoutubeEmbed:
       "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7385569211575697408?compact=1",
     thumbNail: "ui-style.webm",
+    params:"",
+    linkText:"View case study"
   },
   {
     topText: "Ryze Mushroom Coffee — 1 Year, 100+ Shorts",
@@ -22,6 +26,8 @@ export const ProjectsAminData = [
     YoutubeEmbed:
       "",
     thumbNail: "Ryzepreview-1.webm",
+    params:"/services/edite?industry=ryze",
+    linkText:"View shorts"
   },
   {
     topText: " Facebook Privacy Scandal — Full Documentary Edit",
@@ -30,5 +36,7 @@ export const ProjectsAminData = [
     YoutubeEmbed:
       "",
     thumbNail: "Zuckerberg.webm",
+    params:"",
+    linkText:"View case study"
   },
 ];

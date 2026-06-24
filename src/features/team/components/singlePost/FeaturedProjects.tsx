@@ -1,5 +1,6 @@
 "use client";
 import { ArrowBigDown, Play } from "lucide-react";
+import Link from "next/link";
 import React, { useState } from "react";
 
 export interface ProjectsProps {
@@ -7,6 +8,8 @@ export interface ProjectsProps {
   bottomText: string;
   YoutubeEmbed: string;
   thumbNail: string;
+  params: string
+  linkText:string
 }
 
 interface FeaturedProjectsProps {
@@ -75,7 +78,7 @@ export default function FeaturedProjects({ data }: FeaturedProjectsProps) {
               <div
                 className={` w-full aspect-video bg-bg3 rounded-[2px] overflow-hidden mb-1 border-[0.5px] border-border relative 
                   ${hasEmbed ? "cursor-pointer" : "cursor-default"}
-                       ${isLastRow ? "" : "" }
+                       ${isLastRow ? "" : ""}
                 `}
                 onClick={() => hasEmbed && setOpenIndex(index)}
               >
@@ -137,7 +140,7 @@ export default function FeaturedProjects({ data }: FeaturedProjectsProps) {
                 <div className="text-[13px] font-medium text-(--text) leading-[1.4]">
                   {project.topText}
                 </div>
-                <div className="text-[12px] text-[var(--muted2)] leading-[1.7] font-light line-clamp-4">
+                <div className="text-[12px] text-[#777] leading-[1.7] font-light line-clamp-4">
                   {project.bottomText}
                 </div>
 
@@ -161,20 +164,27 @@ export default function FeaturedProjects({ data }: FeaturedProjectsProps) {
               <a
                 className={`mt-auto p-dur-tag w-fit px-2 py-1 flex flex-row gap-2 items-center
                   ${isLastRow ? "hidden" : ""}`}
-                href="#"
+                href={project.params}
               >
                 <span
                   className="p-dur-tag-dot inline-block"
                   style={{ "--text": "#ffffff" } as React.CSSProperties}
                 />
                 <span className="relative z-[3] text-[11px] tracking-[0.04em] text-[var(--text)] font-medium transition-colors duration-250 whitespace-nowrap">
-                  View case study
+                  {project.linkText}
                 </span>
               </a>
             </div>
           );
         })}
       </div>
+      <Link href={"/services/edite"}>
+        <button className="btn-premium relative inline-block rounded-[9px] cursor-pointer bg-transparent border-none">
+          <span className="btn-premium-inner relative z-[2] inline-flex items-center gap-2 lg:text-[13px] text-[11px] font-medium tracking-[0.08em] uppercase text-[#0c0c0c] py-[10px] px-[14px] lg:py-[13px] lg:px-7 rounded-[7px] cursor-pointer bg-[#e8e5df] overflow-hidden whitespace-nowrap transition-[color,background] duration-300 ease-in-out">
+            Let's call
+          </span>
+        </button>
+      </Link>
     </section>
   );
 }
