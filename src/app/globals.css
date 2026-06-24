@@ -83,6 +83,23 @@
 
 /* ========== Utility Classes (از استایل اول) ========== */
 
+@property --btn-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes btn-spin {
+  to {
+    --btn-angle: 360deg;
+  }
+}
+@keyframes btn-sweep {
+  0% { left: -100%; }
+  50% { left: 150%; }
+  100% { left: 150%; }
+}
+
 @property --ptag-angle {
   syntax: "<angle>";
   initial-value: 0deg;
@@ -111,6 +128,52 @@
 }
 
 @layer utilities {
+  .btn-premium::before {
+    content: "";
+    position: absolute;
+    inset: -1.5px;
+    border-radius: 9px;
+    z-index: 0;
+    background: conic-gradient(
+      from var(--btn-angle),
+      transparent 0deg,
+      transparent 55deg,
+      rgba(255, 255, 255, 0.5) 75deg,
+      rgba(255, 255, 255, 0.85) 90deg,
+      rgba(255, 255, 255, 0.5) 105deg,
+      transparent 125deg,
+      transparent 360deg
+    );
+    animation: btn-spin 3s linear infinite;
+  }
+
+  .btn-premium::after {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    border-radius: 7px;
+    background: #e8e5df;
+    z-index: 1;
+    transition: background 0.3s ease;
+  }
+
+  .btn-premium-inner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 55%;
+    height: 100%;
+    background: linear-gradient(
+      to right,
+      transparent,
+      rgba(255, 255, 255, 0.22),
+      transparent
+    );
+    animation: btn-sweep 3s ease-in-out infinite;
+    z-index: 0;
+  }
+
   .p-dur-tag {
     position: relative;
 

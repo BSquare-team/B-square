@@ -22,16 +22,26 @@ import { ProjectsAminData } from "@/data/FeaturedProjectsData";
 import Workflow from "@/src/features/team/components/singlePost/Workflow";
 import { workFlowData } from "@/data/workFlowData";
 import PageHeader from "@/src/features/team/components/singlePost/PageHeader";
+import { useRef } from "react";
 
 export default function page() {
+  const featuredRef = useRef<HTMLDivElement>(null);
+  const letsCallRef = useRef<HTMLDivElement>(null);
+
+  const scrollToFeatured = () => {
+    featuredRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
+  };
+
+  const scrollToLetsCall = () => {
+    letsCallRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
   return (
     <div className="">
       {/* hero section  */}
 
       <PageHeader
         heroTitle="Amin Bagheri "
-        description="  Over 3 years of creative work for one goal — helping great products
-              get the attention they deserve."
+        description="  Frontend Developer | Video Editor"
       />
 
       <section className="relative overflow-hidden shadow-xl dark:shadow-2xl">
@@ -40,15 +50,15 @@ export default function page() {
         </div>
 
         <div className="container mx-auto max-w-7xl px-6 lg:px-8 py-12 lg:py-20">
-          <div className="flex flex-col-reverse lg:flex-row gap-12 lg:gap-0 items-center">
-            <div className="w-full text-center lg:text-left space-y-6 max-w-2xl mx-auto lg:mx-0">
-              <Button
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-0 items-center">
+            <div className="w-full lg:text-left space-y-6 max-w-2xl mx-auto lg:mx-0">
+              {/* <Button
                 variant="ghost"
                 size="sm"
                 className="mx-auto lg:mx-0 w-fit sm:text-xs text-[10px] font-medium bg-white dark:bg-gray-900/50 text-gray-600 dark:text-gray-300 rounded-full px-4 py-1.5 border border-gray-200 dark:border-gray-800 shadow-sm"
               >
                 Frontend Developer| Video Editor
-              </Button>
+              </Button> */}
 
               <h1 className=" text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight">
                 ELEVATING BRANDS <br /> through <br />{" "}
@@ -56,15 +66,35 @@ export default function page() {
                   CREATIVE SOLUTIONS
                 </span>
               </h1>
-
               <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-xl mx-auto lg:mx-0">
                 Over 3 years of creative work, helping companies and creators
                 strengthen their digital presence.
               </p>
+
+              <div className="flex flex-wrap lg:justify-start gap-4 pt-2">
+                {/* دکمه Let's Call */}
+
+                <button
+                  className="btn-premium relative inline-block rounded-[9px] cursor-pointer bg-transparent border-none"
+                  onClick={scrollToLetsCall}
+                >
+                  <span className="btn-premium-inner relative z-[2] inline-flex items-center gap-2 lg:text-[13px] text-[11px] font-medium tracking-[0.08em] uppercase text-[#0c0c0c] py-[10px] px-[14px] lg:py-[13px] lg:px-7 rounded-[7px] cursor-pointer bg-[#e8e5df] overflow-hidden whitespace-nowrap transition-[color,background] duration-300 ease-in-out">
+                    Let's call
+                  </span>
+                </button>
+                <button
+                  className="btn-premium relative inline-block rounded-[9px] cursor-pointer bg-transparent border-none"
+                  onClick={scrollToFeatured}
+                >
+                  <span className="btn-premium-inner relative z-[2] inline-flex items-center gap-2 lg:text-[13px] text-[11px] font-medium tracking-[0.08em] uppercase text-[#e8e5df] py-[10px] px-[14px] lg:py-[13px] rounded-[7px] cursor-pointer bg-[#161616] overflow-hidden whitespace-nowrap transition-[color,background] duration-300 ease-in-out">
+                    View portfolio
+                  </span>
+                </button>
+              </div>
             </div>
 
             <div className="flex-1 flex justify-center lg:justify-end">
-              <div className="relative w-[180px] sm:w-[220px] lg:w-[280px]">
+              <div className="relative w-[220px] lg:w-[280px]">
                 <div className="rounded-3xl  shadow-2xl border border-white/20 dark:border-white/10 bg-white/5 dark:bg-black/20 backdrop-blur-sm p-2">
                   <div className="relative rounded-2xl ">
                     <Image
@@ -125,14 +155,17 @@ export default function page() {
 
       <CompanyBanner />
       {/* comments  */}
-
-      <FeaturedProjects data={ProjectsAminData} />
+      <div ref={featuredRef}>
+        <FeaturedProjects data={ProjectsAminData} />
+      </div>
       <div className="h-0.5 bg-border"></div>
       <Workflow WorkflowProps={workFlowData} />
       <div className="h-0.5 bg-border"></div>
       <CommentsSec />
       <div className="h-0.5 bg-border mt-20"></div>
-      <LetsCallSection />
+      <div ref={letsCallRef}>
+        <LetsCallSection />
+      </div>
       <div className="h-0.5 bg-border"></div>
       {/* <section className="container m-auto max-w-7xl mt-20 px-6">
         <div className="flex flex-col md:flex-row justify-between ">
