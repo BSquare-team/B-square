@@ -4,6 +4,7 @@ import { getAllChangelogEntries } from "@/src/features/changelog/lib/changelog";
 import ChangelogTimeline from "../../../features/changelog/components/ChangelogTimeline";
 import { APP_NAME, SERVER_URL } from "@/src/shared/lib/constants";
 import { Metadata } from "next";
+import PageHeader from "@/src/features/team/components/singlePost/PageHeader";
 
 export const revalidate = 3600;
 
@@ -24,16 +25,15 @@ export default function ChangelogPage() {
   const entries = getAllChangelogEntries();
 
   return (
-    <section className="mt-20 container max-w-7xl mx-auto px-8">
-      <div className="prose dark:prose-invert">
-        <h1>Changelog from our journey</h1>
-        <p>
-          A timeline of our progress, updates, and milestones. Here&apos;s what
-          we&apos;ve been working on.
-        </p>
-      </div>
-
-      <ChangelogTimeline entries={entries} />
-    </section>
+    <>
+      <PageHeader
+        heroTitle="Changelog from our journey "
+        description="A timeline of our progress, updates, and milestones. Here's what
+          we've been working on."
+      />
+      <section className="mt-20 container max-w-7xl mx-auto px-8">
+        <ChangelogTimeline entries={entries} />
+      </section>
+    </>
   );
 }

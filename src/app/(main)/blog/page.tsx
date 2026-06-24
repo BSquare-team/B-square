@@ -6,6 +6,7 @@ import ChangelogCTA from "../../../features/blog/components/ChangelogCTA";
 import { getAllPosts } from "@/src/features/blog/lib/posts";
 import { APP_NAME, SERVER_URL } from "@/src/shared/lib/constants";
 import { Metadata } from "next";
+import PageHeader from "@/src/features/team/components/singlePost/PageHeader";
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -27,9 +28,14 @@ export default function BlogPage() {
 
   return (
     <div className="container m-auto max-w-7xl">
-      <HeroSection />
-      <ChangelogCTA />
+      <PageHeader
+        heroTitle="Blog "
+        description="Stay informed with product updates, company news, and insights on how
+          to sell smarter at your company."
+      />
+
       <BlogPostsSection posts={posts} />
+      <ChangelogCTA />
     </div>
   );
 }
