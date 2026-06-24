@@ -10,7 +10,7 @@ import hp4 from "@/src/assets/image/hp4.jpg";
 import hp3 from "@/src/assets/image/hp3.jpg";
 import hp2 from "@/src/assets/image/hp2.jpg";
 
-import { LucideStar, Play } from "lucide-react";
+import { ArrowBigDown, LucideStar, Play } from "lucide-react";
 import CommentsSec from "../../../../features/team/components/singlePost/CommentsSec";
 import Link from "next/link";
 
@@ -179,69 +179,63 @@ export default function page() {
         </div>
       </section> */}
 
-      <section className="container m-auto max-w-7xl mt-20 px-6">
-        <div className="flex flex-col md:flex-row justify-between ">
-          <div className="prose dark:prose-invert md:w-[60%]">
-            <h2>About me</h2>
-            <p>
-              I'm Amin Bagheri. <br />
-              Most of my story — how I got into front-end development and what
-              I've been through so far — you can read on this blog.
-            </p>
-          </div>
+    <section className="container mx-auto max-w-7xl px-[34px] py-[100px]">
+  <div className="flex items-center gap-4 text-[13px] font-medium text-(--text) mb-14">
+    Blog
+    <ArrowBigDown size={15} />
+  </div>
 
-          <Link href="/blog/how-i-got-here" className="md:w-[40%] group mt-4">
-            <div className="rounded-3xl overflow-hidden hover:shadow-2xl shadow-lg dark:bg-[#0a0a0a94] dark:shadow-[0_10px_30px_-10px_rgba(255,255,255,0.03)] dark:hover:shadow-[0_20px_50px_-12px_rgba(255,255,255,0.08)] transition-all duration-300 h-full">
-              <div className="p-8 border-t-4 border-blue-800 flex flex-col justify-between h-full">
-                <div>
-                  <p className="text-sm/5 text-gray-500 dark:text-gray-400"></p>
-                  <h2 className="mt-2 text-xl/7 font-bold text-gray-900 dark:text-white line-clamp-3 group-hover:text-blue-400 transition-colors">
-                    How I got here
-                  </h2>
-                  <p className="mt-2 text-sm/6 text-gray-600 dark:text-gray-400 line-clamp-4"></p>
-                </div>
-                <p className="mt-6 text-sm/5 font-medium text-gray-700 dark:text-gray-300">
-                  Read more →
-                </p>
-              </div>
-            </div>
-          </Link>
-        </div>
-      </section>
+  {/* About me */}
+  <div className="mb-10">
+    <h2 className="text-[13px] font-medium text-(--text) mb-2">About me</h2>
+    <p className="text-[12px] text-[var(--muted2)] leading-[1.7] font-light max-w-sm">
+      I'm Amin Bagheri. Most of my story — how I got into front-end development
+      and what I've been through so far — you can read on this blog.
+    </p>
+  </div>
 
-      <section className="container m-auto max-w-7xl mt-20 px-6">
-        <div className="flex flex-col md:flex-row justify-between">
-          <div className="md:sticky md:top-40 md:w-[60%] h-fit">
-            <div className="prose dark:prose-invert">
-              <h2>Opportunities </h2>
-              <p>
-                Stories of the valuable opportunities I've had — and what I
-                learned from each one.
-              </p>
-            </div>
-          </div>
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-border border-[0.5px] border-border mb-14">
+    {/* کارت ۱ */}
+    <Link href="/blog/how-i-got-here" className="bg-background px-6 pt-6 pb-7 flex flex-col gap-2.5 min-w-0 group">
+      <div className="text-[11px] font-medium text-(--muted2) tracking-[0.04em] uppercase">
+        Personal
+      </div>
+      <div className="text-[13px] font-medium text-(--text) leading-[1.4]">
+        How I got here
+      </div>
+      <div className="text-[12px] text-[var(--muted2)] leading-[1.7] font-light line-clamp-3">
+        The story of how I transitioned into front-end development — the detours,
+        the decisions, and what eventually made it click.
+      </div>
+      <a className="mt-auto p-dur-tag w-fit px-2 py-1 flex flex-row gap-2 items-center" href="/blog/how-i-got-here">
+        <span className="p-dur-tag-dot inline-block" />
+        <span className="relative z-[3] text-[11px] tracking-[0.04em] text-[var(--text)] font-medium transition-colors duration-250 whitespace-nowrap">
+          Read more
+        </span>
+      </a>
+    </Link>
 
-          <Link
-            href="/blog/first-real-client"
-            className="md:w-[40%] group mt-4"
-          >
-            <div className="rounded-3xl overflow-hidden hover:shadow-2xl shadow-lg dark:bg-[#0a0a0a94] dark:shadow-[0_10px_30px_-10px_rgba(255,255,255,0.03)] dark:hover:shadow-[0_20px_50px_-12px_rgba(255,255,255,0.08)] transition-all duration-300">
-              <div className="p-8 border-t-4 border-blue-800 flex flex-col justify-between">
-                <div>
-                  <p className="text-sm/5 text-gray-500 dark:text-gray-400"></p>
-                  <h2 className="mt-2 text-xl/7 font-bold text-gray-900 dark:text-white line-clamp-3 group-hover:text-blue-400 transition-colors">
-                    First real client
-                  </h2>
-                  <p className="mt-2 text-sm/6 text-gray-600 dark:text-gray-400 line-clamp-4"></p>
-                </div>
-                <p className="mt-6 text-sm/5 font-medium text-gray-700 dark:text-gray-300">
-                  Read more →
-                </p>
-              </div>
-            </div>
-          </Link>
-        </div>
-      </section>
+    {/* کارت ۲ */}
+    <Link href="/blog/first-real-client" className="bg-background px-6 pt-6 pb-7 flex flex-col gap-2.5 min-w-0 group">
+      <div className="text-[11px] font-medium text-(--muted2) tracking-[0.04em] uppercase">
+        Opportunities
+      </div>
+      <div className="text-[13px] font-medium text-(--text) leading-[1.4]">
+        First real client
+      </div>
+      <div className="text-[12px] text-[var(--muted2)] leading-[1.7] font-light line-clamp-3">
+        Stories of the valuable opportunities I've had — and what I learned from
+        each one. Landing the first client was a turning point.
+      </div>
+      <a className="mt-auto p-dur-tag w-fit px-2 py-1 flex flex-row gap-2 items-center" href="/blog/first-real-client">
+        <span className="p-dur-tag-dot inline-block" />
+        <span className="relative z-[3] text-[11px] tracking-[0.04em] text-[var(--text)] font-medium transition-colors duration-250 whitespace-nowrap">
+          Read more
+        </span>
+      </a>
+    </Link>
+  </div>
+</section>
     </div>
   );
 }
