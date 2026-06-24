@@ -8,7 +8,7 @@ export interface pageHeaderProps {
 
 export default function PageHeader({ heroTitle , description}: pageHeaderProps) {
   return (
-      <section className="px-5 pt-14 pb-10 md:px-16 md:pt-20 md:pb-16 max-w-300 mx-auto border-b  border-border">
+      <section className="px-5 lg:pt-14 pb-10 md:px-16 md:pt-20 md:pb-16 max-w-300 mx-auto border-b  border-border">
             <div className="text-[11px] tracking-[0.2em] uppercase text-[#777] mb-5">
               {" "}
               <Breadcrumb />
