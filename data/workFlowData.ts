@@ -20,3 +20,20 @@ export const workFlowData = [
     decs: "Receive polished videos ready to post. Watch audience retention rise, engagement improve, and your brand clarity shine.",
   },
 ];
+
+
+export const blogPostsData = [
+   {
+    category: "Personal",
+    title: "How I got here",
+    desc: "Most of my story — how I got into front-end development and what I've been through so far.",
+    href: "/blog/how-i-got-here",
+  },
+  {
+    category: "Opportunities",
+    title: "First real client",
+    desc: "Stories of the valuable opportunities I've had — and what I learned from each one.",
+    href: "/blog/first-real-client",
+  },
+];
+
