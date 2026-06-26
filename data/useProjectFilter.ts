@@ -2,14 +2,7 @@
 
 import { useCallback, useMemo } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-
-export type ProjectType = "motion" | "shorts" | "long-form";
-export type ProjectIndustry = "power100" | "ryze" | "documentations";
-
-export interface FilterableProject {
-  type: ProjectType;
-  industry: ProjectIndustry;
-}
+import type { ProjectType, ProjectIndustry, ProjectItem } from "@/data/FeaturedProjectsDataAll";
 
 export const TYPE_FILTERS: { key: ProjectType | "all"; label: string }[] = [
   { key: "all", label: "All" },
@@ -28,12 +21,7 @@ export const INDUSTRY_FILTERS: { key: ProjectIndustry | "all"; label: string }[]
 const VALID_TYPES = new Set(TYPE_FILTERS.map((t) => t.key));
 const VALID_INDUSTRIES = new Set(INDUSTRY_FILTERS.map((i) => i.key));
 
-/**
- * نسخه‌ی URL-synced فیلتر — به‌جای useState داخلی، خود URL
- * (?type=...&industry=...) منبع حقیقت state هست.
- * یعنی هر لینکی که با این query بسازی، همون فیلتر رو فعال می‌کنه.
- */
-export function useProjectFilter<T extends FilterableProject>(data: T[]) {
+export function useProjectFilter<T extends ProjectItem>(data: T[]) {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -41,7 +29,6 @@ export function useProjectFilter<T extends FilterableProject>(data: T[]) {
   const rawType = searchParams.get("type");
   const rawIndustry = searchParams.get("industry");
 
-  // اگه تو URL یه مقدار نامعتبر بود (مثلاً ?type=banana)، fallback به "all"
   const typeFilter =
     rawType && VALID_TYPES.has(rawType as ProjectType | "all") ? rawType : "all";
   const industryFilter =
@@ -60,7 +47,6 @@ export function useProjectFilter<T extends FilterableProject>(data: T[]) {
       }
 
       const query = params.toString();
-      // replace نه push — هر کلیک روی فیلتر یه history entry جدید نمی‌سازه
       router.replace(query ? `${pathname}?${query}` : pathname, {
         scroll: false,
       });

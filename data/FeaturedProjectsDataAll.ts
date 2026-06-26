@@ -13,6 +13,8 @@ export interface ProjectItem {
   thumbNail: string;
   type: ProjectType;
   industry: ProjectIndustry;
+  params?: string;
+  linkText?: string; 
 }
 
 /**

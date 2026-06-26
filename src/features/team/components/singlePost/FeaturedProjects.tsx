@@ -13,7 +13,7 @@ export interface ProjectsProps {
 }
 
 interface FeaturedProjectsProps {
-  data: ProjectsProps[];
+  data: ProjectItem[];
   buttonText: string;
   buttonHref: string;
 }
