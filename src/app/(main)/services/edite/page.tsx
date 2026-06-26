@@ -44,7 +44,11 @@ export default function page() {
         />
       </div>
 
-      <FeaturedProjects data={filteredData} />
-    </>
+      <FeaturedProjects
+        data={filteredData}
+        buttonHref="/team/amin#lets-call"
+        buttonText="Let's call"
+      />
+    </> 
   );
 }

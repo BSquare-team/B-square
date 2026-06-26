@@ -95,9 +95,15 @@
   }
 }
 @keyframes btn-sweep {
-  0% { left: -100%; }
-  50% { left: 150%; }
-  100% { left: 150%; }
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 150%;
+  }
+  100% {
+    left: 150%;
+  }
 }
 
 @property --ptag-angle {
@@ -349,6 +355,7 @@
 /* ========== Base Styles ========== */
 @layer base {
   html {
+    scroll-behavior: smooth;
     font-family:
       "Inter",
       system-ui,
