@@ -117,6 +117,51 @@ export const ProjectsAminDataAll: ProjectItem[] = [
   },
 ];
 
+
+export const ProjectsAminData: ProjectItem[] = [
+   {
+    topText: "Pitch Better, Watch Faster — My Edit of Adam Bensman",
+    bottomText: "I re-edited one of Adam Bensman's talks on pitching...",
+    YoutubeEmbed: "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7395027531776585728?compact=1",
+    thumbNail: "D14-1.webm",
+    type: "motion",
+    industry: "Pitch",
+    params: "",
+    linkText: "",
+  },
+  {
+    topText: "From 2022 to 2025 — In 30 Seconds",
+    bottomText: "A crisp 40s explainer...",
+    YoutubeEmbed: "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7385569211575697408?compact=1",
+    thumbNail: "ui-style.webm",
+    type: "motion",
+    industry: "unsorted",
+    params: "",
+    linkText: "",
+  },
+  {
+    topText: "Ryze Mushroom Coffee — 1 Year, 100+ Shorts",
+    bottomText: "One year of advertising for Ryze Mushroom Coffee...",
+    YoutubeEmbed: "",
+    thumbNail: "Ryzepreview-1.webm",
+    type: "shorts",
+    industry: "ryze",
+    params: "/edit?industry=ryze",
+    linkText: "View shorts",
+  },
+  {
+    topText: "Facebook Privacy Scandal — Full Documentary Edit",
+    bottomText: "A deep dive into Facebook's data harvesting...",
+    YoutubeEmbed: "",
+    thumbNail: "Zuckerberg.webm",
+    type: "long-form",
+    industry: "documentations",
+    params: "",
+    linkText: "",
+  },
+];
+
+
 export const TYPE_FILTERS: { key: ProjectType | "all"; label: string }[] = [
   { key: "all", label: "All" },
   { key: "motion", label: "Motion" },

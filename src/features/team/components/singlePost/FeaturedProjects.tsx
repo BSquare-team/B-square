@@ -1,4 +1,5 @@
 "use client";
+import { ProjectItem } from "@/data/FeaturedProjectsDataAll";
 import { ArrowBigDown, Play } from "lucide-react";
 import Link from "next/link";
 import React, { useState } from "react";

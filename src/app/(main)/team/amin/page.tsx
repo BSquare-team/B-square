@@ -18,12 +18,12 @@ import { embedData } from "@/data/embedData";
 import { CompanyBanner } from "@/src/features/team/components/singlePost/CompanyBanner";
 import FeaturedProjects from "@/src/features/team/components/singlePost/FeaturedProjects";
 import LetsCallSection from "@/src/features/team/components/singlePost/LetsCallSection";
-import { ProjectsAminData } from "@/data/FeaturedProjectsData";
 import Workflow from "@/src/features/team/components/singlePost/Workflow";
 import { blogPostsData, workFlowData } from "@/data/workFlowData";
 import PageHeader from "@/src/features/team/components/singlePost/PageHeader";
 import BlogHighlite from "@/src/features/team/components/singlePost/BlogHighlite";
 import { useRef } from "react";
+import { ProjectsAminData } from "@/data/FeaturedProjectsDataAll";
 
 export default function page() {
   const featuredRef = useRef<HTMLDivElement>(null);
@@ -159,8 +159,8 @@ export default function page() {
       <div ref={featuredRef}>
         <FeaturedProjects
           data={ProjectsAminData}
-          buttonHref=""
-          buttonText="Let's call"
+          buttonHref="/edit"
+          buttonText="See portfolio"
         />
       </div>
       <div className="h-0.5 bg-border"></div>
