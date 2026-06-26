@@ -20,8 +20,9 @@ import FeaturedProjects from "@/src/features/team/components/singlePost/Featured
 import LetsCallSection from "@/src/features/team/components/singlePost/LetsCallSection";
 import { ProjectsAminData } from "@/data/FeaturedProjectsData";
 import Workflow from "@/src/features/team/components/singlePost/Workflow";
-import { workFlowData } from "@/data/workFlowData";
+import { blogPostsData, workFlowData } from "@/data/workFlowData";
 import PageHeader from "@/src/features/team/components/singlePost/PageHeader";
+import BlogHighlite from "@/src/features/team/components/singlePost/BlogHighlite";
 import { useRef } from "react";
 
 export default function page() {
@@ -156,14 +157,18 @@ export default function page() {
       <CompanyBanner />
       {/* comments  */}
       <div ref={featuredRef}>
-        <FeaturedProjects data={ProjectsAminData} />
+        <FeaturedProjects
+          data={ProjectsAminData}
+          buttonHref=""
+          buttonText="Let's call"
+        />
       </div>
       <div className="h-0.5 bg-border"></div>
       <Workflow WorkflowProps={workFlowData} />
       <div className="h-0.5 bg-border"></div>
       <CommentsSec />
       <div className="h-0.5 bg-border mt-20"></div>
-      <div ref={letsCallRef}>
+      <div ref={letsCallRef} id="lets-call">
         <LetsCallSection />
       </div>
       <div className="h-0.5 bg-border"></div>
@@ -179,63 +184,7 @@ export default function page() {
         </div>
       </section> */}
 
-    <section className="container mx-auto max-w-7xl px-[34px] py-[100px]">
-  <div className="flex items-center gap-4 text-[13px] font-medium text-(--text) mb-14">
-    Blog
-    <ArrowBigDown size={15} />
-  </div>
-
-  {/* About me */}
-  <div className="mb-10">
-    <h2 className="text-[13px] font-medium text-(--text) mb-2">About me</h2>
-    <p className="text-[12px] text-[var(--muted2)] leading-[1.7] font-light max-w-sm">
-      I'm Amin Bagheri. Most of my story — how I got into front-end development
-      and what I've been through so far — you can read on this blog.
-    </p>
-  </div>
-
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-border border-[0.5px] border-border mb-14">
-    {/* کارت ۱ */}
-    <Link href="/blog/how-i-got-here" className="bg-background px-6 pt-6 pb-7 flex flex-col gap-2.5 min-w-0 group">
-      <div className="text-[11px] font-medium text-(--muted2) tracking-[0.04em] uppercase">
-        Personal
-      </div>
-      <div className="text-[13px] font-medium text-(--text) leading-[1.4]">
-        How I got here
-      </div>
-      <div className="text-[12px] text-[var(--muted2)] leading-[1.7] font-light line-clamp-3">
-        The story of how I transitioned into front-end development — the detours,
-        the decisions, and what eventually made it click.
-      </div>
-      <a className="mt-auto p-dur-tag w-fit px-2 py-1 flex flex-row gap-2 items-center" href="/blog/how-i-got-here">
-        <span className="p-dur-tag-dot inline-block" />
-        <span className="relative z-[3] text-[11px] tracking-[0.04em] text-[var(--text)] font-medium transition-colors duration-250 whitespace-nowrap">
-          Read more
-        </span>
-      </a>
-    </Link>
-
-    {/* کارت ۲ */}
-    <Link href="/blog/first-real-client" className="bg-background px-6 pt-6 pb-7 flex flex-col gap-2.5 min-w-0 group">
-      <div className="text-[11px] font-medium text-(--muted2) tracking-[0.04em] uppercase">
-        Opportunities
-      </div>
-      <div className="text-[13px] font-medium text-(--text) leading-[1.4]">
-        First real client
-      </div>
-      <div className="text-[12px] text-[var(--muted2)] leading-[1.7] font-light line-clamp-3">
-        Stories of the valuable opportunities I've had — and what I learned from
-        each one. Landing the first client was a turning point.
-      </div>
-      <a className="mt-auto p-dur-tag w-fit px-2 py-1 flex flex-row gap-2 items-center" href="/blog/first-real-client">
-        <span className="p-dur-tag-dot inline-block" />
-        <span className="relative z-[3] text-[11px] tracking-[0.04em] text-[var(--text)] font-medium transition-colors duration-250 whitespace-nowrap">
-          Read more
-        </span>
-      </a>
-    </Link>
-  </div>
-</section>
+      <BlogHighlite blogPosts={blogPostsData} />
     </div>
   );
 }
