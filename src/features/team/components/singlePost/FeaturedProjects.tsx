@@ -8,12 +8,14 @@ export interface ProjectsProps {
   bottomText: string;
   YoutubeEmbed: string;
   thumbNail: string;
-  params: string
-  linkText:string
+  params: string;
+  linkText: string;
 }
 
 interface FeaturedProjectsProps {
   data: ProjectsProps[];
+  buttonText: string;
+  buttonHref: string;
 }
 
 function getColSpan(total: number, index: number) {
@@ -52,7 +54,11 @@ function getColSpan(total: number, index: number) {
   return { colSpan: classes.join(" "), isLastRow: isWideCard };
 }
 
-export default function FeaturedProjects({ data }: FeaturedProjectsProps) {
+export default function FeaturedProjects({
+  data,
+  buttonText,
+  buttonHref,
+}: FeaturedProjectsProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
@@ -83,6 +89,7 @@ export default function FeaturedProjects({ data }: FeaturedProjectsProps) {
                 onClick={() => hasEmbed && setOpenIndex(index)}
               >
                 <video
+                  key={project.thumbNail}
                   autoPlay
                   muted
                   loop
@@ -135,7 +142,7 @@ export default function FeaturedProjects({ data }: FeaturedProjectsProps) {
 
               {/* ===== محتوای متن ===== */}
               <div
-                className={`gap-2.5 ${isLastRow ? "flex flex-col lg:gap-4 lg:my-auto " : "flex flex-col gap-2.5"}`}
+                className={`gap-2.5 ${isLastRow ? "flex flex-col lg:gap-4 lg:my-auto w-full" : "flex flex-col gap-2.5"}`}
               >
                 <div className="text-[13px] font-medium text-(--text) leading-[1.4]">
                   {project.topText}
@@ -145,46 +152,52 @@ export default function FeaturedProjects({ data }: FeaturedProjectsProps) {
                 </div>
 
                 {/* لینک View case study — برای ردیف آخر */}
+                {project.linkText && (
+                  <a
+                    className={`mt-auto p-dur-tag w-fit px-2 py-1 flex flex-row gap-2 items-center
+                    ${isLastRow ? "" : "hidden"}`}
+                    href={project.params}
+                  >
+                    <span
+                      className="p-dur-tag-dot inline-block"
+                      style={{ "--text": "#ffffff" } as React.CSSProperties}
+                    />
+                    <span className="relative z-[3] text-[11px] tracking-[0.04em] text-[var(--text)] font-medium transition-colors duration-250 whitespace-nowrap">
+                      {project.linkText}
+                    </span>
+                  </a>
+                )}
+              </div>
+
+              {/* لینک View case study — برای بقیه ردیف‌ها */}
+              {project.linkText && (
                 <a
                   className={`mt-auto p-dur-tag w-fit px-2 py-1 flex flex-row gap-2 items-center
-                    ${isLastRow ? "" : "hidden"}`}
-                  href="#"
+                  ${isLastRow ? "hidden" : ""}`}
+                  href={project.params}
                 >
                   <span
                     className="p-dur-tag-dot inline-block"
                     style={{ "--text": "#ffffff" } as React.CSSProperties}
                   />
                   <span className="relative z-[3] text-[11px] tracking-[0.04em] text-[var(--text)] font-medium transition-colors duration-250 whitespace-nowrap">
-                    View case study
+                    {project.linkText}
                   </span>
                 </a>
-              </div>
-
-              {/* لینک View case study — برای بقیه ردیف‌ها */}
-              <a
-                className={`mt-auto p-dur-tag w-fit px-2 py-1 flex flex-row gap-2 items-center
-                  ${isLastRow ? "hidden" : ""}`}
-                href={project.params}
-              >
-                <span
-                  className="p-dur-tag-dot inline-block"
-                  style={{ "--text": "#ffffff" } as React.CSSProperties}
-                />
-                <span className="relative z-[3] text-[11px] tracking-[0.04em] text-[var(--text)] font-medium transition-colors duration-250 whitespace-nowrap">
-                  {project.linkText}
-                </span>
-              </a>
+              )}
             </div>
           );
         })}
       </div>
-      <Link href={"/services/edite"}>
-        <button className="btn-premium relative inline-block rounded-[9px] cursor-pointer bg-transparent border-none">
-          <span className="btn-premium-inner relative z-[2] inline-flex items-center gap-2 lg:text-[13px] text-[11px] font-medium tracking-[0.08em] uppercase text-[#0c0c0c] py-[10px] px-[14px] lg:py-[13px] lg:px-7 rounded-[7px] cursor-pointer bg-[#e8e5df] overflow-hidden whitespace-nowrap transition-[color,background] duration-300 ease-in-out">
-            Let's call
-          </span>
-        </button>
-      </Link>
+      <div className="w-full flex items-center pt-8">
+        <Link href={buttonHref} className="mx-auto">
+          <button className="btn-premium relative inline-block rounded-[9px] cursor-pointer bg-transparent border-none">
+            <span className="btn-premium-inner relative z-[2] inline-flex items-center gap-2 lg:text-[13px] text-[11px] font-medium tracking-[0.08em] uppercase text-[#0c0c0c] py-[10px] px-[14px] lg:py-[13px] lg:px-7 rounded-[7px] cursor-pointer bg-[#e8e5df] overflow-hidden whitespace-nowrap transition-[color,background] duration-300 ease-in-out">
+              {buttonText}
+            </span>
+          </button>
+        </Link>
+      </div>
     </section>
   );
 }
