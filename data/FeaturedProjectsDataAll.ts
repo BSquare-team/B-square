@@ -1,5 +1,10 @@
 export type ProjectType = "motion" | "shorts" | "long-form";
-export type ProjectIndustry = "power100" | "ryze" | "documentations";
+export type ProjectIndustry =
+  | "power100"
+  | "ryze"
+  | "documentations"
+  | "Pitch"
+  | "unsorted";
 
 export interface ProjectItem {
   topText: string;
@@ -23,8 +28,8 @@ export const ProjectsAminDataAll: ProjectItem[] = [
     YoutubeEmbed:
       "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7395027531776585728?compact=1",
     thumbNail: "D14-1.webm",
-    type: "shorts",
-    industry: "power100",
+    type: "motion",
+    industry: "Pitch",
   },
   {
     topText: "From 2022 to 2025 — In 30 Seconds",
@@ -34,17 +39,9 @@ export const ProjectsAminDataAll: ProjectItem[] = [
       "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7385569211575697408?compact=1",
     thumbNail: "ui-style.webm",
     type: "motion",
-    industry: "documentations",
+    industry: "unsorted",
   },
-  {
-    topText: "Ryze Mushroom Coffee — 1 Year, 100+ Shorts",
-    bottomText:
-      "One year of advertising for Ryze Mushroom Coffee. Over 100 short videos — each with motion graphics, voiceover, and fast cuts.",
-    YoutubeEmbed: "",
-    thumbNail: "Ryzepreview-1.webm",
-    type: "shorts",
-    industry: "ryze",
-  },
+
   {
     topText: "Facebook Privacy Scandal — Full Documentary Edit",
     bottomText:
@@ -54,22 +51,66 @@ export const ProjectsAminDataAll: ProjectItem[] = [
     type: "long-form",
     industry: "documentations",
   },
+
   {
-    topText: "Power100 Webinar Recap",
+    topText: "Ryze Mushroom Coffee — 1 Year, 100+ Shorts",
     bottomText:
-      "Full-length recap edit of a live Power100 sales-training webinar, restructured for clarity and pacing.",
+      "One year of advertising for Ryze Mushroom Coffee. Over 100 short videos — each with motion graphics, voiceover, and fast cuts.",
     YoutubeEmbed: "",
-    thumbNail: "D14-1.webm",
-    type: "long-form",
-    industry: "power100",
+    thumbNail: "Ryzepreview-1.webm",
+    type: "shorts",
+    industry: "ryze",
+  },
+
+  {
+    topText: "MUSHROOM MATCHA",
+    bottomText:
+      "Loaded with adaptogenic mushrooms, our coffee blend delivers calmer energy, sharper focus, and immune support for a balanced body.",
+    YoutubeEmbed: "https://www.youtube.com/embed/3AuClHtIcJc ",
+    thumbNail: "",
+    type: "shorts",
+    industry: "ryze",
   },
   {
-    topText: "Ryze Brand Motion Piece",
+    topText: "Mushroom Hot Cocoa",
     bottomText:
-      "An animated brand explainer built entirely from custom motion graphics for Ryze Mushroom Coffee.",
-    YoutubeEmbed: "",
-    thumbNail: "ui-style.webm",
-    type: "motion",
+      " Mushroom Hot Cocoa is loaded with all-natural, antioxidant-rich ingredients that put quality sleep at the forefront of your wellness routine.",
+    YoutubeEmbed: "https://www.youtube.com/embed/hr9GKBw3_xU",
+    thumbNail: "",
+    type: "shorts",
+    industry: "ryze",
+  },
+  {
+    topText: "Reverse Psychology Demo_03",
+    bottomText: "",
+    YoutubeEmbed: "https://www.youtube.com/embed/w0bF5nRh9tE",
+    thumbNail: "",
+    type: "shorts",
+    industry: "ryze",
+  },
+  {
+    topText: "Smoking Demo_04",
+    bottomText: "",
+    YoutubeEmbed: "https://www.youtube.com/embed/e3XuLv-tnag",
+    thumbNail: "",
+    type: "shorts",
+    industry: "ryze",
+  },
+  {
+    topText: "MC AI Future Pacing Demo_07",
+    bottomText: "",
+    YoutubeEmbed: "https://www.youtube.com/embed/yxAKYLY0nw4",
+    thumbNail: "",
+    type: "shorts",
+    industry: "ryze",
+  },
+
+  {
+    topText: "MC Stuck poop Demo",
+    bottomText: "",
+    YoutubeEmbed: "https://www.youtube.com/embed/3wI54YoiTx0",
+    thumbNail: "",
+    type: "shorts",
     industry: "ryze",
   },
 ];
