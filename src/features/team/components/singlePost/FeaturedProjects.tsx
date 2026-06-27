@@ -89,20 +89,28 @@ export default function FeaturedProjects({
                 `}
                 onClick={() => hasEmbed && setOpenIndex(index)}
               >
-                <video
-                  key={project.thumbNail}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  className="absolute inset-0 w-full h-full object-cover block"
-                >
-                  <source
-                    src={`/videos/${project.thumbNail}`}
-                    type="video/webm"
+                {project.thumbNail?.endsWith(".webm") ? (
+                  <video
+                    key={project.thumbNail}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="absolute inset-0 w-full h-full object-cover block"
+                  >
+                    <source
+                      src={`/videos/${project.thumbNail}`}
+                      type="video/webm"
+                    />
+                    Your browser does not support the video tag.
+                  </video>
+                ) : (
+                  <img
+                    src={`/assets/companies/${project.thumbNail}`}
+                    alt={project.topText}
+                    className="absolute inset-0 w-full h-full object-cover block"
                   />
-                  Your browser does not support the video tag.
-                </video>
+                )}
 
                 {hasEmbed && (
                   <div className="absolute inset-0 flex items-center justify-center bg-black/15 hover:bg-black/30 transition-colors duration-250 z-[2]">
