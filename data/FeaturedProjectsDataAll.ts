@@ -14,7 +14,7 @@ export interface ProjectItem {
   type: ProjectType;
   industry: ProjectIndustry;
   params?: string;
-  linkText?: string; 
+  linkText?: string;
 }
 
 /**
@@ -52,6 +52,18 @@ export const ProjectsAminDataAll: ProjectItem[] = [
     thumbNail: "Zuckerberg.webm",
     type: "long-form",
     industry: "documentations",
+  },
+
+  {
+    topText: "Create 1.2M Views - WANNAnO youtube channel ",
+    bottomText:
+      "end-to-end, scripting, voiceover, editing, sound design, and typography — growing the channel to 1.2M views on short-form content.",
+    YoutubeEmbed: "",
+    thumbNail: "WANNAnO-overview.png",
+    type: "shorts",
+    industry: "documentations",
+    params: "https://www.youtube.com/@WANNAnO22",
+    linkText: "View channel",
   },
 
   {
@@ -117,12 +129,14 @@ export const ProjectsAminDataAll: ProjectItem[] = [
   },
 ];
 
+// Highlight in amin page
 
 export const ProjectsAminData: ProjectItem[] = [
-   {
+  {
     topText: "Pitch Better, Watch Faster — My Edit of Adam Bensman",
     bottomText: "I re-edited one of Adam Bensman's talks on pitching...",
-    YoutubeEmbed: "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7395027531776585728?compact=1",
+    YoutubeEmbed:
+      "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7395027531776585728?compact=1",
     thumbNail: "D14-1.webm",
     type: "motion",
     industry: "Pitch",
@@ -130,9 +144,21 @@ export const ProjectsAminData: ProjectItem[] = [
     linkText: "",
   },
   {
+    topText: "Create 1.2M Views - WANNAnO youtube channel ",
+    bottomText:
+      "end-to-end, scripting, voiceover, editing, sound design, and typography — growing the channel to 1.2M views on short-form content.",
+    YoutubeEmbed: "",
+    thumbNail: "WANNAnO-overview.png",
+    type: "shorts",
+    industry: "documentations",
+    params: "https://www.youtube.com/@WANNAnO22",
+    linkText: "View channel",
+  },
+  {
     topText: "From 2022 to 2025 — In 30 Seconds",
     bottomText: "A crisp 40s explainer...",
-    YoutubeEmbed: "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7385569211575697408?compact=1",
+    YoutubeEmbed:
+      "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7385569211575697408?compact=1",
     thumbNail: "ui-style.webm",
     type: "motion",
     industry: "unsorted",
@@ -150,6 +176,17 @@ export const ProjectsAminData: ProjectItem[] = [
     linkText: "View shorts",
   },
   {
+    topText: "Highlighting events - Power100",
+    bottomText:
+      "review and pick best moments and talks from hours of raw footage to make a 1-minute highlight short with SFX and motion, and create a strong hook.",
+    YoutubeEmbed: "",
+    thumbNail: "three-in-one-2.webm",
+    type: "shorts",
+    industry: "ryze",
+    params: "https://www.youtube.com/@Power100Official",
+    linkText: "Power100 youtube channel",
+  },
+  {
     topText: "Facebook Privacy Scandal — Full Documentary Edit",
     bottomText: "A deep dive into Facebook's data harvesting...",
     YoutubeEmbed: "",
@@ -160,7 +197,6 @@ export const ProjectsAminData: ProjectItem[] = [
     linkText: "",
   },
 ];
-
 
 export const TYPE_FILTERS: { key: ProjectType | "all"; label: string }[] = [
   { key: "all", label: "All" },
