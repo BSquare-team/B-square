@@ -65,7 +65,17 @@ export const ProjectsAminDataAll: ProjectItem[] = [
     params: "https://www.youtube.com/@WANNAnO22",
     linkText: "View channel",
   },
-
+  {
+    topText: "Highlighting events - Power100",
+    bottomText:
+      "review and pick best moments and talks from hours of raw footage to make a 1-minute highlight short with SFX and motion, and create a strong hook.",
+    YoutubeEmbed: "",
+    thumbNail: "three-in-one-2.webm",
+    type: "shorts",
+    industry: "power100",
+    params: "https://www.youtube.com/@Power100Official",
+    linkText: "Power100 youtube channel",
+  },
   {
     topText: "Ryze Mushroom Coffee — 1 Year, 100+ Shorts",
     bottomText:
@@ -182,7 +192,7 @@ export const ProjectsAminData: ProjectItem[] = [
     YoutubeEmbed: "",
     thumbNail: "three-in-one-2.webm",
     type: "shorts",
-    industry: "ryze",
+    industry: "power100",
     params: "https://www.youtube.com/@Power100Official",
     linkText: "Power100 youtube channel",
   },
